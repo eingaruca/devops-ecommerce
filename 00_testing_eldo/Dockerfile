@@ -1,7 +1,11 @@
 FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY index.js ./
+COPY ./app/ .
 
-CMD ["tail", "-f", "/dev/null"]
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["node", "app.js"]
