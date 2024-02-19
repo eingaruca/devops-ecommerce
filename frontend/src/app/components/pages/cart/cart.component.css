@@ -1,0 +1,9 @@
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: Arial, sans-serif; /* Fuente similar a la del footer */
+    color: #333; /* Color de texto similar al del footer */
+    border-bottom: 2px solid #ff9800; /* Línea inferior con color similar al botón */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+    margin-bottom: 20px; /* Espacio inferior para separarlo del formulario */
+  }
+  
