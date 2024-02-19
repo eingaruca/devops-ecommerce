@@ -29,6 +29,7 @@ ng g c components/pages/shop
 ng g c components/pages/shop-product
 ng g c components/pages/blog
 ng g c components/pages/blog-article
+ng g c components/pages/contact
 ng g c components/partials/header
 ng g c components/partials/footer
 ng g c components/partials/product-review

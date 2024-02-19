@@ -23,3 +23,25 @@
    - Node.js 
    - MySql
    - Google Cloud Platform
+
+
+============================================
+## Instrucciones de uso
+### Frontend - Instalar nodeJs
+```
+cd frontend
+npm i
+npm install -g @angular/cli
+npm start  [o]  ng serve -o
+```
+- En el navegador: http://localhost:4200
+- Rutas proyecto:
+```
+INDEX:
+frontend/src/app/components/pages/index.component.html
+frontend/src/app/components/pages/index.component.css
+
+LOGIN
+frontend/src/app/components/pages/signin.component.html
+frontend/src/app/components/pages/signin.component.css
+```

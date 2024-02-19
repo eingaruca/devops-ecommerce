@@ -1,20 +1,33 @@
+<h1>Login</h1>
+
+<div>
+    <form (submit)="signin()">
+        <input type="text" name="email" [(ngModel)]="user.email" placeholder="email" required autofocus /> <br>
+        <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" required /> <br>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<br><br>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<body> 
+<body>
 
 
     <div class="logo">
-        <img src="assets/images/Imagen2.png" alt="">
+        <img src="images/Imagen2.png" alt="">
     </div>
     <div class="fondo">
         <form (submit)="signin()">
@@ -44,7 +57,7 @@
             <button type="submit" class="btn">Iniciar sesión</button>
 
             <div class="registrar-link">
-                <a href="#">Regístrate</a>
+                <a href="./registro.html">Regístrate</a>
             </div>
         </form>
     </div>

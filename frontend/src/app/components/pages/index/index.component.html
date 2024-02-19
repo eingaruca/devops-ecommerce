@@ -1,26 +1,71 @@
-<br>
-<!-- <div style="text-align: center;">INDEX.component.html</div> -->
-    <div class="featured-products">
-        <h1>Productos Destacados</h1>
-        <div class="product">
-            <img src="assets/images/perfume1.jpg" alt="Perfume 1" style="width: 100px; height: 100px;">
-            <h3>Perfume 1</h3>
-            <p>Descripción del perfume 1.</p>
-            <p>Precio: $XX.XX</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="assets/images/perfume2.jpg" alt="Perfume 2" style="width: 100px; height: 100px;">
-            <h3>Perfume 2</h3>
-            <p>Descripción del perfume 2.</p>
-            <p>Precio: $XX.XX</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="assets/images/perfume3.jpg" alt="Perfume 3" style="width: 100px; height: 100px;">
-            <h3>Perfume 3</h3>
-            <p>Descripción del perfume 3.</p>
-            <p>Precio: $XX.XX</p>
-            <button>Añadir al carrito</button>
-        </div>
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function() {
+        var lastScrollTop = 0;
+        var navbar = document.querySelector('.header');
+        var container = document.querySelector('.container');
+
+        window.addEventListener("scroll", function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                navbar.style.top = "-100px"; // Oculta el navbar cuando se desplaza hacia abajo
+            } else {
+                navbar.style.top = "0"; // Muestra el navbar cuando se desplaza hacia arriba
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+            container.style.top = Math.max(93 - currentScroll, 0) + "1"; // Fija el texto "Bienvenidos"
+        });
+    });
+
+
+window.addEventListener('scroll', function() {
+  var welcomeText = document.getElementById('welcomeText');
+  var header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+      header.classList.add('hide');
+      welcomeText.style.visibility = 'hidden';
+  } else {
+      header.classList.remove('hide');
+      welcomeText.style.visibility = 'visible';
+  }
+});
+</script>
+<section class="noticias">
+    <div class="noticia">
+        <img src="assets/images/social.7426-1024x536.jpg" alt="Noticia 1">
+        <h2>Yves Saint Laurent Y Elixir</h2>
+        <h4>Nuevas Fragancias de <em>Igor Masyukov</em></h4>
+        <p></p>
+        <p>La más sensual y lujosa de las fragancias de la colección Y. <em>Y Elixir</em> es un perfume sensual basado en una intrigante combinación de notas especiadas y amaderadas.</p>
+        <a href="#">Leer más</a>
     </div>
+    <div class="noticia">
+        <img src="assets/images/social.7423-1024x536.jpg" alt="Noticia 2">
+        <h2>Tom Ford Oud Wood Parfum</h2>
+        <h4>Nuevas Fragancias de <em>Sanja Pekic</em></h4>
+        <p></p>
+        <p>TOM FORD BEAUTY lanzará la última incorporación a su colección Private Blend en marzo de 2024: la nueva edición de Oud Wood Eau de Parfum, llamada Oud Wood Parfum.</p>
+        <a href="#">Leer más</a>
+    </div>
+    <div class="noticia">
+      <img src="assets/images/o.Q4mex8DBZOg.jpg" alt="Noticia 3">
+      <h2>K by Dolce & Gabbana Eau de Parfum Intense</h2>
+      <h4>Nuevas fragancias</h4>
+      <p></p>
+      <p>Tras el éxito de las primeras creaciones K by Dolce&Gabbana Eau de Toilette, lanzada en 2019, y K by Dolce&Gabbana Eau de Parfum, lanzada en 2020, creadas para celebrar la belleza de los acordes mediterráneos aromáticos, cítricos y amaderados, Dolce&Gabbana toma ahora otra dirección y compone una fragancia especiada, afrutada y de cuero.</p>
+      <a href="#">Leer más</a>
+    </div>
+    <div class="noticia">
+      <iframe src="https://www.youtube.com/embed/dzOqyG73KuE?mute=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+      <h2>Prada Paradoxe </h2>
+      <h4>Fragancia de mujer</h4>
+      <p></p>
+      <p>Es un perfume vanguardista e innovador que consigue crear una fragancia atemporal y sutil para diario. Pertenece a la familia olfativa Ámbar Floral y tiene una intensidad media sobre la piel. Es un acierto si buscas un perfume con carácter que no deje de lado la sutileza de un perfume clásico.</p>
+      <a href="#">Leer más</a>
+    </div>
+
+    <!-- Agrega más noticias según sea necesario -->
+</section>
