@@ -8,10 +8,10 @@ const createProduct = async (req, res, next) => {
     console.log('Request=> ', req.body);
     try{
         const data = req.body;
-        const productSave = await firestore.collection('Products').doc().set(data);
-        return res.json(productSave); 
-        // req.json(data);
-    } catch (error) {
+        // const productSave = await firestore.collection('Products').doc().set(data);
+        return res.json({'message': req.body}); 
+        } catch (error) {
+            console.log('ERROR CREATEPRODUCT')
         return res.status(400).send(error.message);
     }
     // return res.json(`Create Product - Controller ${req.body.name}`);
@@ -35,7 +35,8 @@ const getProducts = async (req, res, next) => {
                     doc.data().brand,
                     doc.data().precio,
                     doc.data().tamano,
-                    doc.data().stock
+                    doc.data().stock,
+                    doc.data().image
                 );
                 productsArray.push(prod);
             });

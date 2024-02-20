@@ -1,6 +1,7 @@
 const {Router} = require('express');
 const router = Router(); 
 const authMiddleware = require('../middlewares/validateToken')
+const upload = require('../multer-config'); // Importa el middleware multer
 
 // Articles
 const articleController = require('../controllers/article.controller');
@@ -18,7 +19,7 @@ router.get('/communities', communityController.getCommunities);
 // Reviews
 const reviewController = require('../controllers/review.controller');
 router.get('/reviews/product/:id', reviewController.getReviewByProduct);
-router.post('/reviews/product/:id',reviewController.createReview)
+router.post('/reviews/product/:id', upload.single('image'), reviewController.createReview)
 // Añadir reviews por usuario
 
 router.post('/reviews', reviewController.createReview);

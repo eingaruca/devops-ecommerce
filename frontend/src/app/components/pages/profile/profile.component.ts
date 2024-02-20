@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit{
           }
         )
 
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage.getItem('token') !== 'undefined') {
       this.userService.getUserById()
         .subscribe(
           res => {

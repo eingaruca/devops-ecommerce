@@ -15,7 +15,9 @@ npm install -g @angular/cli
 npm install --save @angular/material
 npm install --save @angular/animations
 npm install jwt-decode
-npm install firebase @angular/fire --save
+// npm install firebase @angular/fire --save
+//npm install @google-cloud/storage
+
 ng serve -o
 ```
 - Components

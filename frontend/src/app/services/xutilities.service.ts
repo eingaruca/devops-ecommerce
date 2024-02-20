@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -44,9 +46,15 @@ export class XutilitiesService {
     return this.http.get<any>(this.URL + `/reviews/product/${productId}`);
   }
 
+  // createReview(productId:any, newReview:any){
+  //   return this.http.post<any>(this.URL + `/reviews/product/${productId}`, newReview);
+  // }
   createReview(productId:any, newReview:any){
+    console.log("KKKKKKKKKKK", productId)
+    console.log("KKKKKKKKKKK", newReview)
     return this.http.post<any>(this.URL + `/reviews/product/${productId}`, newReview);
   }
+
   /**
    * Category
    */

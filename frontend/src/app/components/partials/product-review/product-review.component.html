@@ -10,30 +10,35 @@
 
 
 <form (ngSubmit)="submitReview()" class="new-review-form">
-    <h2>Agregar Nueva Reseña</h2>
-    <div>
-        <label>Título:</label>
-        <input type="text" [(ngModel)]="newReview.title" name="title" required>
-    </div>
-    <div>
-        <label>Reseña:</label>
-        <textarea [(ngModel)]="newReview.review" name="review" required></textarea>
-    </div>
-    <div>
+    <div *ngIf="userId; else loggedOut">
+        <h2>Agregar Nueva Reseña</h2>
         <div>
-          <input type="file" (change)="createFormData($event)">
+            <label>Título:</label>
+            <input type="text" [(ngModel)]="newReview.title" name="title" required>
         </div>
-        <!-- <button (click)="upload()">Upload</button> -->
-      </div>
-    <div>
-        <label>Valoración:</label>
-        <select [(ngModel)]="newReview.rating" name="rating" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+        <div>
+            <label>Reseña:</label>
+            <textarea [(ngModel)]="newReview.review" name="review" required></textarea>
+        </div>
+        <div>
+            <div>
+                <input type="file" (change)="createFormData($event)">
+            </div>
+            <!-- <button (click)="upload()">Upload</button> -->
+        </div>
+        <div>
+            <label>Valoración:</label>
+            <select [(ngModel)]="newReview.rating" name="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <button type="submit">Enviar Reseña</button>
     </div>
-    <button type="submit">Enviar Reseña</button>
+    <ng-template #loggedOut>
+        Para realizar una review, inicie sesión.
+    </ng-template>
 </form>

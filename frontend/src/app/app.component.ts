@@ -19,7 +19,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FooterComponent,
     HttpClientModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     // AuthService,
@@ -30,5 +30,5 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'BetAroma';
 }

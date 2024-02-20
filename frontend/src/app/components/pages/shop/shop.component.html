@@ -27,7 +27,11 @@
     <mat-list-item role="listitem" *ngFor="let product of products | slice:from:to">
       <div class="product-item">
         <div class="image">
-          <label>image</label>
+          
+          <img *ngIf="product['image'] ; else noimage "src="{{ product['image'][0] }}" style="width: 150px; height: 100px;">
+          <ng-template #noimage>
+            <label>image</label>
+        </ng-template>
         </div>
         <div class="info">
           <div class="title">

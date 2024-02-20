@@ -13,6 +13,7 @@ export class ProductService {
   }
 
   createProduct(product:any) {
+    console.log('serviceprod', product)
     return this.http.post<any>(this.URL, product);
   }
 

@@ -1,23 +1,14 @@
 const firebase = require('../database/db.firebase');
 const firestore = firebase.firestore();
-var multer = require('multer');
+// var multer = require('multer');
 const { SECRET } = require('../config.js');
 const Review = require('../models/Review.js')
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './upload')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname)
-    }
-})
-const upload = multer({
-    storage: storage
-})
+// const upload = require('../multer-config');
 
 
 const createReview = async(req, res, next) => {
+
     /**
      * Por terminar
      */
@@ -26,7 +17,7 @@ const createReview = async(req, res, next) => {
     // console.log(typeof req.image)
 
     // console.log("Request createReview => ", req.body)
-    
+    console.log("REQQQQQQQ" , req.body);
     try{
         const id = req.params.id;
         const data = req.body;

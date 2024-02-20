@@ -11,6 +11,7 @@ import { ShopProductComponent } from './components/pages/shop-product/shop-produ
 import { BlogArticleComponent } from './components/pages/blog-article/blog-article.component';
 import { AboutusComponent } from './components/pages/aboutus/aboutus.component';
 import { CartComponent } from './components/pages/cart/cart.component';
+import { AdminProductComponent } from './components/pages/admin-product/admin-product.component';
 
 export const routes: Routes = [
     {
@@ -47,5 +48,8 @@ export const routes: Routes = [
     },
     {
         path: 'blog-article/:id', component: BlogArticleComponent
+    },
+    {
+        path: 'admin-product', component: AdminProductComponent
     },
 ];

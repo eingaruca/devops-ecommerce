@@ -1,5 +1,6 @@
 npm init
-npm i cors dotenv express firebase nodemon body-parser jsonwebtoken multer
+npm i cors dotenv express firebase nodemon body-parser jsonwebtoken 
+npm i multer
 npm uninstall firebase
 npm i firebase@8.6.8
 npm uninstall firebase@8.6.8

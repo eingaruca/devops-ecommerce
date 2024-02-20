@@ -7,7 +7,8 @@ class Product {
         brand,
         price,
         size,
-        stock
+        stock,
+        image
         // status
     ) {
         this.id = id; 
@@ -18,6 +19,7 @@ class Product {
         this.price = price;
         this.size = size;
         this.stock = stock;
+        this.image = image;
     }
 }
 
