@@ -38,7 +38,7 @@ export class AdminProductComponent implements OnInit {
     this.arrayFiles = [];
   }
 
-  async addFile(event: any) {
+  addFile(event: any) {
     let file = <File>event.target.files[0];
     console.log("añado file")
     this.arrayFiles.push(file);
@@ -46,6 +46,46 @@ export class AdminProductComponent implements OnInit {
   }
 
   async submitProduct() {
+    console.log('length', this.arrayFiles.length);
+    let r = (Math.random() + 1).toString(36).substring(2, 22);
+    for (let i = 0; i < this.arrayFiles.length; i++) {
+      const filePath = `/${this.arrayFiles[i].name}`;
+      const fileRef = ref(this.storage, `/products/${r}/${filePath}`);
+      console.log('uploadprofile');
+  
+      await new Promise<void>((resolve, reject) => { // Añade <void> aquí
+        const uploadFile = uploadBytesResumable(fileRef, this.arrayFiles[i])
+          .on(
+            'state_changed',
+            (snapshot) => {},
+            (error) => {
+              reject(error);
+            },
+            async () => {
+              this.images[i] = await getDownloadURL(fileRef);
+              this.product.image = (this.images[i]);
+              
+              console.log("random", r);
+              this.product.id = r;
+              console.log(`--> images[${i}]`, this.product.image[i]);
+              resolve(); // Pasando void aquí
+            }
+          );
+      });
+    }
+  
+    this.product.image = this.images;
+    try {
+      const res = await this.productService.createProduct(this.product).toPromise();
+      // window.location.reload();
+    } catch (err) {
+      console.log('Error return admin', err);
+    }
+  }
+  
+  
+
+  async submitProduct2() {
 
     console.log('length', await this.arrayFiles.length)
     for (let i = 0; i < await this.arrayFiles.length; i++) {
@@ -77,6 +117,7 @@ export class AdminProductComponent implements OnInit {
 
 
     this.product.image = await this.images;
+    
     console.log('this.product.image', this.product.image)
     return this.productService.createProduct(this.product)
       .subscribe(

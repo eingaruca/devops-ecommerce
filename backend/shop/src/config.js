@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config({path: './src/.env'})
 
 const {SECRET} = process.env;
+const {PORT} = process.env;
 
 const {
   HOST,
@@ -38,6 +39,7 @@ const {
 
 module.exports = {
   SECRET,
+  PORT,
   config,
   firebaseConfig: {
     apiKey: API_KEY,

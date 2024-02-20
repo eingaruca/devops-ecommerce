@@ -31,7 +31,10 @@
     <div class="product-details">
       <div class="product-image">
         <!-- <img src="assets/images/perfume.jpg" alt="Perfume"> -->
-        <img src="assets/images/perfume.jpg" alt="Perfume" style="width: 300px; height: 400px;">
+        <img *ngIf="product['image'] ; else noimage "src="{{ product['image'][0] }}"  alt="Perfume" style="width: 300px; height: 400px;">
+        <ng-template #noimage>
+            <img src="assets/images/perfume.jpg" alt="Perfume" style="width: 300px; height: 400px;">
+        </ng-template>
       </div>
       <div class="product-info">
         <h2>{{ product['name'] }}</h2>

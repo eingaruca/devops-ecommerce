@@ -9,7 +9,8 @@ const whitelist = ['*'];
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 //User
-const userRoutes = require('./routes/user.routes');
+// const userRoutes = require('./routes/user.routes');
+const shopRoutes = require('./routes/shop.route');
 app.use(express.json());
 app.use(cors(
     {origin: '*',
@@ -18,12 +19,8 @@ app.use(cors(
 app.use(bodyParser.json());
 app.use(morgan('dev')); // Para poder ver logs del uso en la consola
 
-// app.get('/', (req, res) => {
-//     // res.send('Inicio');
-//     res.json('Inicio');
-// });
 
-app.use('/', userRoutes);
+app.use('/', shopRoutes);
 
 
 module.exports = app;

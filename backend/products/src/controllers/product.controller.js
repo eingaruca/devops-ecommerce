@@ -8,8 +8,14 @@ const createProduct = async (req, res, next) => {
     console.log('Request=> ', req.body);
     try{
         const data = req.body;
+        // console.log('body', data)
+        
+        const prod = await firestore.collection('Products').doc(data.id)
+        delete data.id
+        const productSaved = prod.set(data);
         // const productSave = await firestore.collection('Products').doc().set(data);
-        return res.json({'message': req.body}); 
+
+        return res.json({'message': 'ok'}); 
         } catch (error) {
             console.log('ERROR CREATEPRODUCT')
         return res.status(400).send(error.message);

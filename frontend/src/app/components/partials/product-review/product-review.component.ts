@@ -51,16 +51,24 @@ export class ProductReviewComponent implements OnInit{
 
   ngOnInit(): void {
     
-    let token = localStorage.getItem('token') || '';
-    if ( token !== null || token !== '' )
-      this.userId = (JSON.parse(atob(token.split('.')[1]))).id 
+    let token = ''
 
+    if (typeof localStorage !== 'undefined') {
+      token = localStorage.getItem('token') || '';
+      if ( token.length > 0 && token !== null){
+        console.log("tok tok", token);
+        this.userId = (JSON.parse(atob(token.split('.')[1]))).id;
+      }
+    }
+
+    // Obtener product  Id de la URL
     this.route.params.subscribe(
       params => {
         this.productId = params['id'];
       }
     )
 
+    // Obtenemos todas las Reviews del producto
     this.xutilitiesService.getReviewsByProduct(this.productId)
       .subscribe(
         res =>{
@@ -70,8 +78,6 @@ export class ProductReviewComponent implements OnInit{
           console.log(err);
         }
       )
-
-
   }
 
   async submitReview(){
