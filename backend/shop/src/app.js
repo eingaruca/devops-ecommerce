@@ -11,6 +11,7 @@ app.use(cookieParser());
 //User
 // const userRoutes = require('./routes/user.routes');
 const shopRoutes = require('./routes/shop.route');
+
 app.use(express.json());
 app.use(cors(
     {origin: '*',
