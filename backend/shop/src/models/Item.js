@@ -4,17 +4,20 @@ class Item {
         id,
         orderId,
         productId,
+        productName,
         unitPrice,
         quantity,
-        subtotal
+        subTotal,
+        statusOrder,
     ) {
         this.id = id;
         this.orderId = orderId;
         this.productId = productId;
+        this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
-        this.subtotal = subtotal;
-
+        this.subTotal = subTotal;
+        this.statusOrder = statusOrder
     }
 
     
