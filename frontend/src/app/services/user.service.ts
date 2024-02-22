@@ -10,34 +10,41 @@ export class UserService {
 
   private URL ='http://localhost:8002'
 
+  token:any ="";
+  headers:any;
+
   constructor(
     private http: HttpClient
-  ) { }
-
-  getUserById(){
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`,
+  ) { 
+    this.token = localStorage.getItem('token');
+    this.headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
     });
 
-    // const decodedToken:any = jwtDecode(token ||'');
-    // console.log('id',decodedToken.id);
-    // return this.http.get<any>(this.URL + `/${decodedToken.id}`, { headers });
-    return this.http.get<any>(this.URL + `/profile`, { headers });
+  }
+
+  getUserById(){
+    // const token = localStorage.getItem('token');
+    // const headers = new HttpHeaders({
+    //   'Authorization': `Bearer ${token}`,
+    // });
+
+    return this.http.get<any>(this.URL + `/profile`, { headers: this.headers });
   }
 
   updateProfile (user: any) {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`,
-    });
+    // const token = localStorage.getItem('token');
+    // const headers = new HttpHeaders({
+    //   'Authorization': `Bearer ${token}`,
+    // });
 
     /**
      * Revisar, porque tenemos que enviar el token y el body.
      * updateProfile -> Recibe todo el usuario y su token.
      */
+
     console.log('USERSERVICE', user)
-    return this.http.put<any>(this.URL + `/updateProfile`, user, {headers})
+    return this.http.put<any>(this.URL + `/updateProfile`, user, {headers: this.headers})
   }
 }
 

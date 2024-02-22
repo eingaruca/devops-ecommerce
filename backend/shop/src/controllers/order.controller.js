@@ -48,9 +48,9 @@ const { format } = require('date-fns')
 const getCart = async (req, res, next) => {
     try {
         // HAY QUE obtener el ID del usuario. Con el token y decodificarlo aquí o que venga decodificado
-        const userId = req.body.userId;
+        const userId = req.user.id;
         const statusOrder = "Cart"
-        console.log(req);
+        console.log(userId);
         
         // Deberíamos validar que sólo haya un cart.
 

@@ -4,6 +4,7 @@ class Item {
         id,
         orderId,
         productId,
+        productImage,
         productName,
         unitPrice,
         quantity,
@@ -13,6 +14,7 @@ class Item {
         this.id = id;
         this.orderId = orderId;
         this.productId = productId;
+        this.productImage = productImage;
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;

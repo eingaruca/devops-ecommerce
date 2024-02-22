@@ -177,8 +177,10 @@ const getItem = async (req, res, next) => {
 
 };
 
-const listItems = async (req, res, next) => {
-    const orderId = req.body.orderId;
+const getItemsByOrder = async (req, res, next) => {
+    // const orderId = req.body.orderId;
+    const orderId = req.params.id;
+    console.log("ooooorderid", orderId);
     const statusOrder = "Cart";
     try {
 
@@ -199,6 +201,7 @@ const listItems = async (req, res, next) => {
                     doc.id,
                     doc.data().orderId,
                     doc.data().productId,
+                    doc.data().productImage,
                     doc.data().productName,
                     doc.data().unitPrice,
                     doc.data().quantity,
@@ -218,7 +221,9 @@ const listItems = async (req, res, next) => {
 
 const deleteItem = async (req, res, next) => {
     try {
+
         let id = req.params.id;
+        console.log("Back deleteItem", id)
         let item = await firestore.collection('Items').doc(id).delete();
         return res.json({'message': 'Item deleted'})
     } catch (error) {
@@ -230,6 +235,6 @@ module.exports = {
     addItemToCart,
     cleanItemsToCart,
     getItem,
-    listItems,
+    getItemsByOrder,
     deleteItem
 }

@@ -4,7 +4,6 @@ import { UserService } from '../../../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { XutilitiesService } from '../../../services/xutilities.service';
 import { CommonModule } from '@angular/common';
-// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',

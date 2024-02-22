@@ -21,6 +21,10 @@ export class AuthService {
     console.log(user)
     return this.http.post<any>(this.URL + '/login', user);
    }
+
+   getToken () {
+    return localStorage.getItem('token');
+   }
 }
 
 // // Authentication

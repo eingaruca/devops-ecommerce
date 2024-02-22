@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     AuthService,
+
   ],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css'

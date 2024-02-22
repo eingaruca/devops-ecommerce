@@ -22,7 +22,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class CartComponent implements OnInit {
 
   userId:string | null = null;
-  orderId:any={};
+  order:any={};
+  items:any=[]
 
   constructor(
     private shopService: ShopService,
@@ -34,32 +35,40 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // Decodificar token para obtener userId
-    let token = ''
-    if (typeof localStorage !== 'undefined') {
-      token = localStorage.getItem('token') || '';
-      if ( token.length > 0 && token !== null){
-        console.log("tok tok", token);
-        this.userId = (JSON.parse(atob(token.split('.')[1]))).id;
-      }
-    } else {
-
-    }
-    console.log('this.userId', this.userId)
-
     this.shopService.getCart()
         .subscribe(
           res => {
             console.log("res:::> ", res);
-            this.orderId = res;
-            
+            this.order = res;
+            this.shopService.getItemsByOrder(this.order.id)
+                .subscribe(
+                  res => {
+                    console.log("resITEM:::> ", res);
+                    this.items = res;
+                    
+                  },
+                  err => {
+                    console.log(err)
+                  }
+                )
           },
           err => {
             console.log(err)
           }
         )
 
+    
   }
 
-
+  eliminarItem(itemId:any){
+    this.shopService.deleteItem(itemId)
+        .subscribe(
+          res => {
+            console.log("res:::> ", res);
+          },
+          err => {
+            console.log(err)
+          }
+        )
+  }
 }

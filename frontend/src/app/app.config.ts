@@ -7,6 +7,8 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { provideFirebaseApp,initializeApp } from '@angular/fire/app'
 import { provideStorage,getStorage } from '@angular/fire/storage'
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(), provideAnimations(),
@@ -23,7 +25,12 @@ export const appConfig: ApplicationConfig = {
         })
       ),
       provideStorage (() => getStorage())
-    ])
+    ]),
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: TokenInterceptorService,
+    //   multi: true,
+    // }
 
     ]
 };
