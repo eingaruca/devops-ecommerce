@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ShopService } from '../../../services/shop.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';
+import { AppComponent } from '../../../app.component';
 
 @Component({
   selector: 'app-cart',
@@ -11,6 +12,7 @@ import { HttpHeaders } from '@angular/common/http';
   imports: [
     CommonModule,
     FormsModule,
+    AppComponent,
     // ShopComponent,
   ],
   providers : [
@@ -56,9 +58,27 @@ export class CartComponent implements OnInit {
             console.log(err)
           }
         )
-
-    
   }
+
+//   async ngOnInit(): Promise<void> {
+//     try {
+//         const cartResponse: any = await this.shopService.getCart().toPromise();
+//         console.log("Respuesta de getCart:", cartResponse);
+//         this.order = cartResponse;
+
+//         // Llamada a getItemsByOrder solo si hay un pedido válido
+//         if (this.order && this.order.id) {
+//             const itemsResponse: any = await this.shopService.getItemsByOrder(this.order.id).toPromise();
+//             console.log("Respuesta de getItemsByOrder:", itemsResponse);
+//             this.items = itemsResponse;
+//         }
+//     } catch (error) {
+//         console.error("Error al obtener el carrito o los elementos del pedido:", error);
+//     }
+// }
+
+
+
 
   eliminarItem(itemId:any){
     this.shopService.deleteItem(itemId)

@@ -4,6 +4,7 @@ import { UserService } from '../../../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { XutilitiesService } from '../../../services/xutilities.service';
 import { CommonModule } from '@angular/common';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -23,6 +24,8 @@ export class ProfileComponent implements OnInit{
   
   user:any = '';
   communities:any = [];
+  token:any ="";
+  headers:any;
 
   constructor(
     private router: Router,
@@ -41,11 +44,25 @@ export class ProfileComponent implements OnInit{
             this.communities = res.communities;
           },
           err => {
-
+            console.log("Err ProfileComponent", err)
           }
         )
 
-    if (typeof localStorage.getItem('token') !== 'undefined') {
+    // if (typeof localStorage.getItem('token') !== 'undefined') {
+    //   this.userService.getUserById()
+    //     .subscribe(
+    //       res => {
+    //         this.user = res;
+    //         console.log(this.user);
+    //       },
+    //       err => {
+    //         console.log(err)
+    //         // this.router.navigate(['index']);
+    //       }
+    //     )
+    // } 
+
+    if (typeof localStorage !== 'undefined' ) {
       this.userService.getUserById()
         .subscribe(
           res => {
@@ -54,16 +71,15 @@ export class ProfileComponent implements OnInit{
           },
           err => {
             console.log(err)
-            // this.router.navigate(['index']);
+            this.router.navigate(['signin']);
           }
         )
-    } 
-    // else{
-    //   console.log(typeof localStorage);
-    //   console.log("NO EXISTE TOKEN!!");
-    //   this.router.navigate(['index']);
-    //   // this.userService.getUserById();
-    // }
+    } else {
+      this.router.navigate(['signin']);
+      console.log("Profilecomponent ngOnInit - localStorage undefined")
+    }
+
+
       
   }
 

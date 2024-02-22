@@ -15,11 +15,25 @@ export class UserService {
 
   constructor(
     private http: HttpClient
-  ) { 
-    this.token = localStorage.getItem('token');
-    this.headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.token}`,
-    });
+  ) 
+  { 
+    // this.token = localStorage.getItem('token');
+    // this.headers = new HttpHeaders({
+    //   'Authorization': `Bearer ${this.token}`,
+    // });
+
+    if (typeof localStorage !== 'undefined') {
+      this.token = localStorage.getItem('token');
+      this.headers = new HttpHeaders({
+        'Authorization': `Bearer ${this.token}`,
+      });
+      console.log("UserService constructor - token ok", this.token)
+    } else {
+      this.headers = new HttpHeaders({
+        'Authorization': `Bearer `,
+      });
+      console.log("UserService constructor - localStorage undefined")
+    }
 
   }
 
