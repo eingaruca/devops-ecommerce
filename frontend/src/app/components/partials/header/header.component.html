@@ -12,8 +12,6 @@
         var navbar = document.querySelector('.header');
         var container = document.querySelector('.container');
 
-        window.addEventListener("scroll", function() {
-            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
             if (currentScroll > lastScrollTop) {
                 navbar.style.top = "-100px"; // Oculta el navbar cuando se desplaza hacia abajo
