@@ -50,11 +50,13 @@ const getCart = async (req, res, next) => {
         // HAY QUE obtener el ID del usuario. Con el token y decodificarlo aquí o que venga decodificado
         const userId = req.body.userId;
         const statusOrder = "Cart"
-        console.log(userId);
+        console.log(req);
         
         // Deberíamos validar que sólo haya un cart.
 
-        const carts = await firestore.collection('Orders').where('statusOrder', '==', statusOrder);
+        const carts = await firestore.collection('Orders')
+                                .where('statusOrder', '==', statusOrder)
+                                .where('userId', '==', userId);;
         // const data = await products.get();
         let cartsArray = [];
         let cart;

@@ -105,7 +105,7 @@ const addItemToCart = async (req, res, next) => {
                 const values ={
                     "userId": userId,
                     "statusOrder": orderStatusOrder,
-                    "createAt": orderCreatedAt,
+                    "createdAt": orderCreatedAt,
                     "updateAt": orderUpdatedAt
                 }
                 try {

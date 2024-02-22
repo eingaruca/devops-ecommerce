@@ -7,16 +7,16 @@ const { SECRET } = require('../config.js');
 
 const loginUser = async(req, res, next) => {
     console.log("hola")
-    res.header("Access-Control-Allow-Origin", "*");
+    // res.header("Access-Control-Allow-Origin", "*");
 
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept, authorization"
-    );
-    res.header(
-        "Access-Control-Allow-Methods",
-        "PUT, GET, POST, DELETE, OPTIONS"
-    );
+    // res.header(
+    //     "Access-Control-Allow-Headers",
+    //     "Origin, X-Requested-With, Content-Type, Accept, authorization"
+    // );
+    // res.header(
+    //     "Access-Control-Allow-Methods",
+    //     "PUT, GET, POST, DELETE, OPTIONS"
+    // );
     try {
         //Utilizando ID
         let user =  await firestore.collection('Users').doc(req.body.email);
@@ -44,21 +44,6 @@ const loginUser = async(req, res, next) => {
             userValid = data.data();
             res.json( {'email': userValid.email, 'token': token} );
         }
-
-        
-
-        // Forma con where
-        // let {email, password} = req.body;
-        // const users =  await firestore.collection('Users').where('email','==',email);
-        // console.log("=========> " + users)
-        // users.get().then(snapshot  =>{
-        //     snapshot.forEach(user => {
-        //         console.log('---> ', user.id, user.data());
-        //     });
-        // });
-        // return res.send("////////// ");
-        //  // const compare = await bcrypt.compare(password, receivedPassword)
-
     } catch (error) {
         return res.status(400).send(error.message);
     }
@@ -72,31 +57,24 @@ const logoutUser = async (req, res,next) => {
 };
 
 const profile = async (req, res, next) => {
-    const user =  await firestore.collection('Users').doc(req.user.id).get();
-    const userFound  = await user.data();
 
-    return res.json(
-        userFound
-    );
-//     return res.json({
-//         id: user.id,
-//         userfullname: userFound.name + " " + userFound.lastname,
-//         email: userFound.email
-//     });
+    try {
+        const user =  await firestore.collection('Users').doc(req.user.id).get();
+        const userFound  = await user.data();
+
+        return res.json(userFound);
+    } catch (error) {
+        return res.status(400).send(error.message);
+    }
 };
 
 const updateProfile = async (req, res, next) => {
-    console.log('backend updateprofile', req.body)
     try {
         let data = req.body;
-        console.log('backend-updateprofile', data.id)
-        // let user = await firestore.collection('Users').doc('123');
         const user =  await firestore.collection('Users').doc(data.id);
-        const xx = await user.get();
-        console.log('user...> ', xx.data())
+        // const xx = await user.get();
         let updatedUser = await user.update(data);
-
-        return res.send(`Actualizado: ${updatedUser}`)
+        return res.json(`Actualizado: ${updatedUser}`)
     } catch (error) {
         return res.status(400).send(error.message);
     }
@@ -134,7 +112,16 @@ const getUsers = async (req, res, next) => {
                     doc.data().name,
                     doc.data().lastname,
                     doc.data().email,
-                    doc.data().password
+                    doc.data().password,
+                    doc.data().phone,
+                    doc.data().address,
+                    doc.data().postalCode,
+                    doc.data().community,
+                    doc.data().role,
+                    doc.data().avatar,
+                    doc.data().createAt,
+                    doc.data().lastLogin,
+                    doc.data().emailValidate
                 );
                 userArray.push(user);
             });

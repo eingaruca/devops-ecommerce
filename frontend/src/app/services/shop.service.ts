@@ -27,8 +27,10 @@ export class ShopService {
       // router.post('/createCart', orderController.createCart);
       // router.put('/changeOrderStatus', orderController.changeOrderStatus);
       
-  getUserCart(userId:any){
-    return this.http.get<any>(this.URL + `/cart`, userId);
+  getCart(){
+
+    
+    return this.http.get<any>(this.URL + `/cart`, { headers });
   }
   createCart(order:any){
     return this.http.post<any>(this.URL + `/createCart`, order);
@@ -40,7 +42,7 @@ export class ShopService {
       // router.get('/getItem/:id', itemController.getItem);
       // router.get('/listItems', itemController.listItems);
       // router.delete('/deleteItem/:id', itemController.deleteItem)
-  createItem(item:any){
+  addItem(item:any){
     return this.http.post<any>(this.URL + `/addItem`, item);
   }
 
