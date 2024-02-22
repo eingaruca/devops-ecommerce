@@ -43,9 +43,8 @@ body{
 }
 .header:hover::after{
     left:100%;
-
 }
-    
+
 .logo img{
     width: 250px;
     height: auto;

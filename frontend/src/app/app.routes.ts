@@ -49,7 +49,7 @@ export const routes: Routes = [
     {
         path: 'blog-article/:id', component: BlogArticleComponent
     },
-    // {
-    //     path: 'contact', component: ContactComponent
-    // },    
+    {
+        path: 'contact', component: ContactComponent
+    },    
 ];
