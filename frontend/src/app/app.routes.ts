@@ -12,6 +12,7 @@ import { BlogArticleComponent } from './components/pages/blog-article/blog-artic
 import { AboutusComponent } from './components/pages/aboutus/aboutus.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { PerfumesComponent } from './components/pages/perfumes/perfumes.component';
 
 export const routes: Routes = [
     {
@@ -51,5 +52,8 @@ export const routes: Routes = [
     },
     {
         path: 'contact', component: ContactComponent
+    },    
+    {
+        path: 'perfumes', component: PerfumesComponent
     },    
 ];
