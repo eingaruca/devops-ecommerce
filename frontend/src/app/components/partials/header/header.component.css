@@ -213,7 +213,7 @@ body {
         z-index: 1000;
     }
     #check:checked~.navbar{
-        height: 27rem;
+        height: 30rem;
     }
     .navbar a{
         display: block;
