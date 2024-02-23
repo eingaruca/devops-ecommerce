@@ -42,6 +42,11 @@ export class ShopService {
     return this.http.post<any>(this.URL + `/createCart`, order, { headers: this.headers });
   }
 
+  updateOrder(order:any){
+    console.log("----------> orderid", order)
+    return this.http.put<any>(this.URL + `/updateOrder`, order, { headers: this.headers } );
+  }
+
   // Items
       // router.post('/addItem', itemController.addItemToCart);
       // router.post('/cleanItemsToCart', itemController.cleanItemsToCart)

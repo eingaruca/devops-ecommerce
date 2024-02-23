@@ -8,6 +8,7 @@ import { AppComponent } from '../../../app.component';
 import { UserService } from '../../../services/user.service';
 import { XutilitiesService } from '../../../services/xutilities.service';
 
+
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -30,13 +31,15 @@ export class CartComponent implements OnInit {
   userId:string | null = null;
   user:any = {};
   order:any = {};
+  orderId:string | null = null;
   items:any = []
   communities:any = []
 
   address: any = {};
-
   token:any ="";
   // headers:any;
+  paymentEnabled: boolean = false;
+
 
   constructor(
     private shopService: ShopService,
@@ -49,7 +52,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.paymentEnabled = false;
     if (typeof localStorage !== 'undefined') {
       this.token = localStorage.getItem('token');
       console.log("CartComponent ngOnInit - token ok", this.token);
@@ -84,6 +87,7 @@ export class CartComponent implements OnInit {
           res => {
             console.log("res:::> ", res);
             this.order = res;
+            this.orderId = this.order.id;
             this.shopService.getItemsByOrder(this.order.id)
                 .subscribe(
                   res => {
@@ -149,10 +153,24 @@ export class CartComponent implements OnInit {
   }
 
   updateAddress(){
-    const address = req.body;
-    const postalCode = "";
-    const comminity = "";
+    let update:any = {};
 
+    update.orderId = this.order.id;
+    update.address = this.order.address ?? this.user.address;
+    update.community = this.order.community ?? this.user.community;
+    update.postalCode = this.order.postalCode ?? this.user.postalCode;
+
+    console.log("update", update)
+    this.shopService.updateOrder(update)
+        .subscribe(
+          res => {
+            console.log("Update Address:::> ", res);
+            this.paymentEnabled = true;
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
   }
 

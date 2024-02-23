@@ -71,13 +71,16 @@
                 <div class="form-group">
                     <label>Dirección envío: </label>
                     <input type="text" [value]="order.address ? order.address : user.address"
-                        [(ngModel)]="order.address">
+                        [(ngModel)]="order.address" name="address">
                 </div>
                 <div class="form-group">
                     <label for="community">Ciudad: </label>
-                    <select id="community" [(ngModel)]="user.community" name="community">
+                    <!-- <select id="community" [(ngModel)]="user.community" name="community">
                         <option *ngFor="let community of communities" [value]="community.id">{{ community['name'] }}
                         </option>
+                    </select> -->
+                    <select id="community" [(ngModel)]="user.community ? user.community : order.community" name="community">
+                        <option *ngFor="let community of communities" [value]="community.id">{{ community['name'] }}</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -88,7 +91,7 @@
                 <button type="submit">Confirmar</button>
             </form>
         </div>
-        <div class="tracking-form">
+        <div class="tracking-form" [ngClass]="{'disabled-form': !paymentEnabled}">
             <h3>Pagos</h3>
             <div class="form-group">
                 <label>Método pago: </label>

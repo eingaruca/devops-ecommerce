@@ -189,12 +189,24 @@ const changeOrderStatus = async (req, res, next) => {
     } catch (error) {
         return res.status(400).send(error.message);
     }
-    
 
     
 }
 
 const updateOrder = async (req, res, next) => {
+    try {
+        
+        let data = req.body;
+        console.log("data", data);
+        let id = data.orderId
+        let order = await firestore.collection('Orders').doc(id);
+
+        let updatedOrder = await order.update(data);
+
+        return res.json({'Actualiza Order': updatedOrder})
+    } catch (error) {
+        return res.status(400).send(error.message);
+    }
     
 }
 

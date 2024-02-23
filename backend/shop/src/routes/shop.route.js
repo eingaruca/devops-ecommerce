@@ -10,6 +10,7 @@ const authMiddleware = require('../middlewares/validateToken')
 router.get('/cart', authMiddleware.authRequired, orderController.getCart);
 router.get('/orders-status', authMiddleware.authRequired, orderController.getOrderByStatus);
 router.post('/createCart', authMiddleware.authRequired, orderController.createCart);
+router.put('/updateOrder', authMiddleware.authRequired, orderController.updateOrder);
 router.put('/changeOrderStatus', authMiddleware.authRequired, orderController.changeOrderStatus);
 
 // Items
