@@ -1,30 +1,22 @@
-<!-- header.component.html -->
-
-<nav class="navbar">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="/index" routerLinkActive="active">Inicio</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/blog" routerLinkActive="active">Blog</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/shop" routerLinkActive="active">Tienda</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/profile" routerLinkActive="active">Perfil</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/aboutus" routerLinkActive="active">Nosotros</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/signin" routerLinkActive="active">SignIn</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/signup" routerLinkActive="active">SignUp</a>
-        </li>
-        <li class="nav-item">
-            <a routerLink="/cart" routerLinkActive="active">Cesta</a>
-        </li>
-    </ul>
-</nav>
+<body>
+    <header class="header">
+       <a href="#" class="logo"><img src="../../../../assets/images/Imagen2.png" alt=""></a>
+       <input type="checkbox" id="check">
+        <label for="check" class="icons">
+         <i class='bx bx-menu' id="menu-icon"></i>
+         <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+          <a routerLink="/index" routerLinkActive="active" style="--i:0;">Home</a>
+          <a routerLink="/perfumes" routerLinkActive="active" style="--i:1;">Perfumes</a>
+          <a routerLink="/hombre" routerLinkActive="active" style="--i:2;">Hombre</a>
+          <a routerLink="/mujer" routerLinkActive="active" style="--i:3;">Mujer</a>
+          <a routerLink="/unisez" routerLinkActive="active" style="--i:4;">Unisex</a>
+          <a routerLink="/aboutus" routerLinkActive="active" style="--i:5;">About</a>
+          <a routerLink="/contact" routerLinkActive="active" style="--i:6;">Contacto</a>
+          <a routerLink="/carrito" routerLinkActive="active" style="--i:6;"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a routerLink="/signin" routerLinkActive="active" id="icoc" style="--i:7;"><img src="../../../../assets/images/sesion.png" alt="sesion"></a>
+        </nav>
+    </header>
+</body>
+  
