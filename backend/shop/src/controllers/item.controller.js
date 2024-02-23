@@ -8,12 +8,14 @@ const addItemToCart = async (req, res, next) => {
     console.log('addItemToCart')
     try{
         // Necesito
+        console.log("additemtocart controller", req.body)
         const statusOrder = "Cart";
         const operation = req.body.operation;
         delete req.body.operation
         const userId = req.body.userId;
         const orderId = req.body.orderId;
         const productId = req.body.productId;
+        const productImage = req.body.productImage;
         const unitPrice = req.body.unitPrice;
         const quantity = req.body.quantity;
         const subTotal = unitPrice * quantity;
@@ -42,16 +44,20 @@ const addItemToCart = async (req, res, next) => {
 
         console.log('existingItem', existingItem.empty)
         if (!existingItem.empty) {
-            
+            const orderUpdatedAt = format(new Date(), 'dd/MM/yyyy HH:mm:ss');
             // Si el item ya existe, actualizar la cantidad sumando la cantidad nueva
             existingItem.forEach(async doc => {
                 const actualQuantity = doc.data().quantity || 0;
+                let orderDoc = await firestore.collection('Orders').doc(doc.data().orderId)
+                const orderGet = await orderDoc.get();
+                let total = orderGet.get('total');
                 let newQuantity;
 
                 if (operation === 'plus'){
                     newQuantity = actualQuantity + quantity;
                     const newSubTotal = newQuantity * unitPrice;
                     const plusItem = await firestore.collection('Items').doc(doc.id).update({ quantity: newQuantity, 'subTotal': newSubTotal });
+                    total = total + (quantity * unitPrice);
                     console.log("plusItem")
                 }               
                 else {
@@ -63,21 +69,27 @@ const addItemToCart = async (req, res, next) => {
                         const minusItem = await firestore.collection('Items').doc(doc.id).update({ quantity: newQuantity, 'subTotal': newSubTotal });
                         console.log('minusItem', minusItem)
                         console.log(`Se ha actualizado la cantidad del item ${productId} para el usuario ${userId}.`);
-
+                        total = total - (quantity * unitPrice);
                     } else {
                         console.log("if < 0")
                         await firestore.collection('Items').doc(doc.id).delete();
                         console.log(`Item Quantity < 0 - Item ${doc.id} deleted`);
+                        total = total - (actualQuantity * unitPrice);
                     }
                 }
+                
+
+                // total = 
+                await orderDoc.update({'updatedAt':orderUpdatedAt, "total": total})
             });
             return res.json({"message": "Item modified"});
         } else {
             // Si el item no existe, crear uno nuevo
             /**
              * SI NO EXISTE ITEM:
-             *   - Si existe Cart, lo añade al cart
              *   - Si NO existe Cart, crea CART y se añade Item al Cart
+             *   - Si existe Cart, lo añade al cart
+             *
              */
             console.log('userid--> ', userId)
             console.log('statusorder--> ', statusOrder)
@@ -96,7 +108,7 @@ const addItemToCart = async (req, res, next) => {
             console.log("previo if exists", existingCart.empty)
             //Si no existe Order en estado Cart del usuario
             if ( existingCart.empty ) {
-                console.log("if exists", !existingCart.empty)
+                console.log("if exists", existingCart.empty)
                 // const addedItem = await firestore.collection('Items').add(req.body);
                 const actual = new Date();
                 const orderCreatedAt = format(actual, 'dd/MM/yyyy HH:mm:ss');
@@ -106,24 +118,30 @@ const addItemToCart = async (req, res, next) => {
                     "userId": userId,
                     "statusOrder": orderStatusOrder,
                     "createdAt": orderCreatedAt,
-                    "updateAt": orderUpdatedAt
+                    "updatedAt": orderUpdatedAt,
+                    "total": subTotal
                 }
                 try {
                     const createCart = await firestore.collection('Orders').add(values);
                     req.body.orderId = createCart.id;
+                    // const updateOrder = await firestore.collection('Orders').doc(req.body.orderId).update({'total': subTotal });
                     console.log('createCart', createCart.id)
                 } catch (error) {
                     console.error("Error creating Cart")
                     console.error(error)
                 }
             } else {
-                console.log('else exists')
+                console.log('else, exists')
                 req.body.orderId = existingCart.docs.map(doc => doc.id)[0];
+                totalupdate = existingCart.docs.map(doc => doc.data().total)[0];
                 console.log('existingCart.id', existingCart.docs.map(doc => doc.id)[0])
                 console.log('existingCart.exists', existingCart.exists)
+                const updateOrder = await firestore.collection('Orders').doc(req.body.orderId)
+                                            .update({'total': (totalupdate + subTotal) });
             }
             
             const addedItem = await firestore.collection('Items').add(req.body);
+
             console.log(`Se ha creado un nuevo item: ${productId} para el usuario ${userId}.`);
             return res.json({'addedItem': addedItem.id}); 
         }
@@ -184,6 +202,8 @@ const getItemsByOrder = async (req, res, next) => {
     const statusOrder = "Cart";
     try {
 
+        total = 0;
+
         const items = await firestore.collection('Items')
                                     .where('orderId', '==', orderId)
                                     // .where('statusOrder', '==', statusOrder);
@@ -205,12 +225,16 @@ const getItemsByOrder = async (req, res, next) => {
                     doc.data().productName,
                     doc.data().unitPrice,
                     doc.data().quantity,
+                    doc.data().size,
                     doc.data().subTotal,
                     doc.data().statusOrder
                 );
+                total = total + Number(doc.data().subTotal);
                 itemsArray.push(item);
             });
         });
+
+        // await firestore.collection('Orders').doc(orderId).update({'total': total});
 
         return res.json(itemsArray); 
 
@@ -224,7 +248,20 @@ const deleteItem = async (req, res, next) => {
 
         let id = req.params.id;
         console.log("Back deleteItem", id)
-        let item = await firestore.collection('Items').doc(id).delete();
+        // let item = await firestore.collection('Items').doc(id).delete();
+        let itemDoc = await firestore.collection('Items').doc(id);
+        const itemGet = await itemDoc.get();
+
+        let subTotal = itemGet.get('subTotal');
+        let orderId = itemGet.get('orderId');
+
+        let orderDoc = await firestore.collection('Orders').doc(orderId)
+        const orderGet = await orderDoc.get();
+        const total = orderGet.get("total");
+
+        await itemDoc.delete();
+        await firestore.collection('Orders').doc(orderId).update({'total': (total - subTotal)});
+
         return res.json({'message': 'Item deleted'})
     } catch (error) {
         return res.status(400).send(error.message);

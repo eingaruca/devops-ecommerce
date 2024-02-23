@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{ order.id }}</td>
                         <td>{{ order.createdAt }}</td>
-                        <td>{{ order.update }}</td>
+                        <td>{{ order.updatedAt }}</td>
                         <td> {{ order.statusOrder }} </td>
                         <td>{{ order.total }}</td>
                     </tr>
@@ -31,14 +31,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Ver</th>
-                        <th>Product</th>
-                        <th>Product Name</th>
-                        <th>Unit Price</th>
-                        <th>Quantity</th>
-                        <th>reducir</th>
-                        <th>sumar</th>
-                        <th>eliminar</th>
+
+                        <th>Producto</th>
+                        <th>Nombre</th>
+                        <th>Precio unidad</th>
+                        <th>Cantidad</th>
+                        <th>Tamaño</th>
+                        <th>Reducir</th>
+                        <th>Sumar</th>
+                        <th>Eliminar</th>
                         <th>Subtotal</th>
                     </tr>
                 </thead>
@@ -46,30 +47,69 @@
                     <!-- Aquí van los datos de los elementos de la orden -->
                     <!-- <tr> -->
                     <tr *ngFor="let item of items">
-                        <td> <a href="#">{{ item.id }} </a> </td>
-                        <td> <a href="#">{{ item.productImage }} </a> </td>
+                        <!-- <td> <a href="#">{{ item.id }} </a> </td> -->
+                        <td>
+                            <a href="#">
+                                <img src="{{ item.productImage }}" style="width: 50px; height: 50px;">
+                            </a>
+                        </td>
                         <td><a [routerLink]="['/shop-product', item['productId']]"> {{ item.productName }} </a></td>
                         <td>{{ item.unitPrice }}</td>
                         <td> {{ item.quantity }} </td>
-                        <td> <button>-</button></td>
-                        <td> <button>+</button></td>
+                        <td> {{ item.size }} </td>
+                        <td> <button (click)="updateQuantity(item.productId,1,item.unitPrice,'minus')">-</button></td>
+                        <td> <button (click)="updateQuantity(item.productId,1,item.unitPrice,'plus')">+</button></td>
                         <td> <button (click)="eliminarItem(item.id)">Delete</button></td>
                         <td> {{ item.subTotal }} </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="order-items">
-            <h3>Items</h3>
-            <p>Dirección envío</p>
-            <input type="text"/>
-            <button >Confirmar</button>
+        <div class="tracking-form">
+            <form (submit)="updateAddress()" >
+                <h2>Entrega</h2>
+                <div class="form-group">
+                    <label>Dirección envío: </label>
+                    <input type="text" [value]="order.address ? order.address : user.address"
+                        [(ngModel)]="order.address">
+                </div>
+                <div class="form-group">
+                    <label for="community">Ciudad: </label>
+                    <select id="community" [(ngModel)]="user.community" name="community">
+                        <option *ngFor="let community of communities" [value]="community.id">{{ community['name'] }}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Código Postal: </label>
+                    <input type="text" [value]="order.postalCode ? order.postalCode : user.postalCode" name="postalCode"
+                        [(ngModel)]="order.postalCode">
+                </div>
+                <button type="submit">Confirmar</button>
+            </form>
         </div>
-        <div class="order-items">
+        <div class="tracking-form">
             <h3>Pagos</h3>
-            <p>...</p>
-            <input type="text"/>
-            <button >Pagar</button>
+            <div class="form-group">
+                <label>Método pago: </label>
+                <a href="#">Paypal</a> <br>
+                <a href="#">Tarjeta Crédito</a><br>
+                <a href="#">Tarjeta Débito</a><br>
+                <a href="#">Código promocional</a>
+            </div>
+            <div class="form-group">
+                <label>Tarjeta: </label>
+                <input type="text" />
+            </div>
+            <div class="form-group">
+                <label>Código Promocional: </label>
+                <input type="text" />
+            </div>
+            <div class="form-group">
+                <button>Pagar</button>
+            </div>
         </div>
+
+
     </div>
 </div>

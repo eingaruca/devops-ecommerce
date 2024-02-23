@@ -75,7 +75,10 @@ const getCart = async (req, res, next) => {
                     doc.data().paymentId,
                     doc.data().paymentStatus,
                     doc.data().carrier,
-                    doc.data().address
+                    doc.data().address,
+                    doc.data().postalCode,
+                    doc.data().community,
+                    doc.data().phoneContact
                 );
             });
         });
@@ -138,7 +141,10 @@ const getOrderByStatus = async (req, res, next) => {
                     doc.data().paymentId,
                     doc.data().paymentStatus,
                     doc.data().carrier,
-                    doc.data().address
+                    doc.data().address,
+                    doc.data().postalCode,
+                    doc.data().community,
+                    doc.data().phoneContact
                 );
                 ordersArray.push(order);
             });
@@ -188,13 +194,7 @@ const changeOrderStatus = async (req, res, next) => {
     
 }
 
-const addItemToCart = async (req, res, next) => {
-    
-}
-
-
-
-const addAdressToOrder = async (req, res, next) => {
+const updateOrder = async (req, res, next) => {
     
 }
 
@@ -208,5 +208,6 @@ module.exports = {
     createCart,
     getOrderByStatus,
     changeOrderStatus,
+    updateOrder,
 
 }

@@ -26,6 +26,8 @@ const getShippingsByUser = async (req, res, next) => {
                     doc.data().userFullName,
                     doc.data().orderId,
                     doc.data().address,
+                    doc.data().postalCode,
+                    doc.data().community,
                     doc.data().contactInfo,
                     doc.data().shippingCompany,
                     doc.data().trackingNumber,

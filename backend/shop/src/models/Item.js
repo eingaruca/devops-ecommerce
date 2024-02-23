@@ -8,6 +8,7 @@ class Item {
         productName,
         unitPrice,
         quantity,
+        size,
         subTotal,
         statusOrder,
     ) {
@@ -18,6 +19,7 @@ class Item {
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
+        this.size = size;
         this.subTotal = subTotal;
         this.statusOrder = statusOrder
     }

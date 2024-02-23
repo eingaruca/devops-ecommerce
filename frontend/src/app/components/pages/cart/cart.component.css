@@ -59,3 +59,46 @@ h1 {
   margin-bottom: 10px;
   color: #333;
 }
+/*** 
+*/
+.tracking-form {
+  max-width: 400px;
+  margin: 0%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*
+Payment
+*/

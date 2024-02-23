@@ -80,7 +80,9 @@ export class ShopProductComponent implements OnInit{
 
     this.item.productId = this.productId;
     this.item.productName = this.product.name;
+    this.item.productImage = this.product.image[0];
     this.item.unitPrice = this.product.price;
+    this.item.size = this.product.size;
     this.item.subTotal = this.item.unitPrice * this.item.quantity;
     this.item.operation = this.operator;
     console.log('IT EM',this.item)

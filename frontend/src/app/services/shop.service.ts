@@ -49,6 +49,7 @@ export class ShopService {
       // router.get('/getItemsByOrder', itemController.getItemsByOrder);
       // router.delete('/deleteItem/:id', itemController.deleteItem)
   addItem(item:any){
+    console.log("shop service", item)
     return this.http.post<any>(this.URL + `/addItem`, item, { headers : this.headers });
   }
   getItemsByOrder(orderId:any){

@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ShopService } from '../../../services/shop.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';
 import { AppComponent } from '../../../app.component';
+import { UserService } from '../../../services/user.service';
+import { XutilitiesService } from '../../../services/xutilities.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,11 +14,13 @@ import { AppComponent } from '../../../app.component';
   imports: [
     CommonModule,
     FormsModule,
-    AppComponent,
+    RouterModule,
     // ShopComponent,
   ],
   providers : [
     ShopService,
+    UserService,
+    XutilitiesService,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -24,11 +28,20 @@ import { AppComponent } from '../../../app.component';
 export class CartComponent implements OnInit {
 
   userId:string | null = null;
-  order:any={};
-  items:any=[]
+  user:any = {};
+  order:any = {};
+  items:any = []
+  communities:any = []
+
+  address: any = {};
+
+  token:any ="";
+  // headers:any;
 
   constructor(
     private shopService: ShopService,
+    private userService: UserService,
+    private xutilitiesService: XutilitiesService,
     private router: Router,
     private route: ActivatedRoute
   ) {
@@ -36,6 +49,35 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    if (typeof localStorage !== 'undefined') {
+      this.token = localStorage.getItem('token');
+      console.log("CartComponent ngOnInit - token ok", this.token);
+      this.userService.getUserById()
+        .subscribe(
+          res => {
+            console.log("::res:::> ", res);
+            this.user = res;
+          },
+          err => {
+            console.log(err)
+          }
+        )
+      
+    } else {
+      this.router.navigate(['signin']);
+    }
+
+    this.xutilitiesService.getCommunities()
+        .subscribe(
+          res => {
+            console.log('---------->',res)
+            this.communities = res.communities;
+          },
+          err => {
+            console.log("Err ProfileComponent", err)
+          }
+    )
 
     this.shopService.getCart()
         .subscribe(
@@ -77,7 +119,42 @@ export class CartComponent implements OnInit {
 //     }
 // }
 
+  updateQuantity(productId:any, quantity:any, price:any, operator:any){
+      let itemMod:any = {};
 
+    //   this.item.productId = this.productId;
+    // this.item.productName = this.product.name;
+    // this.item.unitPrice = this.product.price;
+    // this.item.subTotal = this.item.unitPrice * this.item.quantity;
+    // this.item.operation = this.operator;
+
+      itemMod.userId = this.user.id
+      itemMod.productId = productId;
+      itemMod.unitPrice = price;
+      itemMod.quantity = 1
+      // itemMod.subTotal = price * quantity;
+      itemMod.operation = operator;
+      console.log("itemmod", itemMod)
+      this.shopService.addItem(itemMod)
+      .subscribe(
+        res => {
+          console.log(res)
+          // this.router.navigate(['profile']);
+        },
+        err => {
+          console.log(err)
+        } 
+      )
+    
+  }
+
+  updateAddress(){
+    const address = req.body;
+    const postalCode = "";
+    const comminity = "";
+
+
+  }
 
 
   eliminarItem(itemId:any){

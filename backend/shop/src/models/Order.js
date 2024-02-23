@@ -14,6 +14,9 @@ class Order {
         paymentStatus,
         carrier,
         address,
+        postalCode,
+        community,
+        phoneContact,
     ) {
         this.id = id;
         this.userId = userId;
@@ -29,6 +32,9 @@ class Order {
         this.paymentStatus = paymentStatus;
         this.carrier = carrier;
         this.address = address;
+        this.postalCode = postalCode;
+        this.community = community;
+        this.phoneContact = phoneContact;
     }
 
     
