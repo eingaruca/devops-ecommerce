@@ -7,6 +7,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { AppComponent } from '../../../app.component';
 import { UserService } from '../../../services/user.service';
 import { XutilitiesService } from '../../../services/xutilities.service';
+import { AuthService } from '../../../services/auth.service';
 
 
 @Component({
@@ -22,11 +23,14 @@ import { XutilitiesService } from '../../../services/xutilities.service';
     ShopService,
     UserService,
     XutilitiesService,
+    AuthService,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
 export class CartComponent implements OnInit {
+
+  existToken:boolean = false;
 
   userId:string | null = null;
   user:any = {};
@@ -44,6 +48,7 @@ export class CartComponent implements OnInit {
   constructor(
     private shopService: ShopService,
     private userService: UserService,
+    private authService: AuthService,
     private xutilitiesService: XutilitiesService,
     private router: Router,
     private route: ActivatedRoute
@@ -53,59 +58,16 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.paymentEnabled = false;
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== null) {
-      this.token = localStorage.getItem('token');
-      console.log("CartComponent ngOnInit - token ok", this.token);
-      this.userService.getUserById()
-        .subscribe(
-          res => {
-            console.log("noOnInitgetUserById:::> ", res);
-            this.user = res;
-          },
-          err => {
-            this.router.navigate(['signin']);
-            console.log(err)
-          }
-        )
+
+    this.getCommunities();
+
+    this.existToken = this.checkExistToken2();
+
+    if (this.existToken){
+      console.log("IFFFF", this.existToken)
       
-    } else {
-      console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
-      this.router.navigate(['signin']);
     }
-
-    this.xutilitiesService.getCommunities()
-        .subscribe(
-          res => {
-            console.log('---------->',res)
-            this.communities = res.communities;
-          },
-          err => {
-            console.log("Err ProfileComponent", err)
-          }
-    )
-
-    this.shopService.getCart()
-        .subscribe(
-          res => {
-            console.log("res:::> ", res);
-            this.order = res;
-            this.orderId = this.order.id;
-            this.shopService.getItemsByOrder(this.order.id)
-                .subscribe(
-                  res => {
-                    console.log("resITEM:::> ", res);
-                    this.items = res;
-                    
-                  },
-                  err => {
-                    console.log(err)
-                  }
-                )
-          },
-          err => {
-            console.log(err)
-          }
-        )
+      
   }
 
 //   async ngOnInit(): Promise<void> {
@@ -181,5 +143,93 @@ export class CartComponent implements OnInit {
             console.log(err)
           }
         )
+  }
+
+  /** OTROS **/
+
+  checkExistToken2(){
+
+    if ( !this.authService.existsToken() ) {
+      this.router.navigate(['signin']);
+      return false;
+    } else {
+      this.userService.getUserById()
+        .subscribe(
+          res => {
+            console.log("noOnInitgetUserById:::> ", res);
+            this.user = res;
+            this.shopService.getCart()
+                  .subscribe(
+                    res => {
+                      console.log("res:::> ", res);
+                      this.order = res;
+                      this.orderId = this.order.id;
+                      this.shopService.getItemsByOrder(this.order.id)
+                          .subscribe(
+                            res => {
+                              console.log("resITEM:::> ", res);
+                              this.items = res;
+                              
+                            },
+                            err => {
+                              console.log(err)
+                            }
+                          )
+                    },
+                    err => {
+                      console.log(err)
+                    }
+                  )
+            return true;
+          },
+          err => {
+            this.router.navigate(['signin']);
+            console.log(err);
+            return false;
+          }
+        );
+    }
+    
+    return false;
+  
+
+
+  }
+  
+
+
+  checkExistToken(){
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== null) {
+      this.token = localStorage.getItem('token');
+      console.log("CartComponent ngOnInit - token ok", this.token);
+      this.userService.getUserById()
+        .subscribe(
+          res => {
+            console.log("noOnInitgetUserById:::> ", res);
+            this.user = res;
+          },
+          err => {
+            this.router.navigate(['signin']);
+            console.log(err)
+          }
+        )
+      
+    } else {
+      console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
+      this.router.navigate(['signin']);
+    }
+  }
+  
+  getCommunities() {
+    this.xutilitiesService.getCommunities()
+        .subscribe(
+          res => {
+            console.log('---------->',res)
+            this.communities = res.communities;
+          },
+          err => {
+            console.log("Err ProfileComponent", err)
+          }
+    )
   }
 }

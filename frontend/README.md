@@ -43,6 +43,7 @@ ng g c components/partials/footer
 ng g c components/partials/change-password
 ng g c components/partials/user-reviews
 ng g c components/partials/product-review
+ng g c components/partials/orders-history
 // EJEMPLO (NO USAR): Las tareas a las que se puede acceder sin autenticarse
 ng g c components/pages/tasks
 // EJEMPLO (NO USAR): Las tareas a las que se puede acceder autenticándose

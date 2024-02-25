@@ -37,7 +37,8 @@ export class AuthService {
    }
 
    existsToken(): boolean {
-    return !!localStorage.getItem('token');
+    return typeof localStorage !== 'undefined' && localStorage !== null && !!localStorage.getItem('token');
+    // return !!localStorage.getItem('token');
    }
 
    logout():void  {

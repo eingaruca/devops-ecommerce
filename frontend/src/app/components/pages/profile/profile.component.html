@@ -1,15 +1,16 @@
-<h1> Hola {{ user.name }} </h1>
 
-<nav class="profile-links">
+
+<nav style="padding-top: 100px;">
+    <h1> Hola {{ user.name }} </h1>
     <ul>
-      <li><a href="#">Ver Reseñas</a></li>
-      <li><a href="#">Ver Direcciones</a></li>
-      <li><a href="#">Ver Compras</a></li>
+      <li><a routerLink="/user-reviews" style="color: aliceblue;">Ver Reseñas</a></li>
+      <li><a routerLink="/profile" style="color: aliceblue;">Modificar Perfil</a></li>
+      <li><a routerLink="/change-password" style="color: aliceblue;">Actualizar contraseña</a></li>
+      <li>
+        <a routerLink="/orders-history" routerLinkActive="active" style="--i:2; color: aliceblue;">Ver compras</a>
+        </li>
     </ul>
   </nav>
-
-
-<p>menu para modificar perfil, ver compras, ver cesta, ver direcciones, ver reseñas</p>
 
 <!-- ACTUALIZAR PERFIL -->
 <h1>Actualizar Perfil</h1>
@@ -68,4 +69,9 @@
 <!-- ACTUALIZAR PASSWORD -->
 <section id="change-password">
     <app-change-password></app-change-password>
-  </section>
+</section>
+
+<!-- REVIEWS DEL USUARIO-->
+<section id="user-reviews">
+    <app-user-reviews></app-user-reviews>
+</section>

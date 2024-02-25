@@ -12,12 +12,15 @@ router.get('/orders-status', authMiddleware.authRequired, orderController.getOrd
 router.post('/createCart', authMiddleware.authRequired, orderController.createCart);
 router.put('/updateOrder', authMiddleware.authRequired, orderController.updateOrder);
 router.put('/changeOrderStatus', authMiddleware.authRequired, orderController.changeOrderStatus);
+router.get('/getOrdersByUser', authMiddleware.authRequired, orderController.getOrdersByUser);
+router.get('/getOrderById/:orderId', authMiddleware.authRequired, orderController.getOrderById);
+
 
 // Items
 router.post('/addItem', authMiddleware.authRequired, itemController.addItemToCart);
 router.post('/cleanItemsToCart', authMiddleware.authRequired, itemController.cleanItemsToCart)
 router.get('/getItem/:id', authMiddleware.authRequired, itemController.getItem);
-router.get('/getItemsByOrder/:id', authMiddleware.authRequired, itemController.getItemsByOrder);
+router.get('/getItemsByOrder/:orderId', authMiddleware.authRequired, itemController.getItemsByOrder);
 router.delete('/deleteItem/:id', authMiddleware.authRequired, itemController.deleteItem)
 
 // Payments

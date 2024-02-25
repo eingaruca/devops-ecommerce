@@ -15,7 +15,8 @@
           <a routerLink="/perfumes/unisex" routerLinkActive="active" style="--i:4;">Unisex</a>
           <a routerLink="/aboutus" routerLinkActive="active" style="--i:5;">About</a>
           <a routerLink="/contact" routerLinkActive="active" style="--i:6;">Contacto</a>
-          <a routerLink="/profile" *ngIf="existsToken()" routerLinkActive="active" style="--i:6;">| Hola X, Perfil</a>
+          <!-- <a routerLink="/profile" *ngIf="existsToken()" routerLinkActive="active" style="--i:6;">| Hola X, Perfil</a> -->
+          <a routerLink="/profile" *ngIf="existsToken()" routerLinkActive="active" style="--i:6;">| Perfil</a>
           <a routerLink="/cart" *ngIf="existsToken()" routerLinkActive="active" style="--i:6;"><i class="fa-solid fa-cart-shopping">cart</i> |</a>
           <a routerLink="/signin" *ngIf="!existsToken()" routerLinkActive="active" id="icoc" style="--i:7;"><img src="../../../../assets/images/sesion.png" alt="sesion"></a>
           <a (click)="logout()" *ngIf="existsToken()" routerLinkActive="active" style="--i:6;">Logout</a>

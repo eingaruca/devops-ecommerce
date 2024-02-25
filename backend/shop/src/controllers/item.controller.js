@@ -197,7 +197,7 @@ const getItem = async (req, res, next) => {
 
 const getItemsByOrder = async (req, res, next) => {
     // const orderId = req.body.orderId;
-    const orderId = req.params.id;
+    const orderId = req.params.orderId;
     console.log("ooooorderid", orderId);
     const statusOrder = "Cart";
     try {
@@ -211,12 +211,6 @@ const getItemsByOrder = async (req, res, next) => {
         let itemsArray = [];
         await items.get().then(snapshot => {
             snapshot.forEach(doc => {
-                // id,
-                // orderId,
-                // productId,
-                // unitPrice,
-                // quantity,
-                // subTotal
                 let item = new Item(
                     doc.id,
                     doc.data().orderId,

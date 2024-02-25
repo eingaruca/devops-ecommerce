@@ -39,8 +39,8 @@ const getProducts = async (req, res, next) => {
                     doc.data().description,
                     doc.data().category,
                     doc.data().brand,
-                    doc.data().precio,
-                    doc.data().tamano,
+                    doc.data().price,
+                    doc.data().size,
                     doc.data().stock,
                     doc.data().image
                 );
@@ -91,13 +91,22 @@ const getProductsByCategory = async (req, res, next ) => {
             snapshot.forEach(doc => {
                 console.log('---> ', doc.id, doc.data());
                 const product = new Product(
+        //             id,
+        // name,
+        // description,
+        // category,
+        // brand,
+        // price,
+        // size,
+        // stock,
+        // image
                     doc.id,
                     doc.data().name,
                     doc.data().description,
                     doc.data().category,
                     doc.data().brand,
-                    doc.data().precio,
-                    doc.data().tamano,
+                    doc.data().price,
+                    doc.data().size,
                     doc.data().stock,
                     doc.data().image
                 );

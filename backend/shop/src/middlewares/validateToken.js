@@ -11,9 +11,11 @@ const authRequired = (req, res, next) => {
     // const {token} = req.cookies;
 
     if ( !token ) {
+        console.log("==401===")
         return res.status(401).json({message: "No token, authorization denied"});
     } else {
         jwt.verify(token, SECRET, (err, user) =>{
+            console.log("==Else===")
             if (err) return res.status(403).json({message: "Invalid token"});
             req.user = user;
             // req.body.userId = user;

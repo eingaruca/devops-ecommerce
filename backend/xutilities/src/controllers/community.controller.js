@@ -19,7 +19,7 @@ const getCommunities = async(req, res, next) => {
                 );
                 communitiesArray.push(com);
             });
-            console.log(communitiesArray)
+            // console.log(communitiesArray)
 
             return res.json({"communities": communitiesArray});
         }

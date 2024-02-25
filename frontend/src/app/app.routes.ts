@@ -18,6 +18,8 @@ import { TermsConditionsComponent } from './components/pages/terms-conditions/te
 import { PrivacyComponent } from './components/pages/privacy/privacy.component';
 import { ChangePasswordComponent } from './components/partials/change-password/change-password.component';
 import { UserReviewsComponent } from './components/partials/user-reviews/user-reviews.component';
+import { OrdersHistoryComponent } from './components/partials/orders-history/orders-history.component';
+import { OrdersDetailComponent } from './components/partials/orders-detail/orders-detail.component';
 
 export const routes: Routes = [
     {
@@ -87,5 +89,11 @@ export const routes: Routes = [
     },
     {
         path: 'user-reviews', component: UserReviewsComponent
+    },
+    {
+        path: 'orders-history', component: OrdersHistoryComponent
+    },
+    {
+        path: 'orders-detail/:orderId', component: OrdersDetailComponent
     },
 ];

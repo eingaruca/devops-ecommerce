@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -8,10 +8,46 @@ import { Injectable } from '@angular/core';
 })
 export class XutilitiesService {
   private URL ='http://localhost:8004'
+  token:any ="";
+  headers:any;
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) { 
+
+    this.setHeader();
+  }
+
+  /**
+   * Common Method
+   */
+  setHeader(){
+    // if (typeof localStorage !== 'undefined') {
+    //   this.token = localStorage.getItem('token');
+    //   this.headers = new HttpHeaders({
+    //     'Authorization': `Bearer ${this.token}`,
+    //   });
+    //   console.log("xutilities constructor - token ok", this.token)
+    // } else {
+    //   this.headers = new HttpHeaders({
+    //     'Authorization': `Bearer `,
+    //   });
+    //   console.log("xutilities constructor - localStorage undefined")
+    // }
+
+    if (typeof localStorage !== 'undefined') {
+      this.token = localStorage.getItem('token');
+      this.headers = new HttpHeaders({
+        'Authorization': `Bearer ${this.token}`,
+      });
+      console.log("ShopService constructor - token ok", this.token)
+    } else {
+      this.headers = new HttpHeaders({
+        'Authorization': `Bearer `,
+      });
+      console.log("ShopService constructor - localStorage undefined")
+    }
+  }
 
   /**
    * Articles
@@ -50,9 +86,13 @@ export class XutilitiesService {
   //   return this.http.post<any>(this.URL + `/reviews/product/${productId}`, newReview);
   // }
   createReview(productId:any, newReview:any){
-    console.log("KKKKKKKKKKK", productId)
-    console.log("KKKKKKKKKKK", newReview)
+    // console.log("KKKKKKKKKKK", productId)
+    // console.log("KKKKKKKKKKK", newReview)
     return this.http.post<any>(this.URL + `/reviews/product/${productId}`, newReview);
+  }
+
+  getReviewsByUser(){
+    return this.http.get<any>(this.URL + `/reviews/user`,  {headers: this.headers})
   }
 
   /**

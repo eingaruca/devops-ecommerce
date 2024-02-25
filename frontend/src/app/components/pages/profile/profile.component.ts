@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { XutilitiesService } from '../../../services/xutilities.service';
 import { CommonModule } from '@angular/common';
-import { HttpHeaders } from '@angular/common/http';
 import { ChangePasswordComponent } from '../../partials/change-password/change-password.component';
+import { UserReviewsComponent } from '../../partials/user-reviews/user-reviews.component';
 
 @Component({
   selector: 'app-profile',
@@ -14,6 +14,8 @@ import { ChangePasswordComponent } from '../../partials/change-password/change-p
     FormsModule,
     CommonModule,
     ChangePasswordComponent,
+    UserReviewsComponent,
+    RouterModule
   ],
   providers: [
     UserService,
@@ -64,7 +66,7 @@ export class ProfileComponent implements OnInit {
     this.xutilitiesService.getCommunities()
       .subscribe(
         res => {
-          console.log('---------->', res)
+          // console.log('---------->', res)
           this.communities = res.communities;
         },
         err => {

@@ -4,9 +4,10 @@ const jwt = require('jsonwebtoken');
 const { SECRET } = require('../config.js');
 
 const authRequired = (req, res, next) => {
-    console.log("validate token");
+    // console.log("Middleware: validate");
     const token = req.headers.authorization.split(' ')[1];
-    console.log(token);
+    console.log("Middleware: validate token=", token);
+    // console.log(SECRET)
     
     // const {token} = req.cookies;
 
@@ -16,11 +17,15 @@ const authRequired = (req, res, next) => {
         jwt.verify(token, SECRET, (err, user) =>{
             if (err) return res.status(403).json({message: "Invalid token"});
             req.user = user;
+            // req.body.userId = user;
+            console.log("next")
+            next();
         } );
-
+        
     }
-    next();
+    
 }
+
 
 
 module.exports = {

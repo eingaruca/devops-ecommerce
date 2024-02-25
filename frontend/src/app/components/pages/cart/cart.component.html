@@ -1,5 +1,6 @@
 <div class="container">
-    <div class="order-details">
+    <!-- <div class="order-details" *ngIf="existToken; else notoken"> -->
+    <div class="order-details" >
         <h2>Cesta:</h2>
         <div class="order-info">
             <!-- Aquí va la tabla con los detalles de la orden -->
@@ -115,4 +116,8 @@
 
 
     </div>
+
+    <!-- <ng-template #notoken>
+        <h3 style="padding-top: 100px; color: aliceblue;"> No ha iniciado una cesta, por favor, <a routerLink="/perfumes">  compre aquí </a></h3>
+    </ng-template> -->
 </div>

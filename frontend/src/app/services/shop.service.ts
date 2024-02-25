@@ -43,8 +43,16 @@ export class ShopService {
   }
 
   updateOrder(order:any){
-    console.log("----------> orderid", order)
+    // console.log("----------> orderid", order)
     return this.http.put<any>(this.URL + `/updateOrder`, order, { headers: this.headers } );
+  }
+
+  getOrdersByUser () {
+    return this.http.get<any>(this.URL + `/getOrdersByUser`, { headers: this.headers })
+  }
+
+  getOrderById(orderId:any) {
+    return this.http.get<any>(this.URL + `/getOrderById/${orderId}`, { headers: this.headers })
   }
 
   // Items

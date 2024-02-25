@@ -59,8 +59,42 @@ const getReviewByProduct = async(req, res, next) => {
     }
 };
 
+const getReviewsByUser = async(req, res, next) => {
+    try{
+        console.log('getReviewsByUser', req.user)
+        const id = req.user.id
+        const reviews = await firestore.collection('Reviews').where('userId', '==', id);
+        const data = await reviews.get();
+        let reviewsArray = [];
+
+        if(data.empty) {
+                res.status(204).json(reviewsArray);
+        } else {
+            data.forEach( doc =>{
+                let review = new Review(
+                    doc.id,
+                    doc.data().productId,
+                    doc.data().userId,
+                    doc.data().title,
+                    doc.data().review,
+                    doc.data().rating,
+                    doc.data().likes
+                );
+                reviewsArray.push(review);
+            });
+
+            
+
+            return res.json(reviewsArray);
+        }
+    }catch (error) {
+        return res.status(400).send(error.message);
+    }
+};
+
 
 module.exports = {
     getReviewByProduct,
-    createReview
+    createReview,
+    getReviewsByUser,
 }

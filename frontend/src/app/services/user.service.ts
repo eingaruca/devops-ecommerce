@@ -22,6 +22,11 @@ export class UserService {
     //   'Authorization': `Bearer ${this.token}`,
     // });
 
+    this.setHeader();
+
+  }
+
+  setHeader(){
     if (typeof localStorage !== 'undefined') {
       this.token = localStorage.getItem('token');
       this.headers = new HttpHeaders({
@@ -34,7 +39,6 @@ export class UserService {
       });
       console.log("UserService constructor - localStorage undefined")
     }
-
   }
 
   getUserById(){
