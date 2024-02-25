@@ -24,7 +24,7 @@ import { Router, RouterModule } from '@angular/router';
     MatPaginatorModule,
     MatList,
     MatListItem,
-    RouterModule
+    RouterModule,
     // MatListModule,
   ],
   providers: [

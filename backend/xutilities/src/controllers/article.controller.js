@@ -17,7 +17,8 @@ const getArticles = async(req, res, next) => {
                     doc.id,
                     doc.data().title,
                     doc.data().description,
-                    doc.data().image,
+                    doc.data().imageArticle,
+                    doc.data().imageMini,
                     doc.data().article,
                     doc.data().tags
                 );

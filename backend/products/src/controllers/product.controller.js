@@ -78,8 +78,9 @@ const getProductsByCategory = async (req, res, next ) => {
     
     try {
         
-        const category = req.params.category;
-        console.log(category);
+        let category = req.params.category;
+        category = category.substring(0, 1).toUpperCase() + category.substring(1);
+        console.log('getProductsByCategory',category);
         
         const products = await firestore.collection('Products').where('category', '==', category);
 
@@ -97,7 +98,8 @@ const getProductsByCategory = async (req, res, next ) => {
                     doc.data().brand,
                     doc.data().precio,
                     doc.data().tamano,
-                    doc.data().stock
+                    doc.data().stock,
+                    doc.data().image
                 );
                 productsArray.push(product);
             });

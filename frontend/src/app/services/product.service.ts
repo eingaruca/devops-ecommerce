@@ -21,6 +21,10 @@ export class ProductService {
     return this.http.get<any>(this.URL);
   }
 
+  getProductsByCategory(category:any){
+    return this.http.get<any>(this.URL + `/category/${category}`);
+  }
+
   getBrands(){
     return this.http.get<any>(this.URL + '/brands');
   }

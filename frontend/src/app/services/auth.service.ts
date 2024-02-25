@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
 @Injectable({
@@ -8,10 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 export class AuthService {
 
   private URL ='http://localhost:8002'
+  token:any ="";
+  headers:any;
 
   constructor(private http: HttpClient) {
 
    }
+
+  //  getLoggedIn(){
+  //   // MEJORA: Hay que validar que el token sea válido.
+  //   if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== '') 
+  //     return true;
+
+  //   return false;
+  //  }
 
    signup(user:any) {
     return this.http.post<any>(this.URL, user);
@@ -24,6 +34,14 @@ export class AuthService {
 
    getToken () {
     return localStorage.getItem('token');
+   }
+
+   existsToken(): boolean {
+    return !!localStorage.getItem('token');
+   }
+
+   logout():void  {
+    localStorage.removeItem('token');
    }
 }
 

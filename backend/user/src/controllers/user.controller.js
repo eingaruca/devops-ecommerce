@@ -60,8 +60,10 @@ const profile = async (req, res, next) => {
 
     try {
         const user =  await firestore.collection('Users').doc(req.user.id).get();
-        const userFound  = await user.data();
+        let userFound  = user.data();
+        userFound.id = user.id;
 
+        console.log("USERFOUND! ", userFound)
         return res.json(userFound);
     } catch (error) {
         return res.status(400).send(error.message);
@@ -70,11 +72,33 @@ const profile = async (req, res, next) => {
 
 const updateProfile = async (req, res, next) => {
     try {
+
         let data = req.body;
+        // if (data.id == null) data.id = req.user.id
+        console.log("UPDATEPROF", data)
         const user =  await firestore.collection('Users').doc(data.id);
         // const xx = await user.get();
         let updatedUser = await user.update(data);
         return res.json(`Actualizado: ${updatedUser}`)
+    } catch (error) {
+        return res.status(400).send(error.message);
+    }
+};
+
+const updatePassword = async (req, res, next) => {
+    try {
+
+        let data = req.body;
+        if (data.id == null) data.id = req.user.id
+
+        const salt = await bcrypt.genSalt(10);
+        data.password = await bcrypt.hash(data.password, salt);
+
+        console.log("UPDATE PASS", data)
+        const user =  await firestore.collection('Users').doc(data.id);
+        // const xx = await user.get();
+        let updatedUser = await user.update(data);
+        return res.json(`Contraseña actualizada: ${user.get().id}`)
     } catch (error) {
         return res.status(400).send(error.message);
     }
@@ -203,6 +227,7 @@ module.exports = {
     loginUser,
     logoutUser,
     profile,
+    updatePassword,
     createUser,
     getUsers,
     getUserById,

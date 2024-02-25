@@ -3,15 +3,17 @@ class Article {
         id,
         title,
         description,
-        image,
+        imageArticle,
+        imageMini,
         article,
         tags
     ) {
-        this.id = id,
-        this.title = title,
-        this.description = description,
-        this.image = image,
-        this.article = article,
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.imageArticle = imageArticle;
+        this.imageMini = imageMini;
+        this.article = article;
         this.tags = tags;
     }
 };

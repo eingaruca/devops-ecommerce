@@ -53,21 +53,23 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.paymentEnabled = false;
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== null) {
       this.token = localStorage.getItem('token');
       console.log("CartComponent ngOnInit - token ok", this.token);
       this.userService.getUserById()
         .subscribe(
           res => {
-            console.log("::res:::> ", res);
+            console.log("noOnInitgetUserById:::> ", res);
             this.user = res;
           },
           err => {
+            this.router.navigate(['signin']);
             console.log(err)
           }
         )
       
     } else {
+      console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
       this.router.navigate(['signin']);
     }
 
@@ -126,23 +128,17 @@ export class CartComponent implements OnInit {
   updateQuantity(productId:any, quantity:any, price:any, operator:any){
       let itemMod:any = {};
 
-    //   this.item.productId = this.productId;
-    // this.item.productName = this.product.name;
-    // this.item.unitPrice = this.product.price;
-    // this.item.subTotal = this.item.unitPrice * this.item.quantity;
-    // this.item.operation = this.operator;
-
       itemMod.userId = this.user.id
       itemMod.productId = productId;
       itemMod.unitPrice = price;
       itemMod.quantity = 1
-      // itemMod.subTotal = price * quantity;
       itemMod.operation = operator;
       console.log("itemmod", itemMod)
       this.shopService.addItem(itemMod)
       .subscribe(
         res => {
           console.log(res)
+          window.location.reload()
           // this.router.navigate(['profile']);
         },
         err => {

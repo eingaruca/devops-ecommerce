@@ -47,11 +47,6 @@ export class UserService {
   }
 
   updateProfile (user: any) {
-    // const token = localStorage.getItem('token');
-    // const headers = new HttpHeaders({
-    //   'Authorization': `Bearer ${token}`,
-    // });
-
     /**
      * Revisar, porque tenemos que enviar el token y el body.
      * updateProfile -> Recibe todo el usuario y su token.
@@ -59,6 +54,10 @@ export class UserService {
 
     console.log('USERSERVICE', user)
     return this.http.put<any>(this.URL + `/updateProfile`, user, {headers: this.headers})
+  }
+
+  updatePassword(user:any){
+    return this.http.put<any>(this.URL + `/updatePassword`, user, {headers: this.headers})
   }
 }
 

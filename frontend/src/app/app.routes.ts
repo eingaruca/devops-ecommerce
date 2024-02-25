@@ -12,6 +12,12 @@ import { BlogArticleComponent } from './components/pages/blog-article/blog-artic
 import { AboutusComponent } from './components/pages/aboutus/aboutus.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 import { AdminProductComponent } from './components/pages/admin-product/admin-product.component';
+import { PerfumesComponent } from './components/pages/perfumes/perfumes.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
+import { PrivacyComponent } from './components/pages/privacy/privacy.component';
+import { ChangePasswordComponent } from './components/partials/change-password/change-password.component';
+import { UserReviewsComponent } from './components/partials/user-reviews/user-reviews.component';
 
 export const routes: Routes = [
     {
@@ -51,5 +57,35 @@ export const routes: Routes = [
     },
     {
         path: 'admin-product', component: AdminProductComponent
+    },
+    {
+        path: 'perfumes', component: PerfumesComponent
+    },
+    {
+        path: 'perfumes/:category', component: PerfumesComponent
+    },
+    {
+        path: 'perfumes-man', component: PerfumesComponent
+    },
+    {
+        path: 'perfumes-woman', component: PerfumesComponent
+    },
+    {
+        path: 'perfumes-unisex', component: PerfumesComponent
+    },
+    {
+        path: 'contact', component: ContactComponent
+    },
+    {
+        path: 'terms-conditions', component: TermsConditionsComponent
+    },
+    {
+        path: 'privacy', component: PrivacyComponent
+    },
+    {
+        path: 'change-password', component: ChangePasswordComponent
+    },
+    {
+        path: 'user-reviews', component: UserReviewsComponent
     },
 ];

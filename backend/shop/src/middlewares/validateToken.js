@@ -16,6 +16,7 @@ const authRequired = (req, res, next) => {
         jwt.verify(token, SECRET, (err, user) =>{
             if (err) return res.status(403).json({message: "Invalid token"});
             req.user = user;
+            // req.body.userId = user;
             next();
         } );
     }

@@ -15,7 +15,8 @@
     </div>
 </div> -->
 
-<footer>
+<footer *ngIf="shouldShowFooter()">
+
   <div class="newsletter">
     <h4>¡Suscríbete a nuestro boletín!</h4>
     <p>Entérate de las últimas novedades, ofertas exclusivas y <br>
@@ -38,16 +39,16 @@
   <div class="information-links">
     <h4>Información</h4>
     <ul>
-      <li><a href="#">Sobre nosotros</a></li>
-      <li><a href="#">Términos y condiciones</a></li>
-      <li><a href="#">Política de privacidad</a></li>
+      <li><a routerLink="/aboutus">Sobre nosotros</a></li>
+      <li><a routerLink="/terms-conditions" >Términos y condiciones</a></li>
+      <li><a routerLink="/privacy">Política de privacidad</a></li>
       <li><a href="#">Preguntas frecuentes</a></li>
     </ul>
   </div>
   <div class="support-links">
     <h4>Ayuda y Soporte</h4>
     <ul>
-      <li><a href="#">Contáctanos</a></li>
+      <li><a routerLink="/contact">Contáctanos</a></li>
       <li><a href="#">Envíos y devoluciones</a></li>
       <li><a href="#">Guía de tallas</a></li>
       <li><a href="#">Estado del pedido</a></li>
@@ -56,10 +57,10 @@
   <div class="shop-links">
     <h4>Nuestra tienda</h4>
     <ul>
-      <li><a href="#">Perfumes para ella</a></li>
-      <li><a href="#">Perfumes para él</a></li>
-      <li><a href="#">Perfumes unisex</a></li>
-      <li><a href="#">Ofertas especiales</a></li>
+      <li><a routerLink="/perfumes/mujer">Perfumes para ella</a></li>
+      <li><a routerLink="/perfumes/hombre">Perfumes para él</a></li>
+      <li><a routerLink="/perfumes/unisex">Perfumes unisex</a></li>
+      <li><a routerLink="/perfumes">Ofertas especiales</a></li>
     </ul>
   </div>
 </footer>

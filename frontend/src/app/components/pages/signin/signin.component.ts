@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     FormsModule,
     CommonModule,
+    RouterModule
   ],
   providers: [
     AuthService,
@@ -32,6 +33,7 @@ export class SigninComponent {
   ngOnInit() {}
 
   signin(){
+    console.log("signin", this.user)
     this.authService.signin(this.user)
       .subscribe(
         res => {
@@ -40,7 +42,7 @@ export class SigninComponent {
           this.router.navigate(['profile']);
         },
         err => {
-          console.log(err)
+          console.log("ERROR Signin component", err)
         } 
       )
   }

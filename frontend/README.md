@@ -31,8 +31,17 @@ ng g c components/pages/shop
 ng g c components/pages/shop-product
 ng g c components/pages/blog
 ng g c components/pages/blog-article
+ng g c components/pages/perfumes
+ng g c components/pages/perfumes-man
+ng g c components/pages/perfumes-woman
+ng g c components/pages/perfumes-unisex
+ng g c components/pages/perfumes-unisex
+ng g c components/pages/contact
+
 ng g c components/partials/header
 ng g c components/partials/footer
+ng g c components/partials/change-password
+ng g c components/partials/user-reviews
 ng g c components/partials/product-review
 // EJEMPLO (NO USAR): Las tareas a las que se puede acceder sin autenticarse
 ng g c components/pages/tasks

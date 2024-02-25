@@ -8,7 +8,10 @@ const authMiddleware = require('../middlewares/validateToken')
 router.post('/login', userController.loginUser);
 router.post('/logout', authMiddleware.authRequired, userController.logoutUser);
 router.get('/profile', authMiddleware.authRequired, userController.profile);
+// router.put('/updateProfile', authMiddleware.authRequired, userController.updateProfile);
 router.put('/updateProfile', authMiddleware.authRequired, userController.updateProfile);
+router.put('/updatePassword', authMiddleware.authRequired, userController.updatePassword);
+
 // Users
 router.get('/', authMiddleware.authRequired, userController.getUsers);
 router.post('/', userController.createUser);

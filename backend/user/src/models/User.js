@@ -32,7 +32,6 @@ class User {
         this.createAt = createAt;
         this.lastLogin = lastLogin;
         this.emailValidate = emailValidate;
-
     }
 
     

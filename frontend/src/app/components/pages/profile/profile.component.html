@@ -8,8 +8,12 @@
     </ul>
   </nav>
 
+
 <p>menu para modificar perfil, ver compras, ver cesta, ver direcciones, ver reseñas</p>
 
+<!-- ACTUALIZAR PERFIL -->
+<h1>Actualizar Perfil</h1>
+** Añadir foto **
 <form (submit)="updateProfile()" class="profile-form">
     <div class="form-group">
         <label for="email">E-mail:</label>
@@ -46,8 +50,7 @@
             <option *ngFor="let community of communities" [value]="community.id">{{ community['name'] }}</option>
         </select>
     </div>
-    
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="newPassword">Nueva Contraseña:</label>
         <input type="password" id="newPassword">
     </div>
@@ -55,9 +58,14 @@
     <div class="form-group">
         <label for="confirmPassword">Confirme Contraseña:</label>
         <input type="password" id="confirmPassword">
-    </div>
+    </div> -->
     
     <div class="form-group">
         <button type="submit">Modificar perfil</button>
     </div>
 </form>
+
+<!-- ACTUALIZAR PASSWORD -->
+<section id="change-password">
+    <app-change-password></app-change-password>
+  </section>

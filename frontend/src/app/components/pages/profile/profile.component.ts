@@ -5,27 +5,29 @@ import { FormsModule } from '@angular/forms';
 import { XutilitiesService } from '../../../services/xutilities.service';
 import { CommonModule } from '@angular/common';
 import { HttpHeaders } from '@angular/common/http';
+import { ChangePasswordComponent } from '../../partials/change-password/change-password.component';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    ChangePasswordComponent,
   ],
-  providers : [
+  providers: [
     UserService,
     XutilitiesService,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent implements OnInit{
-  
-  user:any = '';
-  communities:any = [];
-  token:any ="";
-  headers:any;
+export class ProfileComponent implements OnInit {
+
+  user: any = '';
+  communities: any = [];
+  token: any = "";
+  headers: any;
 
   constructor(
     private router: Router,
@@ -36,18 +38,42 @@ export class ProfileComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.getCommunities();
+    this.getProfileLocalStorage();
+  }
 
+  updateProfile() {
+    console.log("profilecomponent", this.user)
+    this.user.id = this.user.email
+    delete this.user.password
+    return this.userService.updateProfile(this.user)
+      .subscribe(
+        res => {
+          console.log(res)
+          this.router.navigate(['index'])
+        },
+        err => {
+          console.log(err);
+          // this.router.navigate(['index'])
+        }
+      )
+
+  }
+
+  getCommunities() {
     this.xutilitiesService.getCommunities()
-        .subscribe(
-          res => {
-            console.log('---------->',res)
-            this.communities = res.communities;
-          },
-          err => {
-            console.log("Err ProfileComponent", err)
-          }
-        )
+      .subscribe(
+        res => {
+          console.log('---------->', res)
+          this.communities = res.communities;
+        },
+        err => {
+          console.log("Err ProfileComponent", err)
+        }
+      )
+  }
 
+  getProfileLocalStorage() {
     // if (typeof localStorage.getItem('token') !== 'undefined') {
     //   this.userService.getUserById()
     //     .subscribe(
@@ -62,7 +88,7 @@ export class ProfileComponent implements OnInit{
     //     )
     // } 
 
-    if (typeof localStorage !== 'undefined' ) {
+    if (typeof localStorage !== 'undefined') {
       this.userService.getUserById()
         .subscribe(
           res => {
@@ -79,26 +105,6 @@ export class ProfileComponent implements OnInit{
       console.log("Profilecomponent ngOnInit - localStorage undefined")
     }
 
-
-      
-  }
-
-  updateProfile(){
-    console.log("profilecomponent", this.user)
-    this.user.id = this.user.email
-    delete this.user.password
-    return this.userService.updateProfile(this.user)
-      .subscribe(
-        res => {
-          console.log(res)
-          this.router.navigate(['index'])
-        },
-        err => {
-          console.log(err);
-          // this.router.navigate(['index'])
-        }
-      )
-    
   }
 
 }
