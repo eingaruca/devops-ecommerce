@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylePanel.css">
+  <script src="https://kit.fontawesome.com/a2c2ab77fe.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  
+  <title>Panel usuario</title>
+</head>
+
+  <body>
+    <div class="user-profile">
+        <div class="user-avatar">
+          <img id="avatar-preview" src="#" alt="Avatar">
+          <input type="file" id="avatar" name="avatar" accept="image/*" onchange="previewAvatar(event)">
+        </div>
+      <div class="user-info">
+        <div class="tabs">
+          <button class="tablinks active" onclick="openTab(event, 'datos')">Datos Personales</button>
+          <button class="tablinks" onclick="openTab(event, 'password')">Cambiar Contraseña</button>
+          <button class="tablinks" onclick="openTab(event, 'compras')">Últimas Compras</button>
+        </div>
+        <div id="datos" class="tabcontent" style="display: block;">
+          <h2>Datos Personales</h2>
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="mail">Correo electrónico:</label>
+              <input type="email" id="mail" name="mail" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="domicilio">Domicilio:</label>
+                <input type="text" id="domiclio" name="domicilio" placeholder="Direccion" required>
+              </div>
+              <div class="form-group">
+                <label for="postal">Código Postal:</label>
+                <input type="text" id="postal" name="postal" placeholder="Código Postal" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Teléfono contacto" required>
+              </div>
+              <button type="submit" class="guardar-cambios-btn">Guardar cambios</button>
+          </form>
+        </div>
+        <div id="password" class="tabcontent">
+          <h2>Cambiar Contraseña</h2>
+          <form>
+            <div class="form-group">
+              <label for="current-password">Contraseña actual:</label>
+              <input type="password" id="current-password" name="current-password" required>
+            </div>
+            <div class="form-group">
+              <label for="new-password">Nueva Contraseña:</label>
+              <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirmar Nueva Contraseña:</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="guardar-cambios-btn">Guardar cambios</button>
+          </form>
+        </div>
+        <div id="compras" class="tabcontent">
+          <h2>Últimas Compras</h2>
+          <div class="reseña">
+            <p>ejemplo</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        function previewAvatar(event) {
+    const preview = document.getElementById('avatar-preview');
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function() {
+      preview.src = reader.result;
+    }
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+      </script>
+  </body>
+    
+
+
+
+</html>
+
+
