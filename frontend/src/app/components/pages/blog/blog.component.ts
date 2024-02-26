@@ -41,7 +41,7 @@ export class BlogComponent implements OnInit{
     this.xutilitiesService.getArticles()
       .subscribe(
         res => { 
-          console.log("blog.component.ts", res.articles[0]);
+          // console.log("blog.component.ts", res.articles[0]);
           this.articles = res.articles;
           //Paginación
           this.pages = this.articles.length;
