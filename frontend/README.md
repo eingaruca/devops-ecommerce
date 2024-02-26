@@ -34,6 +34,9 @@ ng g c components/partials/header
 ng g c components/partials/footer
 ng g c components/partials/product-review
 ng g c components/pages/perfumes
+ng g c components/pages/hombre
+ng g c components/pages/mujer
+ng g c components/pages/unisex
 // EJEMPLO (NO USAR): Las tareas a las que se puede acceder sin autenticarse
 ng g c components/pages/tasks
 // EJEMPLO (NO USAR): Las tareas a las que se puede acceder autenticándose

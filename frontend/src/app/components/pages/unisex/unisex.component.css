@@ -1,0 +1,172 @@
+* {
+    margin-top: 50px;
+    padding: 0;
+}
+body{
+    overflow-x: hidden; /* Para evitar la barra de desplazamiento horizontal */
+}
+
+.container {
+    position: relative; /* Establecer la posición relativa para poder posicionar las imágenes */
+    padding-left: 200px; /* Ajustar según el ancho de la imagen izquierda */
+    padding-right: 200px; /* Ajustar según el ancho de la imagen derecha */
+    max-width: 1200px; /* Ancho máximo del contenido central */
+    margin: 0 auto; /* Centrar el contenido */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.perfume {
+    padding: 10px;
+    margin: 10px;
+    
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+.perfume img {
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.perfume h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+.perfume p,
+.perfume h5 {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.perfume:hover {
+    transform: scale(1.1); /* Agrandar al 110% */
+}
+
+.left-image,
+.right-image {
+    position: fixed; /* Establecer la posición fija */
+    top: 0;
+    height: 100%; /* O ajustar según el tamaño deseado */
+}
+
+.left-image {
+    left: 0;
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+
+.right-image {
+    right: 0;
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+
+/* Ajustar el tamaño de las imágenes según sea necesario */
+.left-image img,
+.right-image img {
+    opacity: 0.8;
+    margin-top: -50px;
+    height: 100%;
+    width: auto;
+}
+@media (max-width: 1675px) {
+    .left-image,
+    .right-image {
+        display: none; /* Ocultar las imágenes cuando el ancho de la ventana sea menor o igual a 1675px */
+    }
+}
+.navbar a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.5rem; 
+}
+.navbar img {
+    width: 30px; 
+    margin-right: 10px; 
+}
+.navbar img:hover {
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50%;  
+}
+.navbar a:hover {
+    color: rgba(23, 21, 168, 0.3);
+    transition: color 0.1s ease;
+}
+#check{
+    display: none;
+}
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 992px){
+    .header{
+        padding: 0;
+    }
+}
+@media (max-width: 768px){
+    .header{
+        padding: 0;
+    }
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: .3s ease;
+        z-index: 1000;
+    }
+    #check:checked~.navbar{
+        height: 27rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+    
+    .f-input{
+        width: 100%;
+        }
+   
+
+}

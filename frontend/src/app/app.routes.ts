@@ -13,6 +13,9 @@ import { AboutusComponent } from './components/pages/aboutus/aboutus.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { PerfumesComponent } from './components/pages/perfumes/perfumes.component';
+import { HombreComponent } from './components/pages/hombre/hombre.component';
+import { MujerComponent } from './components/pages/mujer/mujer.component';
+import { UnisexComponent } from './components/pages/unisex/unisex.component';
 
 export const routes: Routes = [
     {
@@ -55,5 +58,14 @@ export const routes: Routes = [
     },    
     {
         path: 'perfumes', component: PerfumesComponent
+    },
+    {
+        path: 'hombre', component: HombreComponent
+    },
+    {
+        path: 'mujer', component: MujerComponent
+    },
+    {
+        path: 'unisex', component: UnisexComponent
     },    
 ];

@@ -22,9 +22,14 @@ import { Router } from '@angular/router';
 export class SignupComponent {
   
   user ={
+    nombre: '',
+    apellido: '',
+    domicilio: '',
+    postal: '',
+    telefono: '',
     email: '',
-    password: '',
-  }
+    password: ''
+  };
   // user ={}
 
   constructor(
