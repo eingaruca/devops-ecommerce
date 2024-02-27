@@ -78,13 +78,13 @@ body {
 .details__prices {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-bottom: 40px;
 }
 
 .details__now {
-  font-size: 1.2em;
-  margin-right: 10px;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-right: 15px;
 }
 
 .details__discount {
@@ -206,7 +206,7 @@ body {
 }
 
 .quantity {
-  width: 50px;
+  width: 70px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
