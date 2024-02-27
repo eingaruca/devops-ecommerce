@@ -191,7 +191,6 @@ const getBrands = async (req, res, next) => {
 /**
  * Completa esta función para poner un producto disponible o no disponible
  */
-
 const cambiarEstadoProducto = async (req, res, next) => {
     try {
         let id = req.params.id;
