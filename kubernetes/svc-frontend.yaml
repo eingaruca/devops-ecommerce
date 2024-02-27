@@ -4,7 +4,7 @@ metadata:
   labels:
     app: frontend
   name: frontend
-  namespace: ecommerce
+  # namespace: ecommerce
 spec:
   ports:
   - nodePort: 32700
