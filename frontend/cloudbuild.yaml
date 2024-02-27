@@ -2,13 +2,13 @@ steps:
   # Paso para instalar dependencias npm
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
-    dir: '.'  # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
+    dir: 'frontend'  # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
 
   # Paso para compilar el proyecto Angular
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
-    dir: '.'  # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
+    dir: 'frontend'    # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
 
   # Paso para construir la imagen de Docker
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/image-name:latest', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/image-name:latest', 'frontend/']
