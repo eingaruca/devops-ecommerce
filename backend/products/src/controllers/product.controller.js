@@ -91,15 +91,6 @@ const getProductsByCategory = async (req, res, next ) => {
             snapshot.forEach(doc => {
                 console.log('---> ', doc.id, doc.data());
                 const product = new Product(
-        //             id,
-        // name,
-        // description,
-        // category,
-        // brand,
-        // price,
-        // size,
-        // stock,
-        // image
                     doc.id,
                     doc.data().name,
                     doc.data().description,
