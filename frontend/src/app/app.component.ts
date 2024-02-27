@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FooterComponent,
     HttpClientModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    IonicModule
   ],
   providers: [
     // AuthService,
