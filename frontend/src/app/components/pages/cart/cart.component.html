@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Cesta compra</title>
+    
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+    <main class="container">
+        <h1 class="heading">
+            <ion-icon name="cart-outline"></ion-icon>Carrito Compra
+        </h1>
+
+        <div class="item-flex">
+            <section class="checkout">
+                <h2 class="section-heading">Detalles de Pago</h2>
+                <div class="payment-form">
+                    <div class="payment-method">
+                        <button class="method selected">
+                            <ion-icon name="card"></ion-icon>
+                            <span>Tarjeta</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                        </button>
+
+                        <button class="method">
+                            <ion-icon name="logo-paypal"></ion-icon>
+                            <span>Paypal</span>
+                            <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <form action="#">
+                        <div class="cardholder-name">
+                            <label for="cardholder-name" class="label-default">Nombre Tarjeta</label>
+                            <input type="text" name= "cardholder-name" id="cardholder-name" class="input-default">
+                        </div>
+
+                        <div class="card-number">
+                            <label for="card-number" class="label-default">Número tarjeta </label>
+                            <input type="text" name= "card-number" id="card-number" class="input-default">
+                        </div>
+
+                        <div class="input-flex">
+
+                            <div class="expire-date">
+                                <label for="expire-date" class="label-default">Fecha expiración</label>
+                                <div class="input-flex">
+                                    <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31" class="input-default">
+                                    /
+                                    <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12" class="input-default">
+                                </div>
+                            </div>
+                            <div class="cvv">
+                                <label for="cvv" class="label-default">CVV</label>
+                                <input type="number" name= "cvv" id="cvv" class="input-default">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn btn-primary">
+                    <b>Pagar</b><span id="payAmount">146,41 €</span>
+                </button>
+
+            </section>
+
+
+            <section class="cart">
+                <div class="cart-item-box">
+                    <h2 class="section-heading">Detalles compra</h2>
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="assets/images/Perfumes/Hombre/l-homme.jpg" alt="Prada Homme" width="80px" class="product-img">
+                            </div>
+                            <div class="detail">
+                                <h4 class="product-name">Prada Homme 100ml</h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+                                        <span id="quantity">1</span>
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="price">
+                                        € <span id="price">65</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="assets/images/Perfumes/Mujer/ch-good-girl-edp-vapo.jpg" alt="Good Girl" width="80px" class="product-img">
+                            </div>
+                            <div class="detail">
+                                <h4 class="product-name">Good Girl 80ml</h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+                                        <span id="quantity">1</span>
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                    <div class="price">
+                                        € <span id="price">56</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="discount-token">
+                        <label for="discount-token" class="label-default">Código descuento</label>
+
+                        <div class="wrapper-flex">
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+
+                            <button class="btn btn-outline">Aplicar</button>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="subtotal">
+                            <span>Subtotal</span><span><span id="subtotal">121,00€</span></span>
+                        </div>
+                        <div class="IVA">
+                            <span>IVA</span><span><span id="IVA">25,41€</span></span>
+                        </div>
+                        <div class="Envio">
+                            <span>Envio</span><span><span id="Envio">0,00€</span></span>
+                        </div>
+                        <div class="Total">
+                            <span>TOTAL</span><span><span id="total">146,41€</span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    
+</body>
+</html>

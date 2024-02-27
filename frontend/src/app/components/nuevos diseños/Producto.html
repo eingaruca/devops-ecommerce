@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleProducto.css">
+    <title>Producto</title>
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+    <section class="content">
+        <article class="gallery">
+          <div class="gallery__image-container">
+            <img src="../../../../../image-product-1.jpg" alt="">
+          </div>
+        </article>
+  
+        <article class="details">
+          <h2 class="details__company">BetAromas</h2>
+          <h2 class="details__title">Prada L´homme</h2>
+          <p class="details__description">L'Homme de Prada es una fragancia de la familia olfativa Amaderada Chipre para Hombres. Prada L'Homme se lanzó en 2016. La Nariz detrás de esta fragrancia es Daniela (Roche) Andrier. Las Notas de Salida son neroli, pimienta negra, cardamomo y semillas de zanahoria; las Notas de Corazón son iris, violeta, geranio y yerba mate; las Notas de Fondo son ámbar, cedro, sándalo y pachulí.</p>
+          <div class="details__prices">
+            <p class="details__now">64.95€ <span class="details__discount">44%</span> </p>
+            <p class="details__before">115.00€ </p>
+          </div>
+          <div class="details__product-quantity">
+            <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+            <input type="" class="quantity" value="1" min="1">
+            <button class="quantity-button" onclick="increaseQuantity()">+</button>
+          
+            <button class="details__button"> <img src="./images/icon-cart-white.svg" alt=""><i class="fa-solid fa-cart-shopping"></i> Añadir a la cesta</button>
+          </div>
+        </article>
+      </section>
+  
+      <script>
+        function increaseQuantity() {
+            const input = document.querySelector('.quantity');
+            const value = parseInt(input.value);
+            input.value = value + 1;
+        }
+    
+        function decreaseQuantity() {
+            const input = document.querySelector('.quantity');
+            const value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
+        }
+    </script>   
+</body>
+</html>
