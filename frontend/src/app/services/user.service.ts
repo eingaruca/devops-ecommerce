@@ -8,7 +8,8 @@ import { jwtDecode } from 'jwt-decode';
 })
 export class UserService {
 
-  private URL ='http://localhost:8002'
+  private URL = 'http://35.208.97.0:32702'
+  // private URL ='http://localhost:8002'
   // private URL ='http://user.default.svc.cluster.local:8002'
   
 
