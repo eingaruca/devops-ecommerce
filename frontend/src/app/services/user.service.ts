@@ -9,6 +9,8 @@ import { jwtDecode } from 'jwt-decode';
 export class UserService {
 
   private URL ='http://localhost:8002'
+  // private URL ='http://user.default.svc.cluster.local:8002'
+  
 
   token:any ="";
   headers:any;

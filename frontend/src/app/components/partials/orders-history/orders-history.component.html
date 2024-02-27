@@ -16,7 +16,7 @@
         <!-- Aquí puedes iterar sobre tus órdenes y mostrar cada una en una fila de la tabla -->
         <!-- Ejemplo de fila para una orden -->
         <tr *ngFor="let order of orders">
-            <td> <a [routerLink]="['/orders-detail', order['id']]" style="color: aliceblue;"> {{ order.id }} </a> </td>
+            <td> <a [routerLink]="['/orders-detail', order['id']]"> {{ order.id }} </a> </td>
             <td> {{ order.orderedAt }} </td>
             <td> {{ order.sendedAt }} </td>
             <td> {{ order.paidAt }} </td>
@@ -28,5 +28,5 @@
       </tbody>
     </table>
   </div>
-  <a routerLink="/profile" routerLinkActive="active" style="--i:6; color:aliceblue"> <strong>Volver al perfil </strong></a>
+  <a routerLink="/profile" routerLinkActive="active" style="--i:6;"> <strong>Volver al perfil </strong></a>
   

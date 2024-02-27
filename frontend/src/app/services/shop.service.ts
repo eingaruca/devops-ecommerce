@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
 export class ShopService {
 
   private URL = 'http://localhost:8003'
+  // private URL = 'http://shop.default.svc.cluster.local:8003'
+  
   token:any ="";
   headers:any;
 

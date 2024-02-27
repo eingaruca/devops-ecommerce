@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class AuthService {
 
   private URL ='http://localhost:8002'
+  // private URL ='http://user.default.svc.cluster.local:8002'
   token:any ="";
   headers:any;
 

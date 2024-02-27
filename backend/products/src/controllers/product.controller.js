@@ -121,6 +121,46 @@ const getProductsByCategory = async (req, res, next ) => {
     }
 };
 
+const getProductsByName = async (req, res, next) => {
+    try {
+        let name = req.params.text;
+        console.log('getProductsByName', name);
+
+        // Convertir el nombre a minúsculas para que la consulta sea insensible a mayúsculas y minúsculas
+        name = name.toLowerCase();
+        console.log('getProductsByName', name);
+
+        const products = await firestore.collection('Products')
+                                            .where('name', '>=', name)
+                                            .where('name', '<=', name + '\uf8ff').get();
+
+        let productsArray = [];
+
+        await products.get().then(snapshot => {
+            snapshot.forEach(doc => {
+                console.log('---> ', doc.id, doc.data());
+                const product = new Product(
+                    doc.id,
+                    doc.data().name,
+                    doc.data().description,
+                    doc.data().category,
+                    doc.data().brand,
+                    doc.data().price,
+                    doc.data().size,
+                    doc.data().stock,
+                    doc.data().image
+                );
+                productsArray.push(product);
+            });
+        });
+
+        return res.json(productsArray);
+    } catch (error) {
+        return res.status(400).send(error.message);
+    }
+};
+
+
 const updateProduct = async (req, res, next) => {
     try {
         let id = req.params.id;
@@ -177,5 +217,6 @@ module.exports = {
     getProductById,
     getProductsByCategory,
     updateProduct,
-    getBrands
+    getBrands,
+    getProductsByName,
 }

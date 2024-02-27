@@ -6,6 +6,8 @@ import { XutilitiesService } from '../../../services/xutilities.service';
 import { CommonModule } from '@angular/common';
 import { ChangePasswordComponent } from '../../partials/change-password/change-password.component';
 import { UserReviewsComponent } from '../../partials/user-reviews/user-reviews.component';
+import { OrdersDetailComponent } from '../../partials/orders-detail/orders-detail.component';
+import { OrdersHistoryComponent } from '../../partials/orders-history/orders-history.component';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +17,8 @@ import { UserReviewsComponent } from '../../partials/user-reviews/user-reviews.c
     CommonModule,
     ChangePasswordComponent,
     UserReviewsComponent,
-    RouterModule
+    RouterModule,
+    OrdersHistoryComponent,
   ],
   providers: [
     UserService,
@@ -108,5 +111,57 @@ export class ProfileComponent implements OnInit {
     }
 
   }
+
+
+
+  // openTab(evt, tabName) {
+  openTab(evt: MouseEvent, tabName: string): void {
+    const target = evt.currentTarget;
+    if (target instanceof HTMLElement) {
+      target.classList.add("active");
+    }
+
+    const tabcontent = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < tabcontent.length; i++) {
+      const element = tabcontent[i] as HTMLElement;
+      element.style.display = "none";
+    }
+
+    const tablinks = document.getElementsByClassName("tablinks");
+    for (let i = 0; i < tablinks.length; i++) {
+      const element = tablinks[i] as HTMLElement;
+      element.classList.remove("active");
+    }
+
+    const selectedTab = document.getElementById(tabName);
+    if (selectedTab) {
+      selectedTab.style.display = "block";
+    }
+  }
+
+  // previewAvatar(event) {
+  previewAvatar(event: Event): void {
+    const preview = document.getElementById('avatar-preview');
+    if (!preview) {
+      return; // Salir de la función si preview es null
+    }
+
+    const fileInput = event.target as HTMLInputElement;
+    const file = fileInput.files?.[0];
+    if (!file) {
+      return; // Salir de la función si no se ha seleccionado ningún archivo
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function () {
+      if (preview instanceof HTMLImageElement) {
+        preview.src = reader.result as string;
+      }
+    };
+
+    reader.readAsDataURL(file);
+  }
+
 
 }
