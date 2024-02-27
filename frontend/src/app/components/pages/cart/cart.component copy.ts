@@ -8,7 +8,6 @@ import { AppComponent } from '../../../app.component';
 import { UserService } from '../../../services/user.service';
 import { XutilitiesService } from '../../../services/xutilities.service';
 import { AuthService } from '../../../services/auth.service';
-import { IonicModule } from '@ionic/angular';
 
 
 @Component({
@@ -18,7 +17,6 @@ import { IonicModule } from '@ionic/angular';
     CommonModule,
     FormsModule,
     RouterModule,
-    IonicModule,
     // ShopComponent,
   ],
   providers : [
