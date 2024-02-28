@@ -1,12 +1,12 @@
 
+
 .container {
-    margin-top: 70px;
+    margin-top: 150px;
     padding: 0;
-    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 .perfume {
     padding: 10px;
@@ -19,7 +19,7 @@
 .perfume img {
     width: 100%;
     height: auto;
-    border-radius: 10%;
+    border-radius: 30%;
     object-fit: cover;
     margin-bottom: 10px;
 }
@@ -38,6 +38,26 @@
 
 .perfume:hover {
     transform: scale(1.1); /* Agrandar al 110% */
+}
+.navbar a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.5rem; 
+}
+.navbar img {
+    width: 30px; 
+    margin-right: 10px; 
+}
+.navbar img:hover {
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50%;  
+}
+.navbar a:hover {
+    color: rgba(23, 21, 168, 0.3);
+    transition: color 0.1s ease;
 }
 #check{
     display: none;
@@ -85,7 +105,7 @@
         z-index: 1000;
     }
     #check:checked~.navbar{
-        height: 27rem;
+        height: 33rem;
     }
     .navbar a{
         display: block;

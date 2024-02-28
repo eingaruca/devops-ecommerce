@@ -7,9 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+element.style {
+    display: flex;
+    justify-content: center;
+}
 body{
-    padding-top: 100px;
+    /* padding-top: 100px; */
     position: relative;
     display: flex;
     justify-content: center;

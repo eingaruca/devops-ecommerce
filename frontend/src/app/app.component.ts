@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     HttpClientModule,
     MatPaginatorModule,
     FormsModule,
+    IonicModule,
   ],
   providers: [
     // AuthService,

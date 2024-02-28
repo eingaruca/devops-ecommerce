@@ -1,8 +1,7 @@
 #about-us {
-    /* background-color: #f9f9f9; */
-    padding-top: 100px;
-    padding-bottom: 50px;
-    /* padding: 50px 0; */
+    margin-top: 80px;
+    background-color: transparent;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -12,10 +11,12 @@
 }
 
 #about-us h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 45px;
+    color: white;
+    text-shadow: 2px 2px 4px black; /* Aquí se define el sombreado */
+    margin-bottom: 40px;
 }
+
 
 #about-us p {
     font-size: 18px;

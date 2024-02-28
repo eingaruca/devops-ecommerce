@@ -1,5 +1,5 @@
 
-:root{
+ :root{
   --onyx:         hsl(0, 0%, 25%);
   --azure:        hsl(219, 77%, 60%);
   --white:        hsl(0, 0%, 100%);
@@ -25,22 +25,13 @@
 
   --px: 60px;
   --radius: 5px;
-}
+} 
 
 
-*, *::before, *::after{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 /* html {font-family: sans-serif;} */
-.div-body {
-  font-family: sans-serif;
-  background: url(../../../../assets/images/fondo3.jpg) no-repeat fixed;
-  background-size: cover;
-  position: relative;
-}
+
 
 a{
   color: inherit;
@@ -64,7 +55,7 @@ input{
   border: none;
 }
 
-input:focus { outline: 2px solid var(--azure);}
+input:focus { outline: 2px solid hsl(219, 77%, 60%);}
 
 
 input::-webkit-inner-spin-button,
@@ -95,11 +86,11 @@ input::-webkit-outer-spin-button{
 
 .heading{
   margin-top: 100px;
-  font-size: var(--fs-28);
-  font-weight: var(--fe-6);
-  color: var(--white);
-  border-bottom: 1px solid var(--gainsboro);
-  padding: 20px var(--px);
+  font-size: 28px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  padding: 20px 60px;;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -113,19 +104,74 @@ input::-webkit-outer-spin-button{
   display: flex;
   flex-grow: 1;
 }
+.tracking-form {
+  padding: 40px 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
 
+.tracking-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: hsl(0, 0%, 62%);
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: calc(100% - 30px); /* Reducir el ancho para dejar espacio al botón */
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 91%);
+  color: hsl(0, 0%, 30%);
+  margin-bottom: 5px; /* Añadir un pequeño margen inferior */
+}
+
+
+.form-group button {
+  padding: 10px 25px;
+  font-size: 18px;
+  border: 1px solid hsl(219, 77%, 60%);
+  background-color: hsl(219, 77%, 60%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group button:focus {
+  outline: 2px solid hsl(219, 77%, 60%);
+}
+
+.form-group button:active {
+  transform: scale(0.99);
+}
 .checkout{
-  width: 70%;
-  padding: 40px var(--px);
-  background: var(--white);
-  border-right: 1px solid var(--gainsboro);
+  width: 70%;  
+  padding: 40px 60px;;
+  background: white;
+  border-right: 1px solid hsl(0, 0%, 90%);
 }
 
 .section-heading{
-  color: var(--onyx);
+  color: hsl(0, 0%, 25%);
   margin-bottom: 30px;
-  font-size: var(--fs-24);
-  font-weight: var(--fe-5);
+  font-size: 24px;
+  
 }
 
 .payment-form{
@@ -138,8 +184,8 @@ input::-webkit-outer-spin-button{
   margin-bottom: 40px;
 }
 .payment-method .method{
-  border: 1px solid var(--quick-silver);
-  border-radius: var(--radius);
+  border: 1px solid hsl(0, 0%, 64%);
+  border-radius: 5px;
   width: 50%;
   display: flex;
   align-items: center;
@@ -148,34 +194,34 @@ input::-webkit-outer-spin-button{
   cursor: pointer;
 }
 .payment-method .selected{
-  border-color: var(--azure);
+  border-color: hsl(219, 77%, 60%);
 }
 .payment-method .method ion-icon{
   font-size: 20px;
 }
 .payment-method .method .checkmark{
   margin-left: auto;
-  color: var(--quick-silver);
+  color: hsl(0, 0%, 64%);
 }
 
 .payment-method .method .fill{
-  color: var(--azure);
+  color: hsl(219, 77%, 60%);
 }
 .label-default{
   padding-left: 10px;
   margin-bottom: 5px;
-  font-size: var(--fs-14);
-  color: var(--spanish-gray);
+  font-size: 14px;
+  color: hsl(0, 0%, 62%);
 }
 .input-default{
-  background: var(--platinum);
-  border-radius: var(--radius);
-  color: var(--davys-gray);
+  background: hsl(0, 0%, 91%);
+  border-radius: 5px;
+  color: hsl(0, 0%, 30%);
 }
 .payment-form input{
   padding: 10px 15px;
-  font-size: var(--fs-18);
-  font-weight: var(--fw-5);
+  font-size: 18px;
+  font-weight: 500;
 }
 .cardholder-name, .card-number{
   margin-bottom: 20px;
@@ -192,28 +238,28 @@ input::-webkit-outer-spin-button{
   width: 50%;
 }
 .expire-date .input-flex{
-  color: var(--spanish-gray);
+  color: hsl(0, 0%, 62%);
   gap: 13px;
 }
 .expire-date .input-flex input{
   text-align: center;
 }
 .btn{
-  border-radius: var(--radius);
+  border-radius: 5px;
 }
 .btn:active{
   transform: scale(0.99);
 }
 .btn:focus{
-  color: var(--white);
-  background: var(--azure);
-  outline: 2px solid var(--azure);
+  color: hsl(0, 0%, 100%);
+  background: hsl(219, 77%, 60%);
+  outline: 2px solid hsl(219, 77%, 60%);
   outline-offset: 2px;
 }
 .btn-primary{
-  background: var(--azure);
-  font-weight: var(--fw-5);
-  color: var(--white);
+  background: hsl(219, 77%, 60%);
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
   padding: 13px 45px;
 }
 .btn-primary b{
@@ -227,7 +273,7 @@ input::-webkit-outer-spin-button{
   justify-content: flex-end;
 }
 .cart-item-box{
-  padding: 40px var(--px);
+  padding: 40px 60px;
   margin-bottom: auto;
 }
 .product-card:not(:last-child) {
@@ -240,12 +286,12 @@ input::-webkit-outer-spin-button{
   gap: 20px;
 }
 
-.card .product-img{ border-radius: var(--radius);}
+.card .product-img{ border-radius: 5px;}
 
 .card .detail .product-name{
-  font-weight: var(--fw-6);
-  font-size: var(--fs-15);
-  color: var(--onyx);
+  font-weight: 600;
+  font-size: 15px;
+  color: hsl(0, 0%, 25%);
   margin-bottom: 10px;
 }
 .card .detail .wrapper{
@@ -258,7 +304,7 @@ input::-webkit-outer-spin-button{
   gap: 10px;
 }
 .product-qty button{
-  background: var(--platinum);
+  background: hsl(0, 0%, 91%);
   width: 20px;
   height: 20px;
   display: flex;
@@ -282,16 +328,16 @@ input::-webkit-outer-spin-button{
 }
 .product-close-btn ion-icon{
   font-size: 25px;
-  color: var(--onyx);
+  color: hsl(0, 0%, 25%);
 }
 .product-close-btn ion-icon:hover ion-icon{
-  color: var(--red-salsa);
+  color: hsl(0, 77%, 60%);
 }
 
 .discount-token{
-  padding: 40px var(--px);
-  border-top: 1px solid var(--gainsboro);
-  border-bottom: 1px solid var(--gainsboro);
+  padding: 40px 60px;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 .wrapper-flex{
   display: flex;
@@ -300,19 +346,19 @@ input::-webkit-outer-spin-button{
 }
 .wrapper-flex input{
   padding: 12px 15px;
-  font-weight: var(--fw-6);
+  font-weight: 600;
   letter-spacing: 2px;
 }
 .btn-outline{
   padding: 10px 25px;
-  border: 1px solid var(--azure);
-  color: var(--azure);
+  border: 1px solid hsl(219, 77%, 60%);
+  color: hsl(219, 77%, 60%);
 }
 .btn-outline:hover{
-  background: var(--azure);
-  color: var(--white);
+  background: hsl(219, 77%, 60%);
+  color: hsl(0, 0%, 100%);
 }
-.amount{ padding: 40px var(--px);}
+.amount{ padding: 40px 60px;}
 
 .amount > div{
   display: flex;
@@ -323,9 +369,9 @@ input::-webkit-outer-spin-button{
   margin-bottom: 10px;
 }
 .amount .total{
-  font-size: var(--fs-18);
-  font-weight: var(--fw-7);
-  color: var(--onyx);
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(0, 0%, 25%);
 }
 
 
@@ -346,34 +392,47 @@ input::-webkit-outer-spin-button{
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      border-bottom: 1px solid var(--gainsboro);
+      border-bottom: 1px solid hsl(0, 0%, 90%);
   }
 
   .cart .wrapper { margin-top: auto;}
 
   .cart .cart-item-box {
-      border-right: 1px solid var(--gainsboro);
+      border-right: 1px solid hsl(0, 0%, 90%);
       margin-bottom: 0;
   }
   .discount-token { border-top: none;}
 }
 
 @media(max-width: 768px){
-  :root { --px: 40px;}
+  .html { padding: 40px;}
   .cart { grid-template-columns: 1fr;}
-  .discount-token { border-top: 1px solid var(--gainsboro);}
+  .discount-token { border-top: 1px solid hsl(0, 0%, 90%);}
   .wrapper-flex { gap: 20px;}
+  .tracking-form {
+    padding: 20px 30px; /* Ajuste de padding para dispositivos móviles */
+  }
+  .checkout {
+    width: 100%;
+    padding: 20px;
+}
 }
 
 @media(max-width: 567px){
 
-  :root { --px: 20px;}
-
+  .html { padding: 20px;}
+  .tracking-form {
+    padding: 20px; /* Ajuste de padding para dispositivos muy pequeños */
+  }
   .payment-method,
   .input-flex{
       flex-direction: column;
       gap: 20px;
   }
+  .checkout {
+        width: 100%;
+        padding: 20px;
+    }
 
   .payment-method .method { width: 100%;}
 
