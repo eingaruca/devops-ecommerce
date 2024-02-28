@@ -14,6 +14,7 @@ router.put('/updateOrder', authMiddleware.authRequired, orderController.updateOr
 router.put('/changeOrderStatus', authMiddleware.authRequired, orderController.changeOrderStatus);
 router.get('/getOrdersByUser', authMiddleware.authRequired, orderController.getOrdersByUser);
 router.get('/getOrderById/:orderId', authMiddleware.authRequired, orderController.getOrderById);
+router.put('/update/payment/', orderController.updateOrderStatePayment, itemController.updateStatusItem);
 
 
 // Items

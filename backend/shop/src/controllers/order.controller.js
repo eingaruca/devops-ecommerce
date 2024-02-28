@@ -265,6 +265,22 @@ const getOrderById = async (req, res, next) => {
   }
 };
 
+const updateOrderStatePayment = async (req, res, next) => {
+    try {
+      let data = req.body;
+      console.log("data", data);
+      let id = data.orderId;
+      let order = await firestore.collection("Orders").doc(id);
+  
+      let updatedOrder = await order.update({'statusOrder': 'Paid'});
+
+      req.body.statusItem = "Paid"
+      next();
+    //   return res.json({ "Actualiza Order": updatedOrder });
+    } catch (error) {
+      return res.status(400).send(error.message);
+    }
+  };
 
 const addFavoriteProduct = async (req, res, next) => {};
 
@@ -276,4 +292,5 @@ module.exports = {
   updateOrder,
   getOrdersByUser,
   getOrderById,
+  updateOrderStatePayment,
 };
