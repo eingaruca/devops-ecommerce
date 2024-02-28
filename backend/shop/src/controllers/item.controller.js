@@ -262,10 +262,27 @@ const deleteItem = async (req, res, next) => {
     }
 };
 
+const updateStatusItem = async (req, res, next) => {
+    try {
+      let data = req.body;
+      console.log("data", data);
+      let orderId = data.orderId;
+      let item = await firestore.collection("Items")
+                                .where('orderId', '==', orderId)
+  
+      let updatedItem = await item.update({'statusOrder': data.statusItem});
+  
+      return res.json({ "Actualizdo": updatedItem });
+    } catch (error) {
+      return res.status(400).send(error.message);
+    }
+  };
+
 module.exports = {
     addItemToCart,
     cleanItemsToCart,
     getItem,
     getItemsByOrder,
-    deleteItem
+    deleteItem,
+    updateStatusItem,
 }
