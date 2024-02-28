@@ -22,6 +22,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
+  align-items: center;
 }
 
 /* Estilos para la galería de imágenes */
