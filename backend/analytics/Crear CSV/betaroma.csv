@@ -1,0 +1,601 @@
+Categoria,Precio,Nombre_Perfume,Marca,Nombre_Cliente,Apellido_Cliente,Edad,Sexo,Fecha_Compra,Email,Cesta
+Hombre,156,La Belle Parfum - Jean Paul Gaultier,Marca2,Sebastian,Hoffmann,43,M,2024-02-28,cliente1@example.com,4
+Mujer,164,Paradoxe Intense - Prada,Marca2,Johanna,Becker,67,M,2024-02-28,cliente2@example.com,7
+Unisex,181,Poison EDT - Dior,Marca1,Luca,Pérez,35,M,2024-02-28,cliente3@example.com,4
+Unisex,176,Gentleman EDP - Givenchy,Marca3,Luis,Kuhdi,43,M,2024-02-28,cliente4@example.com,10
+Hombre,90,Erba Pura - Xerjoff,Marca1,María,Hoffmann,34,F,2024-02-28,cliente5@example.com,9
+Mujer,124,Acqua di Gio EDP - Georgio Armani,Marca3,Amelie,Rodríguez,75,M,2024-02-28,cliente6@example.com,9
+Hombre,150,Scandal him - Jean Paul Gaultier,Marca1,Hannah,Servantes,62,M,2024-02-28,cliente7@example.com,3
+Hombre,85,Accento - Xerjoff,Marca3,Leonie,Fischer,66,M,2024-02-28,cliente8@example.com,7
+Mujer,114,Good Girl Supreme - Carolina Herrera,Marca1,Luis,Braun,22,F,2024-02-28,cliente9@example.com,10
+Mujer,145,Acqua di Gio Parfum - Georgio Armani,Marca3,Simon,Hofmann,24,F,2024-02-28,cliente10@example.com,1
+Unisex,59,Paradoxe Intense - Prada,Marca3,Julian,Müller,40,M,2024-02-28,cliente11@example.com,2
+Unisex,85,K - Dolce & Gabbana,Marca2,Laura,Servantes,63,M,2024-02-28,cliente12@example.com,10
+Hombre,90,Idole nectar - Lancome,Marca3,Emilia,Wagner,27,F,2024-02-28,cliente13@example.com,1
+Hombre,137,Si Passione - Giorgio Armani,Marca1,Laura,Müller,29,F,2024-02-28,cliente14@example.com,9
+Unisex,146,Homme intense - Yves Saint Laurent,Marca3,Sarah,Zaruma,32,F,2024-02-28,cliente15@example.com,8
+Hombre,94,Noir Extreme - Tom Ford,Marca1,Ella,Zaruma,33,M,2024-02-28,cliente16@example.com,8
+Hombre,54,Luna Rosa Carbon - Prada,Marca1,Sofía,González,53,F,2024-02-28,cliente17@example.com,7
+Unisex,101,Black Opium green - Yves Saint Laurent,Marca1,Marie,Weber,73,F,2024-02-28,cliente18@example.com,2
+Hombre,90,Black Opium green - Yves Saint Laurent,Marca1,David,Schwarz,78,M,2024-02-28,cliente19@example.com,3
+Hombre,58,Very Good Girl Glam - Carolina Herrera,Marca3,Lukas,Meyer,60,M,2024-02-28,cliente20@example.com,10
+Mujer,68,Spicebomb Extreme - Viktor & Rolf,Marca1,Luca,Schmitz,68,F,2024-02-28,cliente21@example.com,1
+Hombre,138,La Vie Est Belle Intense - Lancome,Marca2,Paul,Martínez,40,M,2024-02-28,cliente22@example.com,1
+Unisex,57,Sauvage EDP - Dior,Marca3,Niklas,Martínez,79,F,2024-02-28,cliente23@example.com,9
+Unisex,163,Naxos - Xerjoff,Marca2,Pedro,Schmitz,38,F,2024-02-28,cliente24@example.com,6
+Mujer,112,The Most Wanted - Azaro,Marca1,Mila,Wagner,76,M,2024-02-28,cliente25@example.com,4
+Unisex,156,Ombre Leather Parfum - Tom Ford,Marca2,Liam,Gómez,45,F,2024-02-28,cliente26@example.com,9
+Unisex,76,Boss the scent - Hugo Boss,Marca2,Sophie,Lange,20,F,2024-02-28,cliente27@example.com,7
+Mujer,51,Bad Boy le Parfum - Carolina Herrera,Marca2,Maximilian,Zaruma,37,M,2024-02-28,cliente28@example.com,8
+Mujer,148,Chloe absolute - Chloé,Marca2,Lea,Lange,38,M,2024-02-28,cliente29@example.com,10
+Hombre,176,Cool water - Davidoff,Marca1,María,Bauer,31,M,2024-02-28,cliente30@example.com,6
+Mujer,121,L´Interdir Rouge - Givenchy,Marca2,Carlos,Schulze,73,M,2024-02-28,cliente31@example.com,10
+Mujer,196,Phantom Parfum - Paco Rabanne,Marca1,Elena,Schmitz,61,M,2024-02-28,cliente32@example.com,1
+Hombre,111,Y men EDT - Yves Saint Laurent,Marca1,Sebastian,Wolf,49,M,2024-02-28,cliente33@example.com,2
+Mujer,124,Sauvage Elixir - Dior,Marca3,Emilia,García,24,F,2024-02-28,cliente34@example.com,1
+Unisex,161,Phantom - Paco Rabanne,Marca3,Juan,Fischer,52,M,2024-02-28,cliente35@example.com,4
+Unisex,89,Le Beau Le Parfum - Jean Paul Gaultier,Marca2,Luis,Werner,57,M,2024-02-28,cliente36@example.com,6
+Mujer,153,Black Opium extreme - Yves Saint Laurent,Marca3,Maximilian,Klein,58,M,2024-02-28,cliente37@example.com,4
+Hombre,62,K - Dolce & Gabbana,Marca2,Luca,Richter,75,M,2024-02-28,cliente38@example.com,9
+Hombre,155,Paradoxe Intense - Prada,Marca1,Luca,Lehmann,19,M,2024-02-28,cliente39@example.com,1
+Unisex,109,Ombre Leather Parfum - Tom Ford,Marca3,Mia,Meier,43,F,2024-02-28,cliente40@example.com,9
+Mujer,137,Ultra Male - Jean Paul Gaultier,Marca1,María,Schröder,57,F,2024-02-28,cliente41@example.com,7
+Mujer,77,Sauvage EDP - Dior,Marca1,Lea,Schneider,24,M,2024-02-28,cliente42@example.com,10
+Hombre,164,Code Absolu woman - Georgio Armani,Marca2,Marie,Becker,47,F,2024-02-28,cliente43@example.com,8
+Unisex,103,Man in Black - Bulgari,Marca1,Juan,Hoffmann,63,M,2024-02-28,cliente44@example.com,2
+Unisex,59,Idole Aura - Lancome,Marca2,Tobias,Galia,34,M,2024-02-28,cliente45@example.com,4
+Unisex,172,Creed - Bad Boy Elixir,Marca2,Sofía,Pérez,42,F,2024-02-28,cliente46@example.com,4
+Hombre,124,Daisy Love - Marc Jacobs,Marca1,Ella,Koch,25,F,2024-02-28,cliente47@example.com,1
+Mujer,69,Costa Azzurra - Tom Ford,Marca1,Lukas,Gómez,60,M,2024-02-28,cliente48@example.com,8
+Hombre,176,Invictus Victory - Paco Rabanne,Marca2,Sofía,Schulze,46,F,2024-02-28,cliente49@example.com,10
+Hombre,139,Fleur D´Oranger - Prada,Marca1,Niklas,Fischer,53,M,2024-02-28,cliente50@example.com,10
+Unisex,67,Good Girl - Carolina Herrera,Marca3,Lena,Becker,54,F,2024-02-28,cliente51@example.com,6
+Mujer,144,Infusion de Figue - Prada,Marca3,Emilia,Werner,57,M,2024-02-28,cliente52@example.com,3
+Unisex,79,Gentleman EDP - Givenchy,Marca3,David,Koch,67,M,2024-02-28,cliente53@example.com,7
+Mujer,145,Miss Dior - Dior,Marca2,David,Becker,31,F,2024-02-28,cliente54@example.com,6
+Unisex,136,Femme intense - Paco Rabanne,Marca1,Lukas,Meier,56,M,2024-02-28,cliente55@example.com,4
+Hombre,190,Very Good Girl EDP - Carolina Herrera,Marca2,Maximilian,Lange,44,F,2024-02-28,cliente56@example.com,3
+Mujer,102,Poison EDT - Dior,Marca1,Ana,Krause,71,M,2024-02-28,cliente57@example.com,2
+Hombre,121,Accento - Xerjoff,Marca2,Jakob,Gómez,26,F,2024-02-28,cliente58@example.com,1
+Unisex,120,L´Interdir Rouge - Givenchy,Marca1,Tobias,Fittigi,73,M,2024-02-28,cliente59@example.com,1
+Mujer,133,This is really her - Zadig & Voltaire,Marca1,Laura,Schmidt,72,M,2024-02-28,cliente60@example.com,5
+Hombre,135,Naxos - Xerjoff,Marca2,Lea,Díaz,35,F,2024-02-28,cliente61@example.com,1
+Mujer,78,Homme intense - Yves Saint Laurent,Marca3,Juan,Koch,49,F,2024-02-28,cliente62@example.com,9
+Hombre,82,L´Homme Ideal Extreme - Guerlain,Marca1,Laura,Schmitt,34,M,2024-02-28,cliente63@example.com,10
+Unisex,125,Miss Dior - Dior,Marca2,Julian,Wussyt,25,F,2024-02-28,cliente64@example.com,6
+Hombre,152,L´Interdir Rouge - Givenchy,Marca3,David,Martínez,49,F,2024-02-28,cliente65@example.com,6
+Unisex,103,La Vie Est Belle Intense - Lancome,Marca3,Finn,González,67,M,2024-02-28,cliente66@example.com,6
+Mujer,187,K edt - Dolce & Gabbana,Marca2,Alexander,Hoffmann,47,M,2024-02-28,cliente67@example.com,4
+Unisex,58,Poison EDT - Dior,Marca2,Mia,Meyer,29,M,2024-02-28,cliente68@example.com,9
+Unisex,94,This is really her - Zadig & Voltaire,Marca1,María,López,29,M,2024-02-28,cliente69@example.com,8
+Mujer,120,Luna Rosa Ocean - Prada,Marca1,Lina,Braun,51,F,2024-02-28,cliente70@example.com,3
+Unisex,199,Good Girl Supreme - Carolina Herrera,Marca3,Jakob,Hofmann,62,F,2024-02-28,cliente71@example.com,8
+Unisex,124,Musc Noir for her - Narciso Rodriguez,Marca3,Leonie,Wussyt,18,M,2024-02-28,cliente72@example.com,9
+Hombre,73,Good Girl - Carolina Herrera,Marca1,Leonie,Wolf,46,M,2024-02-28,cliente73@example.com,2
+Unisex,58,Spicebomb nightvision - Viktor & Rolf,Marca2,Julian,Becker,38,F,2024-02-28,cliente74@example.com,6
+Unisex,77,The only one - Dolce & Gabbana,Marca2,Tobias,Meier,76,F,2024-02-28,cliente75@example.com,9
+Mujer,123,Idole Aura - Lancome,Marca2,Mia,Hartmann,28,M,2024-02-28,cliente76@example.com,5
+Hombre,84,Stronger with you Absolutely - Giorgio Armani,Marca3,Clara,Galia,58,F,2024-02-28,cliente77@example.com,4
+Hombre,101,La Belle Parfum - Jean Paul Gaultier,Marca1,Carlos,Schäfer,67,M,2024-02-28,cliente78@example.com,9
+Unisex,87,Sauvage Parfum - Dior,Marca2,Lukas,Bauer,43,F,2024-02-28,cliente79@example.com,9
+Unisex,106,Paradoxe EDP - Prada,Marca3,Hannah,Martínez,45,F,2024-02-28,cliente80@example.com,4
+Mujer,142,Invictus Victory - Paco Rabanne,Marca1,Diego,Hartmann,76,F,2024-02-28,cliente81@example.com,2
+Unisex,61,Divine - Jean Paul Gaultier,Marca3,Emilia,Pérez,56,M,2024-02-28,cliente82@example.com,6
+Mujer,183,Oud Minerale - Tom Ford,Marca3,David,Bauer,58,M,2024-02-28,cliente83@example.com,2
+Mujer,121,Good Girl - Carolina Herrera,Marca1,Moritz,Wolf,25,M,2024-02-28,cliente84@example.com,5
+Mujer,107,Alien her - Thierry Mugler,Marca1,Elena,Schröder,44,M,2024-02-28,cliente85@example.com,8
+Unisex,194,My Way Nectar - Giorgio Armani,Marca2,Paul,Lange,44,M,2024-02-28,cliente86@example.com,3
+Unisex,152,Le Beau Le Parfum - Jean Paul Gaultier,Marca3,Clara,Werner,74,F,2024-02-28,cliente87@example.com,6
+Unisex,185,Gentleman Society - Givenchy,Marca1,Sophie,Meyer,74,F,2024-02-28,cliente88@example.com,10
+Hombre,198,Sauvage EDP - Dior,Marca3,Ana,Lehmann,69,M,2024-02-28,cliente89@example.com,7
+Unisex,199,Si Passione - Giorgio Armani,Marca2,Emilia,Müller,26,F,2024-02-28,cliente90@example.com,9
+Unisex,129,MYSLF - Yves Saint Laurent,Marca2,Lea,Wagner,56,M,2024-02-28,cliente91@example.com,4
+Unisex,148,Accento - Xerjoff,Marca1,Amelie,Schneider,23,M,2024-02-28,cliente92@example.com,7
+Hombre,137,Invictus Victory - Paco Rabanne,Marca2,Ana,García,73,M,2024-02-28,cliente93@example.com,4
+Unisex,65,Musc Noir for her - Narciso Rodriguez,Marca2,Hannah,Lange,46,M,2024-02-28,cliente94@example.com,8
+Mujer,75,L´Interdir Rouge - Givenchy,Marca1,Lukas,Meier,74,M,2024-02-28,cliente95@example.com,4
+Mujer,184,The Most Wanted - Azaro,Marca1,Marie,Meyer,48,F,2024-02-28,cliente96@example.com,3
+Mujer,105,Stronger whit you - Emporio Armani,Marca3,Lina,Fischer,72,F,2024-02-28,cliente97@example.com,3
+Hombre,103,Ultra Male - Jean Paul Gaultier,Marca2,Benjamin,Weber,46,F,2024-02-28,cliente98@example.com,1
+Hombre,149,Sauvage Parfum - Dior,Marca2,Lea,González,35,M,2024-02-28,cliente99@example.com,1
+Hombre,72,Boss the scent - Hugo Boss,Marca2,Ana,Hoffmann,31,M,2024-02-28,cliente100@example.com,4
+Mujer,112,Good Girl Blush - Carolina Herrera,Marca1,Jakob,Müller,33,M,2024-02-28,cliente101@example.com,3
+Hombre,114,Daisy Love - Marc Jacobs,Marca2,Maximilian,López,69,F,2024-02-28,cliente102@example.com,8
+Hombre,196,Toy Boy - Moschino,Marca1,Finn,Galia,43,M,2024-02-28,cliente103@example.com,7
+Unisex,61,L´Homme Ideal Extreme - Guerlain,Marca1,Emma,Schmitz,19,M,2024-02-28,cliente104@example.com,8
+Mujer,139,One Million Elixir - Paco Rabanne,Marca2,Moritz,Wagner,29,M,2024-02-28,cliente105@example.com,1
+Mujer,57,212 heroes her - Carolina Herrera,Marca1,David,Galia,62,M,2024-02-28,cliente106@example.com,7
+Hombre,79,Fleur D´Oranger - Prada,Marca3,Leon,Hofmann,52,M,2024-02-28,cliente107@example.com,9
+Hombre,160,Femme intense - Paco Rabanne,Marca2,Elena,Hartmann,51,F,2024-02-28,cliente108@example.com,8
+Unisex,51,Spicebomb nightvision - Viktor & Rolf,Marca2,Simon,Wolf,18,F,2024-02-28,cliente109@example.com,4
+Mujer,193,Fleur D´Oranger - Prada,Marca2,David,Meier,19,F,2024-02-28,cliente110@example.com,1
+Hombre,130,Gentleman EDP - Givenchy,Marca1,Lena,Werner,53,M,2024-02-28,cliente111@example.com,1
+Unisex,119,Y Elixir - Yves Saint Laurent,Marca2,Felix,Weber,31,F,2024-02-28,cliente112@example.com,7
+Unisex,195,Good Girl Supreme - Carolina Herrera,Marca2,Benjamin,Fischer,34,M,2024-02-28,cliente113@example.com,2
+Mujer,58,This is really her - Zadig & Voltaire,Marca1,María,Wussyt,63,F,2024-02-28,cliente114@example.com,2
+Mujer,56,Boss the scent - Hugo Boss,Marca2,Alexander,Martínez,54,M,2024-02-28,cliente115@example.com,2
+Unisex,111,Daisy Love - Marc Jacobs,Marca1,Niklas,Servantes,65,M,2024-02-28,cliente116@example.com,3
+Unisex,108,L´Homme Ideal Extreme - Guerlain,Marca3,Moritz,Schmidt,59,F,2024-02-28,cliente117@example.com,3
+Mujer,140,Poison EDT - Dior,Marca1,Lena,López,39,M,2024-02-28,cliente118@example.com,1
+Unisex,161,Spirit of the Brave intense - Diesel,Marca3,Laura,Werner,72,M,2024-02-28,cliente119@example.com,10
+Unisex,197,Stronger with you Absolutely - Giorgio Armani,Marca3,Ella,Wagner,60,F,2024-02-28,cliente120@example.com,1
+Unisex,92,Sauvage Parfum - Dior,Marca1,Ella,Schäfer,28,M,2024-02-28,cliente121@example.com,3
+Hombre,129,Carolina Herrera - Bad Boy EDT,Marca3,Johanna,Wagner,68,M,2024-02-28,cliente122@example.com,2
+Unisex,189,Poison EDT - Dior,Marca2,Leonie,García,36,F,2024-02-28,cliente123@example.com,8
+Mujer,141,My Way Intense - Giorgio Armani,Marca1,Jonas,Fernández,51,M,2024-02-28,cliente124@example.com,5
+Mujer,52,Heritage - Guerlain,Marca2,Mia,Schmitt,62,M,2024-02-28,cliente125@example.com,6
+Mujer,197,Y men EDT - Yves Saint Laurent,Marca2,Clara,Díaz,29,F,2024-02-28,cliente126@example.com,2
+Mujer,65,Spirit of the Brave - Diesel,Marca1,Felix,Zimmermann,26,F,2024-02-28,cliente127@example.com,9
+Unisex,85,One Million Elixir - Paco Rabanne,Marca2,Juan,Schmid,59,M,2024-02-28,cliente128@example.com,6
+Mujer,151,The One intense - Dolce & Gabbana,Marca3,Lukas,Müller,28,M,2024-02-28,cliente129@example.com,5
+Unisex,127,212 heroes her - Carolina Herrera,Marca2,Sarah,Neumann,52,F,2024-02-28,cliente130@example.com,2
+Mujer,61,Black Opium extreme - Yves Saint Laurent,Marca3,Emma,Schmitz,45,M,2024-02-28,cliente131@example.com,10
+Unisex,72,Le Male Elixir - Jean Paul Gaultier,Marca3,Finn,Zaruma,55,F,2024-02-28,cliente132@example.com,1
+Hombre,75,Luna Rosa Ocean - Prada,Marca1,Felix,Zaruma,35,M,2024-02-28,cliente133@example.com,1
+Unisex,163,Le Male Elixir - Jean Paul Gaultier,Marca1,Felix,Meyer,28,F,2024-02-28,cliente134@example.com,10
+Unisex,106,Acqua di Gio Profondo - Georgio Armani,Marca2,Emma,Neumann,79,M,2024-02-28,cliente135@example.com,5
+Mujer,161,Black Opium green - Yves Saint Laurent,Marca3,Liam,Koch,78,F,2024-02-28,cliente136@example.com,1
+Hombre,146,Libre Le Parfum - Yves Saint Laurent,Marca3,Lina,Schmitz,21,M,2024-02-28,cliente137@example.com,1
+Mujer,114,Fleur D´Oranger - Prada,Marca2,Diego,Weber,71,M,2024-02-28,cliente138@example.com,1
+Mujer,136,Libre EDT - Yves Saint Laurent,Marca1,Mia,Krause,58,M,2024-02-28,cliente139@example.com,10
+Unisex,158,Noir Extreme - Tom Ford,Marca2,Lukas,García,32,M,2024-02-28,cliente140@example.com,3
+Unisex,194,K - Dolce & Gabbana,Marca1,Mia,Fernández,27,F,2024-02-28,cliente141@example.com,7
+Unisex,130,L´Homme eau - Prada,Marca1,Johanna,Fernández,26,M,2024-02-28,cliente142@example.com,1
+Mujer,86,Oud Minerale - Tom Ford,Marca3,Alexander,Wussyt,54,M,2024-02-28,cliente143@example.com,4
+Unisex,182,Ultra Male - Jean Paul Gaultier,Marca3,Benjamin,García,22,M,2024-02-28,cliente144@example.com,2
+Unisex,138,Carolina Herrera - Bad Boy EDT,Marca3,Maximilian,Schmitt,63,M,2024-02-28,cliente145@example.com,2
+Unisex,59,Lima Tonka - Adolfo Dominguez,Marca2,Sofía,Pérez,42,M,2024-02-28,cliente146@example.com,4
+Unisex,159,MYSLF - Yves Saint Laurent,Marca2,Diego,Wussyt,26,F,2024-02-28,cliente147@example.com,5
+Unisex,151,Infusion de Figue - Prada,Marca3,Diego,Díaz,25,M,2024-02-28,cliente148@example.com,3
+Hombre,107,Idole Aura - Lancome,Marca3,Emma,Schäfer,36,M,2024-02-28,cliente149@example.com,4
+Mujer,138,Imperatrice 3 - Dolce & Gabbana,Marca2,Mia,Wussyt,52,M,2024-02-28,cliente150@example.com,8
+Unisex,141,The Most Wanted - Azaro,Marca3,María,Schneider,30,F,2024-02-28,cliente151@example.com,6
+Mujer,164,Fleur D´Oranger - Prada,Marca3,Benjamin,López,45,F,2024-02-28,cliente152@example.com,4
+Mujer,179,The only one - Dolce & Gabbana,Marca1,Carlos,Sánchez,77,M,2024-02-28,cliente153@example.com,6
+Unisex,175,This is really her - Zadig & Voltaire,Marca2,Amelie,Schmitt,71,F,2024-02-28,cliente154@example.com,6
+Mujer,57,Spicebomb Extreme - Viktor & Rolf,Marca3,Luca,Servantes,25,M,2024-02-28,cliente155@example.com,4
+Hombre,97,Femme Intense - Paco Rabanne,Marca1,Finn,Schwarz,21,M,2024-02-28,cliente156@example.com,1
+Unisex,180,Phantom - Paco Rabanne,Marca1,Marie,Schmitz,49,M,2024-02-28,cliente157@example.com,3
+Mujer,61,Poison EDT - Dior,Marca3,Lena,Zaruma,66,F,2024-02-28,cliente158@example.com,7
+Mujer,173,Polo Blue - Ralph Lauren,Marca3,Simon,Servantes,29,F,2024-02-28,cliente159@example.com,10
+Mujer,97,Libre Absolu - Yves Saint Laurent,Marca2,Luis,Neumann,59,F,2024-02-28,cliente160@example.com,2
+Hombre,146,Acqua di Gio EDP - Georgio Armani,Marca2,Juan,Müller,73,M,2024-02-28,cliente161@example.com,4
+Hombre,76,Stronger with you Absolutely - Giorgio Armani,Marca3,Sebastian,Schröder,75,F,2024-02-28,cliente162@example.com,8
+Hombre,177,Spicebomb nightvision - Viktor & Rolf,Marca3,Niklas,Schulze,50,F,2024-02-28,cliente163@example.com,10
+Hombre,117,Very Good Girl EDP - Carolina Herrera,Marca1,Luis,Müller,21,M,2024-02-28,cliente164@example.com,1
+Unisex,86,Musc Noir for her - Narciso Rodriguez,Marca3,Lena,Lange,24,F,2024-02-28,cliente165@example.com,10
+Hombre,72,Doir Homme intense - Dior,Marca2,Ana,Lehmann,24,M,2024-02-28,cliente166@example.com,4
+Unisex,69,Pure Musc - Narciso Rodriguez,Marca2,Sofía,Schmid,32,M,2024-02-28,cliente167@example.com,2
+Hombre,66,Poison EDP - Dior,Marca1,Hannah,Kuhdi,24,M,2024-02-28,cliente168@example.com,5
+Hombre,99,Acqua di Gio Parfum - Georgio Armani,Marca1,Emma,Schröder,20,M,2024-02-28,cliente169@example.com,7
+Hombre,79,Scandal Le Parfum - Jean Paul Gaultier,Marca1,Anna,González,59,M,2024-02-28,cliente170@example.com,3
+Hombre,64,Very Good Girl EDP - Carolina Herrera,Marca1,Leon,Sánchez,65,M,2024-02-28,cliente171@example.com,6
+Mujer,198,Sauvage EDT - Dior,Marca2,Felix,Kuhdi,56,M,2024-02-28,cliente172@example.com,10
+Hombre,76,Polo Blue - Ralph Lauren,Marca2,Ella,Rodríguez,44,M,2024-02-28,cliente173@example.com,7
+Mujer,178,Femme Intense - Paco Rabanne,Marca2,Emilia,López,54,M,2024-02-28,cliente174@example.com,2
+Unisex,60,Phantom Parfum - Paco Rabanne,Marca3,Laura,González,67,F,2024-02-28,cliente175@example.com,3
+Unisex,83,Pure Musc - Narciso Rodriguez,Marca1,Emilia,Pérez,34,F,2024-02-28,cliente176@example.com,1
+Hombre,100,Gentleman intense - Givenchy,Marca3,Simon,Wolf,72,M,2024-02-28,cliente177@example.com,8
+Hombre,158,Luna Rosa Ocean - Prada,Marca2,Maximilian,Hartmann,77,M,2024-02-28,cliente178@example.com,5
+Hombre,187,Gentleman intense - Givenchy,Marca3,Anna,Fernández,33,F,2024-02-28,cliente179@example.com,2
+Unisex,93,Uomo Born In Roma - Valentino,Marca1,Leon,Schmitz,26,F,2024-02-28,cliente180@example.com,9
+Unisex,179,Le Male Elixir - Jean Paul Gaultier,Marca2,María,Krause,55,M,2024-02-28,cliente181@example.com,1
+Unisex,132,Acqua di Gio Profondo - Georgio Armani,Marca1,Emilia,Martínez,65,M,2024-02-28,cliente182@example.com,9
+Mujer,81,Lima Tonka - Adolfo Dominguez,Marca2,Juan,García,20,M,2024-02-28,cliente183@example.com,2
+Unisex,180,Good Girl - Carolina Herrera,Marca3,Mila,García,32,M,2024-02-28,cliente184@example.com,8
+Mujer,158,Good Girl Blush - Carolina Herrera,Marca1,Emilia,Wussyt,44,F,2024-02-28,cliente185@example.com,2
+Mujer,116,Spicebomb nightvision - Viktor & Rolf,Marca1,Alexander,Schröder,38,F,2024-02-28,cliente186@example.com,9
+Unisex,105,L´Homme Ideal Extreme - Guerlain,Marca3,Simon,Weber,51,M,2024-02-28,cliente187@example.com,6
+Mujer,89,Luna Rosa Ocean - Prada,Marca2,Elena,Hoffmann,31,F,2024-02-28,cliente188@example.com,2
+Hombre,105,More Than Words - Xerjoff,Marca3,Felix,Bauer,52,M,2024-02-28,cliente189@example.com,5
+Hombre,134,Boss the scent - Hugo Boss,Marca1,Paul,Hoffmann,46,M,2024-02-28,cliente190@example.com,3
+Unisex,69,Rose Passion - Jimmy Choo,Marca1,Jonas,Schneider,73,M,2024-02-28,cliente191@example.com,3
+Hombre,148,Spicebomb Infrared - Viktor & Rolf,Marca1,Simon,Schröder,47,M,2024-02-28,cliente192@example.com,10
+Unisex,107,K - Dolce & Gabbana,Marca1,Marie,Krause,19,F,2024-02-28,cliente193@example.com,2
+Mujer,132,Poison EDP - Dior,Marca2,Emilia,Krause,49,M,2024-02-28,cliente194@example.com,3
+Mujer,105,Ombre Leather - Tom Ford,Marca2,Simon,Martínez,20,F,2024-02-28,cliente195@example.com,9
+Hombre,177,Y EDP - Yves Saint Laurent,Marca1,Juan,Sánchez,77,F,2024-02-28,cliente196@example.com,2
+Unisex,72,Idole nectar - Lancome,Marca1,Luis,Schmitz,47,F,2024-02-28,cliente197@example.com,6
+Mujer,174,Le Male Parfum - Jean Paul Gaultier,Marca3,Maximilian,Bauer,53,M,2024-02-28,cliente198@example.com,6
+Mujer,77,Acqua di Gio Parfum - Georgio Armani,Marca2,Tobias,Krause,68,M,2024-02-28,cliente199@example.com,10
+Mujer,73,Luna Rosa Ocean - Prada,Marca3,Lukas,Gómez,67,M,2024-02-28,cliente200@example.com,6
+Unisex,85,Femme Parfum - Paco Rabanne,Marca2,Tobias,Kuhdi,68,M,2024-02-28,cliente201@example.com,10
+Unisex,164,Man in Black - Bulgari,Marca2,Pedro,Schröder,38,M,2024-02-28,cliente202@example.com,5
+Hombre,171,Poison EDP - Dior,Marca1,Laura,Zimmermann,41,M,2024-02-28,cliente203@example.com,8
+Mujer,123,Acqua di Gio EDP - Georgio Armani,Marca3,Lukas,Lange,42,M,2024-02-28,cliente204@example.com,2
+Hombre,84,Gentleman EDP - Givenchy,Marca1,Lena,Koch,50,F,2024-02-28,cliente205@example.com,8
+Unisex,159,Black Opium over red - Yves Saint Laurent,Marca1,Emilia,Hofmann,51,M,2024-02-28,cliente206@example.com,2
+Unisex,75,L´Interdir Rouge - Givenchy,Marca1,Diego,Krause,23,M,2024-02-28,cliente207@example.com,3
+Hombre,170,Gentleman intense - Givenchy,Marca1,David,Richter,61,F,2024-02-28,cliente208@example.com,3
+Mujer,145,Femme Parfum - Paco Rabanne,Marca1,Jakob,Werner,79,F,2024-02-28,cliente209@example.com,3
+Unisex,70,My Way Intense - Giorgio Armani,Marca1,Luis,Fernández,54,M,2024-02-28,cliente210@example.com,3
+Mujer,99,Infusion de Figue - Prada,Marca1,Leonie,Schmidt,28,M,2024-02-28,cliente211@example.com,3
+Mujer,189,The one homme - Dolce & Gabbana,Marca2,Emilia,González,69,F,2024-02-28,cliente212@example.com,9
+Hombre,178,Libre Absolu - Yves Saint Laurent,Marca3,Lina,González,31,M,2024-02-28,cliente213@example.com,5
+Unisex,51,Olympea Solar - Paco Rabanne,Marca2,Sebastian,Werner,20,M,2024-02-28,cliente214@example.com,3
+Hombre,137,Le Male Parfum - Jean Paul Gaultier,Marca1,Elena,Krüger,65,M,2024-02-28,cliente215@example.com,6
+Unisex,111,Homme intense - Yves Saint Laurent,Marca3,Moritz,Fittigi,58,F,2024-02-28,cliente216@example.com,10
+Mujer,163,Femme Parfum - Paco Rabanne,Marca1,Liam,Schneider,74,M,2024-02-28,cliente217@example.com,2
+Hombre,92,Le Male Parfum - Jean Paul Gaultier,Marca2,Johanna,García,75,F,2024-02-28,cliente218@example.com,4
+Mujer,142,Man in Black - Bulgari,Marca1,Laura,Hofmann,55,M,2024-02-28,cliente219@example.com,1
+Unisex,148,Millesime Imperial - Creed,Marca3,Amelie,Klein,26,F,2024-02-28,cliente220@example.com,4
+Mujer,186,Sauvage EDP - Dior,Marca1,Mila,Hartmann,48,F,2024-02-28,cliente221@example.com,4
+Hombre,94,212 heroes men - Carolina Herrera,Marca2,Mila,Fernández,21,M,2024-02-28,cliente222@example.com,6
+Hombre,54,Libre EDT - Yves Saint Laurent,Marca1,David,Braun,78,M,2024-02-28,cliente223@example.com,10
+Unisex,87,Yes I Am - Cacharel,Marca1,Mila,García,54,F,2024-02-28,cliente224@example.com,9
+Mujer,184,Spicebomb Extreme - Viktor & Rolf,Marca3,Ana,Wolf,32,M,2024-02-28,cliente225@example.com,7
+Unisex,56,Phantom - Paco Rabanne,Marca2,Juan,Schneider,70,F,2024-02-28,cliente226@example.com,10
+Mujer,193,Y Le Parfum - Yves Saint Laurent,Marca2,Lukas,Zimmermann,42,M,2024-02-28,cliente227@example.com,3
+Mujer,72,J´Adore Infinissime - Dior,Marca3,Luis,Gómez,47,M,2024-02-28,cliente228@example.com,1
+Unisex,127,Doir Homme intense - Dior,Marca3,Luis,Hoffmann,23,M,2024-02-28,cliente229@example.com,3
+Hombre,169,Divine - Jean Paul Gaultier,Marca3,Ana,Schulze,43,M,2024-02-28,cliente230@example.com,1
+Unisex,133,Naxos - Xerjoff,Marca2,Luca,Wagner,18,F,2024-02-28,cliente231@example.com,6
+Hombre,135,L´Interdir Rouge - Givenchy,Marca1,Tobias,Krüger,18,M,2024-02-28,cliente232@example.com,4
+Hombre,62,Infusion Vanille - Prada,Marca1,Julian,Gómez,28,M,2024-02-28,cliente233@example.com,1
+Hombre,70,L´Homme - Prada,Marca3,Tobias,Koch,30,M,2024-02-28,cliente234@example.com,7
+Hombre,189,Noir Extreme - Tom Ford,Marca1,Anna,Wolf,71,M,2024-02-28,cliente235@example.com,4
+Hombre,72,Lady Million - Paco Rabanne,Marca3,Sebastian,González,50,M,2024-02-28,cliente236@example.com,4
+Mujer,158,Millesime Imperial - Creed,Marca3,Sofía,Neumann,24,F,2024-02-28,cliente237@example.com,1
+Mujer,143,Paradoxe Intense - Prada,Marca3,Anna,Hartmann,21,F,2024-02-28,cliente238@example.com,4
+Unisex,70,La nuit de´l homme - Yves Saint Laurent,Marca3,María,Meier,56,M,2024-02-28,cliente239@example.com,10
+Unisex,113,Armani Code EDP - Georgio Armani,Marca2,Juan,Pérez,39,F,2024-02-28,cliente240@example.com,4
+Mujer,157,Infusion Vanille - Prada,Marca2,Jonas,Wagner,40,M,2024-02-28,cliente241@example.com,5
+Unisex,132,Armani Code EDP - Georgio Armani,Marca2,Alexander,Klein,73,M,2024-02-28,cliente242@example.com,1
+Hombre,86,Rose Passion - Jimmy Choo,Marca3,Laura,López,36,M,2024-02-28,cliente243@example.com,1
+Mujer,177,Libre Absolu - Yves Saint Laurent,Marca3,Leon,Schmid,47,M,2024-02-28,cliente244@example.com,2
+Mujer,166,Ombre Leather - Tom Ford,Marca1,Ana,Schmitz,19,F,2024-02-28,cliente245@example.com,10
+Unisex,84,The only one her - Dolce & Gabbana,Marca1,Maria,Pérez,76,M,2024-02-28,cliente246@example.com,5
+Hombre,163,La Petite Noire Rose - Guerlain,Marca1,Sophie,Klein,55,F,2024-02-28,cliente247@example.com,10
+Hombre,55,The One intense - Dolce & Gabbana,Marca2,Maximilian,Klein,21,F,2024-02-28,cliente248@example.com,1
+Mujer,87,Gentleman Society - Givenchy,Marca2,Leonie,Schneider,35,F,2024-02-28,cliente249@example.com,9
+Hombre,152,This is really her - Zadig & Voltaire,Marca2,Johanna,Schulz,44,F,2024-02-28,cliente250@example.com,6
+Mujer,129,Armani Code - Georgio Armani,Marca2,Clara,Hartmann,66,F,2024-02-28,cliente251@example.com,3
+Hombre,110,Gentleman intense - Givenchy,Marca2,Benjamin,Pérez,80,F,2024-02-28,cliente252@example.com,6
+Mujer,74,Costa Azzurra - Tom Ford,Marca3,Benjamin,Schmidt,59,F,2024-02-28,cliente253@example.com,7
+Unisex,108,Fahrenheit - Dior,Marca1,Maria,Díaz,80,F,2024-02-28,cliente254@example.com,3
+Mujer,127,Imperatrice 3 - Dolce & Gabbana,Marca2,Julian,Hoffmann,56,F,2024-02-28,cliente255@example.com,1
+Unisex,85,Si Passione - Giorgio Armani,Marca2,Emilia,Werner,28,F,2024-02-28,cliente256@example.com,9
+Hombre,110,Creed - Bad Boy Elixir,Marca3,Leon,Gómez,22,M,2024-02-28,cliente257@example.com,10
+Unisex,112,Noir Extreme - Tom Ford,Marca3,Anna,Schulz,47,M,2024-02-28,cliente258@example.com,3
+Unisex,93,L´Interdir Rouge - Givenchy,Marca2,Leonie,Braun,76,F,2024-02-28,cliente259@example.com,2
+Mujer,121,Millesime Imperial - Creed,Marca1,Liam,Zimmermann,66,M,2024-02-28,cliente260@example.com,2
+Hombre,88,This is really her - Zadig & Voltaire,Marca1,Pedro,Fischer,68,M,2024-02-28,cliente261@example.com,7
+Mujer,168,Lady Million - Paco Rabanne,Marca3,David,Schmitt,56,F,2024-02-28,cliente262@example.com,3
+Unisex,169,Imperatrice 3 - Dolce & Gabbana,Marca3,Lea,Schmidt,25,F,2024-02-28,cliente263@example.com,5
+Mujer,131,Luna Rosa Ocean - Prada,Marca2,Maria,Neumann,57,F,2024-02-28,cliente264@example.com,2
+Hombre,94,Spicebomb nightvision - Viktor & Rolf,Marca3,Juan,Krause,64,F,2024-02-28,cliente265@example.com,9
+Unisex,122,Poison EDP - Dior,Marca3,Sarah,Sánchez,39,F,2024-02-28,cliente266@example.com,9
+Mujer,101,L´Homme - Prada,Marca3,Mila,Koch,29,M,2024-02-28,cliente267@example.com,10
+Unisex,53,Sauvage Elixir - Dior,Marca1,Jakob,Gómez,40,F,2024-02-28,cliente268@example.com,1
+Mujer,132,Fleur D´Oranger - Prada,Marca1,Amelie,Schwarz,32,F,2024-02-28,cliente269@example.com,8
+Mujer,184,Homme intense - Yves Saint Laurent,Marca3,Sarah,Zimmermann,30,F,2024-02-28,cliente270@example.com,3
+Unisex,115,The only one - Dolce & Gabbana,Marca1,Carlos,Pérez,33,M,2024-02-28,cliente271@example.com,7
+Unisex,141,Naxos - Xerjoff,Marca3,Emma,Schäfer,69,M,2024-02-28,cliente272@example.com,1
+Unisex,79,Infusion Vanille - Prada,Marca3,Johanna,Sánchez,23,F,2024-02-28,cliente273@example.com,1
+Mujer,159,Dior Addict - Dior,Marca1,Luca,Wussyt,34,M,2024-02-28,cliente274@example.com,9
+Hombre,161,Boss the scent - Hugo Boss,Marca1,Lena,García,38,F,2024-02-28,cliente275@example.com,1
+Unisex,159,MYSLF - Yves Saint Laurent,Marca2,Lukas,Müller,78,M,2024-02-28,cliente276@example.com,1
+Mujer,50,Noir Extreme - Tom Ford,Marca3,Sarah,Wolf,67,M,2024-02-28,cliente277@example.com,6
+Mujer,81,Libre EDT - Yves Saint Laurent,Marca2,Mila,Klein,38,F,2024-02-28,cliente278@example.com,2
+Unisex,81,Le Beau Le Parfum - Jean Paul Gaultier,Marca3,Mia,Hoffmann,62,F,2024-02-28,cliente279@example.com,8
+Hombre,99,My Way Intense - Giorgio Armani,Marca2,Tobias,Becker,54,M,2024-02-28,cliente280@example.com,8
+Hombre,115,Yes I Am - Cacharel,Marca2,Luis,Rodríguez,21,F,2024-02-28,cliente281@example.com,3
+Mujer,167,L´Homme Ideal Extreme - Guerlain,Marca3,Lukas,López,45,M,2024-02-28,cliente282@example.com,1
+Mujer,191,Boss the scent - Hugo Boss,Marca3,Jonas,Hoffmann,57,F,2024-02-28,cliente283@example.com,10
+Mujer,58,Le Beau Paradise Garden - Jean Paul Gaultier,Marca1,Finn,Neumann,50,F,2024-02-28,cliente284@example.com,4
+Hombre,119,Gentleman Society - Givenchy,Marca1,Emilia,Schulz,27,F,2024-02-28,cliente285@example.com,9
+Hombre,117,The only one - Dolce & Gabbana,Marca1,Emma,Schneider,18,M,2024-02-28,cliente286@example.com,3
+Unisex,119,Libre EDT - Yves Saint Laurent,Marca3,Luca,Schulze,20,M,2024-02-28,cliente287@example.com,3
+Unisex,166,Sauvage Parfum - Dior,Marca2,Ella,Schäfer,19,M,2024-02-28,cliente288@example.com,9
+Hombre,142,Very Good Girl Glam - Carolina Herrera,Marca3,Lea,García,44,M,2024-02-28,cliente289@example.com,6
+Mujer,127,Erba Pura - Xerjoff,Marca3,Lena,Schäfer,33,M,2024-02-28,cliente290@example.com,3
+Unisex,77,Spirit of the Brave intense - Diesel,Marca3,Finn,Hofmann,80,M,2024-02-28,cliente291@example.com,9
+Mujer,67,Le Male Parfum - Jean Paul Gaultier,Marca2,David,Wolf,21,M,2024-02-28,cliente292@example.com,8
+Mujer,162,Doir Homme intense - Dior,Marca1,Jakob,Lange,42,M,2024-02-28,cliente293@example.com,5
+Unisex,105,Uomo Born In Roma - Valentino,Marca1,Clara,Schäfer,48,M,2024-02-28,cliente294@example.com,2
+Mujer,137,Y Le Parfum - Yves Saint Laurent,Marca2,Niklas,Meyer,60,F,2024-02-28,cliente295@example.com,2
+Unisex,159,Uomo Born In Roma - Valentino,Marca2,Paul,Neumann,24,F,2024-02-28,cliente296@example.com,9
+Unisex,82,Ultra Male - Jean Paul Gaultier,Marca2,David,Zimmermann,63,M,2024-02-28,cliente297@example.com,5
+Hombre,78,L´Homme - Prada,Marca2,Sophie,Wagner,21,M,2024-02-28,cliente298@example.com,7
+Hombre,184,La Belle Parfum - Jean Paul Gaultier,Marca3,Lena,Gómez,52,M,2024-02-28,cliente299@example.com,5
+Hombre,92,La Belle Parfum - Jean Paul Gaultier,Marca2,Sarah,Lehmann,72,F,2024-02-28,cliente300@example.com,10
+Hombre,114,Eros Flame - Versace,Marca1,Moritz,Galia,28,M,2024-02-28,cliente301@example.com,4
+Hombre,124,Good Girl Supreme - Carolina Herrera,Marca3,Lukas,Werner,60,F,2024-02-28,cliente302@example.com,3
+Unisex,101,Acqua di Gio Parfum - Georgio Armani,Marca2,Liam,Schmidt,74,M,2024-02-28,cliente303@example.com,4
+Mujer,79,Dior Homme - Dior,Marca1,Moritz,Díaz,77,M,2024-02-28,cliente304@example.com,2
+Mujer,142,Le Male Elixir - Jean Paul Gaultier,Marca2,Mila,Werner,48,F,2024-02-28,cliente305@example.com,9
+Unisex,194,Q - Dolce & Gabbana,Marca1,Moritz,Krause,77,F,2024-02-28,cliente306@example.com,5
+Unisex,147,Stronger with you Absolutely - Giorgio Armani,Marca1,Clara,Wolf,32,F,2024-02-28,cliente307@example.com,1
+Mujer,168,Lady Million - Paco Rabanne,Marca3,Pedro,Rodríguez,25,M,2024-02-28,cliente308@example.com,1
+Mujer,167,L´Homme Intense - Prada,Marca2,Anna,Galia,45,F,2024-02-28,cliente309@example.com,2
+Unisex,153,Scandal Le Parfum - Jean Paul Gaultier,Marca2,Jakob,Schmidt,24,F,2024-02-28,cliente310@example.com,1
+Unisex,131,One Million Elixir - Paco Rabanne,Marca3,Luis,Rodríguez,62,F,2024-02-28,cliente311@example.com,1
+Hombre,123,This is really her - Zadig & Voltaire,Marca2,Niklas,Fernández,39,M,2024-02-28,cliente312@example.com,5
+Unisex,55,Idole nectar - Lancome,Marca2,Tobias,Bauer,78,F,2024-02-28,cliente313@example.com,5
+Hombre,94,Libre Absolu - Yves Saint Laurent,Marca1,Maria,Zaruma,30,M,2024-02-28,cliente314@example.com,9
+Unisex,67,Imperatrice 3 - Dolce & Gabbana,Marca2,Liam,Schulze,24,M,2024-02-28,cliente315@example.com,2
+Unisex,168,Eros Homme - Versace,Marca1,Marie,Bauer,59,M,2024-02-28,cliente316@example.com,4
+Mujer,157,Le Male Parfum - Jean Paul Gaultier,Marca2,Mila,Lehmann,39,F,2024-02-28,cliente317@example.com,5
+Hombre,54,Invictus Victory - Paco Rabanne,Marca2,Mila,Wolf,35,M,2024-02-28,cliente318@example.com,10
+Unisex,68,The one homme - Dolce & Gabbana,Marca3,Felix,Krüger,58,F,2024-02-28,cliente319@example.com,2
+Mujer,136,My Way Le Parfum - Giorgio Armani,Marca2,Hannah,Klein,70,F,2024-02-28,cliente320@example.com,1
+Hombre,57,Sauvage EDT - Dior,Marca3,María,Rodríguez,40,M,2024-02-28,cliente321@example.com,1
+Hombre,79,The Scent Her - Hugo Boss,Marca1,Mila,López,38,F,2024-02-28,cliente322@example.com,1
+Mujer,90,Musc Noir for her - Narciso Rodriguez,Marca2,Felix,Meier,78,F,2024-02-28,cliente323@example.com,10
+Mujer,187,L´Homme Ideal Extreme - Guerlain,Marca3,Luca,Pérez,51,M,2024-02-28,cliente324@example.com,1
+Mujer,150,Costa Azzurra - Tom Ford,Marca2,Simon,Lehmann,78,M,2024-02-28,cliente325@example.com,5
+Unisex,196,Millesime Imperial - Creed,Marca3,Sebastian,Servantes,53,M,2024-02-28,cliente326@example.com,10
+Mujer,181,Femme Parfum - Paco Rabanne,Marca1,Laura,Díaz,26,F,2024-02-28,cliente327@example.com,7
+Mujer,81,MYSLF - Yves Saint Laurent,Marca2,Felix,Schulze,25,F,2024-02-28,cliente328@example.com,4
+Hombre,65,Costa Azzurra - Tom Ford,Marca1,Leon,Sánchez,63,M,2024-02-28,cliente329@example.com,6
+Unisex,131,Yes I Am - Cacharel,Marca2,Clara,Schulz,29,M,2024-02-28,cliente330@example.com,5
+Unisex,55,Acqua di Gio Profondo - Georgio Armani,Marca3,Tobias,Weber,36,F,2024-02-28,cliente331@example.com,6
+Mujer,174,Paradoxe EDP - Prada,Marca3,Julian,Koch,51,F,2024-02-28,cliente332@example.com,3
+Hombre,117,Invictus Victory - Paco Rabanne,Marca1,Benjamin,Kuhdi,65,M,2024-02-28,cliente333@example.com,5
+Hombre,133,Y Le Parfum - Yves Saint Laurent,Marca2,Mia,Krause,36,M,2024-02-28,cliente334@example.com,4
+Mujer,176,Spirit of the Brave intense - Diesel,Marca2,Mia,Hartmann,22,F,2024-02-28,cliente335@example.com,6
+Mujer,147,Le Beau Paradise Garden - Jean Paul Gaultier,Marca2,Luca,Braun,18,F,2024-02-28,cliente336@example.com,6
+Unisex,69,L´Homme Intense - Prada,Marca3,David,Hofmann,39,F,2024-02-28,cliente337@example.com,2
+Hombre,161,Toy Boy - Moschino,Marca1,Felix,Zimmermann,75,M,2024-02-28,cliente338@example.com,3
+Unisex,145,Black Opium over red - Yves Saint Laurent,Marca1,Amelie,Servantes,68,M,2024-02-28,cliente339@example.com,3
+Mujer,129,My Way Le Parfum - Giorgio Armani,Marca2,Moritz,Meyer,48,F,2024-02-28,cliente340@example.com,6
+Mujer,144,Black Opium extreme - Yves Saint Laurent,Marca1,Lea,Hartmann,23,F,2024-02-28,cliente341@example.com,5
+Mujer,124,Paradoxe EDP - Prada,Marca1,Mila,Fernández,45,M,2024-02-28,cliente342@example.com,6
+Unisex,168,Armani Code EDP - Georgio Armani,Marca2,Laura,Schmitt,74,F,2024-02-28,cliente343@example.com,8
+Mujer,173,The Scent Her - Hugo Boss,Marca1,Lukas,Wolf,77,F,2024-02-28,cliente344@example.com,5
+Mujer,126,The Scent Her - Hugo Boss,Marca3,Elena,Hofmann,35,M,2024-02-28,cliente345@example.com,2
+Hombre,107,My Way Intense - Giorgio Armani,Marca2,Tobias,Hartmann,41,M,2024-02-28,cliente346@example.com,5
+Unisex,122,Paradoxe EDP - Prada,Marca1,Finn,Schmitt,19,F,2024-02-28,cliente347@example.com,7
+Unisex,123,Polo Blue - Ralph Lauren,Marca2,Hannah,Schäfer,46,M,2024-02-28,cliente348@example.com,5
+Hombre,189,La Belle Parfum - Jean Paul Gaultier,Marca2,Hannah,Zimmermann,64,F,2024-02-28,cliente349@example.com,8
+Unisex,76,Musc Noir for her - Narciso Rodriguez,Marca1,Emma,López,77,M,2024-02-28,cliente350@example.com,6
+Hombre,196,Bad Boy le Parfum - Carolina Herrera,Marca3,Maximilian,Becker,59,F,2024-02-28,cliente351@example.com,7
+Hombre,139,212 heroes her - Carolina Herrera,Marca1,Johanna,Schneider,40,F,2024-02-28,cliente352@example.com,9
+Unisex,136,Costa Azzurra - Tom Ford,Marca2,David,Krause,79,F,2024-02-28,cliente353@example.com,10
+Hombre,54,More Than Words - Xerjoff,Marca2,Paul,Meyer,63,F,2024-02-28,cliente354@example.com,2
+Unisex,152,Yes I Am - Cacharel,Marca2,Liam,Schulz,62,M,2024-02-28,cliente355@example.com,10
+Unisex,126,La nuit de´l homme - Yves Saint Laurent,Marca2,Lina,Schwarz,26,M,2024-02-28,cliente356@example.com,7
+Hombre,180,Femme intense - Paco Rabanne,Marca3,David,Schmitt,34,F,2024-02-28,cliente357@example.com,5
+Mujer,176,Y EDP - Yves Saint Laurent,Marca3,Mia,Schmid,52,F,2024-02-28,cliente358@example.com,1
+Unisex,199,Infusion Vanille - Prada,Marca3,Hannah,Schmidt,56,F,2024-02-28,cliente359@example.com,7
+Hombre,169,La Petite Noire Rose - Guerlain,Marca2,Anna,Hoffmann,64,M,2024-02-28,cliente360@example.com,6
+Hombre,177,Lady Million - Paco Rabanne,Marca2,Emilia,Meier,37,M,2024-02-28,cliente361@example.com,4
+Unisex,162,Good Girl Supreme - Carolina Herrera,Marca1,Diego,Wussyt,41,F,2024-02-28,cliente362@example.com,10
+Hombre,95,Idole Aura - Lancome,Marca2,Maximilian,Koch,45,M,2024-02-28,cliente363@example.com,10
+Mujer,64,Erba Pura - Xerjoff,Marca3,María,López,72,M,2024-02-28,cliente364@example.com,9
+Unisex,95,Code Absolu woman - Georgio Armani,Marca2,Emma,Schulze,67,M,2024-02-28,cliente365@example.com,3
+Unisex,190,Spirit of the Brave - Diesel,Marca3,Benjamin,Lange,38,M,2024-02-28,cliente366@example.com,2
+Mujer,77,L´Homme eau - Prada,Marca1,Johanna,Fittigi,29,F,2024-02-28,cliente367@example.com,2
+Unisex,108,Gentleman EDP - Givenchy,Marca3,Juan,Gómez,78,F,2024-02-28,cliente368@example.com,6
+Hombre,126,Daisy Love - Marc Jacobs,Marca3,Niklas,Hoffmann,75,F,2024-02-28,cliente369@example.com,5
+Mujer,75,Dior Addict - Dior,Marca3,Ana,Meier,44,F,2024-02-28,cliente370@example.com,9
+Hombre,54,Y men EDT - Yves Saint Laurent,Marca1,Pedro,Meyer,45,M,2024-02-28,cliente371@example.com,9
+Unisex,170,My Way Le Parfum - Giorgio Armani,Marca3,Maria,Hofmann,58,F,2024-02-28,cliente372@example.com,2
+Hombre,76,Y men EDT - Yves Saint Laurent,Marca2,Anna,Fischer,23,M,2024-02-28,cliente373@example.com,9
+Mujer,87,K - Dolce & Gabbana,Marca2,Jakob,Hoffmann,50,M,2024-02-28,cliente374@example.com,5
+Hombre,58,Dior Homme - Dior,Marca2,Lina,Krause,50,M,2024-02-28,cliente375@example.com,8
+Mujer,192,L´Homme eau - Prada,Marca2,Alexander,Braun,32,M,2024-02-28,cliente376@example.com,2
+Unisex,170,Daisy Love - Marc Jacobs,Marca2,Moritz,Schulze,54,F,2024-02-28,cliente377@example.com,3
+Mujer,168,My Way Le Parfum - Giorgio Armani,Marca1,Paul,Lehmann,31,M,2024-02-28,cliente378@example.com,5
+Mujer,124,Poison EDP - Dior,Marca2,Emilia,Braun,56,M,2024-02-28,cliente379@example.com,7
+Mujer,163,A men - Thierry Mugler,Marca2,Emma,Galia,79,M,2024-02-28,cliente380@example.com,10
+Mujer,101,Chloe absolute - Chloé,Marca3,Ella,Hartmann,29,M,2024-02-28,cliente381@example.com,2
+Mujer,108,The one homme - Dolce & Gabbana,Marca1,Ana,Meyer,74,F,2024-02-28,cliente382@example.com,7
+Unisex,180,Gentleman Society - Givenchy,Marca2,Maximilian,González,78,M,2024-02-28,cliente383@example.com,3
+Mujer,179,Homme intense - Yves Saint Laurent,Marca1,Marie,Zimmermann,59,F,2024-02-28,cliente384@example.com,7
+Mujer,70,Libre Le Parfum - Yves Saint Laurent,Marca1,Alexander,Schmid,37,F,2024-02-28,cliente385@example.com,6
+Mujer,56,Sauvage EDP - Dior,Marca1,Sebastian,Richter,49,M,2024-02-28,cliente386@example.com,2
+Unisex,145,Ombre Leather - Tom Ford,Marca1,Sarah,Schulze,28,M,2024-02-28,cliente387@example.com,7
+Hombre,123,One Million Elixir - Paco Rabanne,Marca2,Sophie,García,49,M,2024-02-28,cliente388@example.com,4
+Mujer,120,This is really her - Zadig & Voltaire,Marca1,Lukas,Lehmann,64,M,2024-02-28,cliente389@example.com,6
+Hombre,197,Spicebomb nightvision - Viktor & Rolf,Marca1,Maria,Braun,26,M,2024-02-28,cliente390@example.com,8
+Mujer,151,La Vie Est Belle Intense - Lancome,Marca2,Maria,Neumann,22,F,2024-02-28,cliente391@example.com,5
+Hombre,196,L´Interdir Rouge - Givenchy,Marca1,Hannah,Schmitz,78,F,2024-02-28,cliente392@example.com,8
+Hombre,183,Ombre Leather - Tom Ford,Marca1,Laura,Krüger,48,F,2024-02-28,cliente393@example.com,7
+Unisex,184,Noir Extreme - Tom Ford,Marca2,Johanna,Servantes,44,M,2024-02-28,cliente394@example.com,8
+Hombre,184,Bleu Noir - Narciso Rodriguez,Marca3,Johanna,Bauer,34,F,2024-02-28,cliente395@example.com,6
+Hombre,88,Olympea Solar - Paco Rabanne,Marca2,Leon,Meyer,54,F,2024-02-28,cliente396@example.com,2
+Unisex,100,The Scent Her - Hugo Boss,Marca3,David,Sánchez,58,F,2024-02-28,cliente397@example.com,6
+Unisex,60,A men - Thierry Mugler,Marca3,Julian,Díaz,24,F,2024-02-28,cliente398@example.com,9
+Mujer,144,Carolina Herrera - Bad Boy EDT,Marca1,Niklas,Zimmermann,52,M,2024-02-28,cliente399@example.com,1
+Mujer,93,Invictus Victory - Paco Rabanne,Marca2,Clara,López,70,M,2024-02-28,cliente400@example.com,5
+Mujer,94,The one homme - Dolce & Gabbana,Marca1,Laura,Schmitt,38,M,2024-02-28,cliente401@example.com,2
+Unisex,150,Good Girl Supreme - Carolina Herrera,Marca1,Ella,Müller,26,M,2024-02-28,cliente402@example.com,8
+Unisex,99,Creed - Bad Boy Elixir,Marca3,Mila,Galia,76,M,2024-02-28,cliente403@example.com,4
+Hombre,108,Millesime Imperial - Creed,Marca3,Leonie,Fittigi,41,F,2024-02-28,cliente404@example.com,4
+Hombre,75,Dior Homme - Dior,Marca1,Anna,Schmid,61,M,2024-02-28,cliente405@example.com,3
+Hombre,101,The one homme - Dolce & Gabbana,Marca1,Sebastian,Servantes,44,M,2024-02-28,cliente406@example.com,4
+Mujer,50,Gentleman Society - Givenchy,Marca1,Mia,Hartmann,58,M,2024-02-28,cliente407@example.com,5
+Unisex,152,Gentleman EDP - Givenchy,Marca1,Jakob,Koch,80,F,2024-02-28,cliente408@example.com,8
+Unisex,170,Infusion de Figue - Prada,Marca2,Moritz,Schäfer,24,F,2024-02-28,cliente409@example.com,1
+Hombre,116,Poison EDT - Dior,Marca2,Niklas,Wussyt,80,M,2024-02-28,cliente410@example.com,4
+Unisex,106,MYSLF - Yves Saint Laurent,Marca3,Mila,Meier,75,F,2024-02-28,cliente411@example.com,4
+Hombre,173,Acqua di Gio Parfum - Georgio Armani,Marca1,Juan,Martínez,72,F,2024-02-28,cliente412@example.com,5
+Mujer,197,Daisy Love - Marc Jacobs,Marca1,Ella,García,76,M,2024-02-28,cliente413@example.com,1
+Unisex,80,Scandal Le Parfum - Jean Paul Gaultier,Marca3,Elena,Meyer,77,F,2024-02-28,cliente414@example.com,4
+Unisex,190,Cedrat Boise Intense - Mancera,Marca2,Maria,Schmitz,30,F,2024-02-28,cliente415@example.com,5
+Hombre,177,Pure Musc - Narciso Rodriguez,Marca2,Emilia,Schwarz,73,F,2024-02-28,cliente416@example.com,9
+Mujer,181,Doir Homme intense - Dior,Marca1,Maximilian,Schmid,18,F,2024-02-28,cliente417@example.com,3
+Unisex,104,Gentleman EDP - Givenchy,Marca1,Luis,Zimmermann,49,F,2024-02-28,cliente418@example.com,6
+Unisex,171,Classique for her - Jean Paul Gaultier,Marca3,Lukas,Sánchez,46,F,2024-02-28,cliente419@example.com,10
+Unisex,167,Phantom - Paco Rabanne,Marca1,Jakob,Krüger,45,M,2024-02-28,cliente420@example.com,1
+Mujer,180,Ombre Leather Parfum - Tom Ford,Marca3,David,Braun,57,F,2024-02-28,cliente421@example.com,7
+Unisex,76,Black Opium green - Yves Saint Laurent,Marca1,Emma,Martínez,63,F,2024-02-28,cliente422@example.com,4
+Unisex,174,Acqua di Gio EDP - Georgio Armani,Marca3,María,Kuhdi,42,F,2024-02-28,cliente423@example.com,1
+Unisex,112,L´Homme Ideal Extreme - Guerlain,Marca2,Hannah,Schröder,23,F,2024-02-28,cliente424@example.com,6
+Hombre,55,Phantom - Paco Rabanne,Marca3,Emilia,Galia,79,M,2024-02-28,cliente425@example.com,8
+Unisex,157,This is really her - Zadig & Voltaire,Marca3,Amelie,Müller,44,F,2024-02-28,cliente426@example.com,2
+Mujer,66,Sauvage Parfum - Dior,Marca1,Lina,Schröder,60,M,2024-02-28,cliente427@example.com,5
+Hombre,143,Gentleman EDP - Givenchy,Marca3,Moritz,Zaruma,40,M,2024-02-28,cliente428@example.com,5
+Mujer,67,L´Interdir Rouge - Givenchy,Marca1,Diego,Klein,77,F,2024-02-28,cliente429@example.com,5
+Unisex,144,Libre Absolu - Yves Saint Laurent,Marca3,Clara,Pérez,48,F,2024-02-28,cliente430@example.com,9
+Unisex,146,Armani Code - Georgio Armani,Marca3,Emilia,Wagner,33,M,2024-02-28,cliente431@example.com,1
+Mujer,144,Acqua di Gio Parfum - Georgio Armani,Marca1,Sophie,Schmitt,50,M,2024-02-28,cliente432@example.com,3
+Mujer,169,Le Male Parfum - Jean Paul Gaultier,Marca1,Finn,Servantes,22,F,2024-02-28,cliente433@example.com,10
+Hombre,180,Naxos - Xerjoff,Marca1,Lina,Wussyt,26,F,2024-02-28,cliente434@example.com,4
+Unisex,170,Daisy Love - Marc Jacobs,Marca2,Julian,Schmid,58,F,2024-02-28,cliente435@example.com,5
+Mujer,65,Armani Code EDP - Georgio Armani,Marca3,Mila,Fischer,55,F,2024-02-28,cliente436@example.com,3
+Mujer,111,This is Her - Zadig & Voltaire,Marca3,Alexander,Wagner,27,M,2024-02-28,cliente437@example.com,6
+Mujer,91,Sauvage EDT - Dior,Marca2,Emilia,González,41,M,2024-02-28,cliente438@example.com,1
+Hombre,135,L´Homme Ideal Extreme - Guerlain,Marca2,Emilia,Müller,47,M,2024-02-28,cliente439@example.com,9
+Mujer,127,Dior Addict - Dior,Marca3,Paul,Krüger,63,M,2024-02-28,cliente440@example.com,8
+Hombre,176,Sauvage EDT - Dior,Marca2,Emma,Bauer,46,M,2024-02-28,cliente441@example.com,7
+Unisex,103,Dior Addict - Dior,Marca3,Jakob,Hofmann,63,F,2024-02-28,cliente442@example.com,9
+Hombre,146,Sauvage EDP - Dior,Marca3,Laura,Krüger,37,F,2024-02-28,cliente443@example.com,8
+Mujer,194,Sauvage EDP - Dior,Marca2,Lukas,Galia,27,M,2024-02-28,cliente444@example.com,2
+Mujer,71,My Way Le Parfum - Giorgio Armani,Marca2,Ella,Neumann,18,F,2024-02-28,cliente445@example.com,7
+Unisex,159,Stronger with you Absolutely - Giorgio Armani,Marca3,Sebastian,Pérez,34,M,2024-02-28,cliente446@example.com,2
+Hombre,175,The only one - Dolce & Gabbana,Marca1,Paul,Lange,73,M,2024-02-28,cliente447@example.com,7
+Unisex,155,Phantom Parfum - Paco Rabanne,Marca2,Moritz,Hofmann,77,M,2024-02-28,cliente448@example.com,10
+Mujer,150,Y Le Parfum - Yves Saint Laurent,Marca1,Juan,Wagner,61,F,2024-02-28,cliente449@example.com,9
+Hombre,123,Femme intense - Paco Rabanne,Marca2,Ella,Fischer,76,F,2024-02-28,cliente450@example.com,1
+Unisex,163,L´Interdir Rouge - Givenchy,Marca2,Amelie,Fernández,77,F,2024-02-28,cliente451@example.com,4
+Unisex,129,Y Le Parfum - Yves Saint Laurent,Marca1,Anna,Hoffmann,51,M,2024-02-28,cliente452@example.com,2
+Mujer,113,Good Girl Blush - Carolina Herrera,Marca2,Pedro,González,56,F,2024-02-28,cliente453@example.com,8
+Unisex,128,J´Adore Infinissime - Dior,Marca1,Liam,Bauer,37,M,2024-02-28,cliente454@example.com,3
+Mujer,141,Alien her - Thierry Mugler,Marca2,Luca,Hartmann,23,M,2024-02-28,cliente455@example.com,10
+Mujer,61,Man in Black - Bulgari,Marca1,Sarah,Hoffmann,53,F,2024-02-28,cliente456@example.com,3
+Unisex,51,212 heroes her - Carolina Herrera,Marca2,Lena,Rodríguez,19,F,2024-02-28,cliente457@example.com,9
+Hombre,77,Black Opium green - Yves Saint Laurent,Marca3,Simon,López,56,M,2024-02-28,cliente458@example.com,9
+Hombre,54,Black Opium green - Yves Saint Laurent,Marca1,Anna,Fernández,67,F,2024-02-28,cliente459@example.com,10
+Mujer,103,A men - Thierry Mugler,Marca3,Emma,Weber,70,M,2024-02-28,cliente460@example.com,10
+Mujer,129,La nuit de´l homme - Yves Saint Laurent,Marca3,Anna,Hartmann,44,F,2024-02-28,cliente461@example.com,3
+Mujer,173,Good Girl Blush - Carolina Herrera,Marca1,Maximilian,Bauer,51,M,2024-02-28,cliente462@example.com,8
+Unisex,194,Femme Parfum - Paco Rabanne,Marca1,Ana,Meier,50,M,2024-02-28,cliente463@example.com,4
+Unisex,76,La Belle Parfum - Jean Paul Gaultier,Marca2,Emma,Bauer,62,F,2024-02-28,cliente464@example.com,6
+Unisex,200,La Petite Noire Rose - Guerlain,Marca2,Anna,Gómez,22,F,2024-02-28,cliente465@example.com,7
+Unisex,179,Divine - Jean Paul Gaultier,Marca3,Ana,Schulz,35,F,2024-02-28,cliente466@example.com,3
+Mujer,126,Noir Extreme - Tom Ford,Marca1,Maria,Schneider,61,F,2024-02-28,cliente467@example.com,1
+Hombre,144,Musc Noir for her - Narciso Rodriguez,Marca3,Clara,López,18,F,2024-02-28,cliente468@example.com,3
+Unisex,71,MYSLF - Yves Saint Laurent,Marca2,Laura,Richter,41,M,2024-02-28,cliente469@example.com,10
+Hombre,152,Naxos - Xerjoff,Marca2,Luis,Hartmann,79,F,2024-02-28,cliente470@example.com,10
+Unisex,119,Ultra Male - Jean Paul Gaultier,Marca2,Pedro,Rodríguez,36,M,2024-02-28,cliente471@example.com,10
+Unisex,112,Carolina Herrera - Bad Boy EDT,Marca2,Anna,Schmidt,55,F,2024-02-28,cliente472@example.com,9
+Hombre,183,Rose Passion - Jimmy Choo,Marca1,Leon,Weber,54,M,2024-02-28,cliente473@example.com,9
+Unisex,136,Creed - Bad Boy Elixir,Marca3,Julian,Hartmann,27,F,2024-02-28,cliente474@example.com,5
+Hombre,154,Sauvage Parfum - Dior,Marca3,Lea,Wussyt,18,F,2024-02-28,cliente475@example.com,4
+Mujer,138,Cedrat Boise Intense - Mancera,Marca3,Paul,Zaruma,77,F,2024-02-28,cliente476@example.com,8
+Mujer,70,Toy Boy - Moschino,Marca3,Maximilian,Krüger,62,F,2024-02-28,cliente477@example.com,6
+Mujer,165,My Way Nectar - Giorgio Armani,Marca2,Johanna,Krüger,50,M,2024-02-28,cliente478@example.com,3
+Mujer,88,Luna Rosa Ocean - Prada,Marca1,Lukas,Hofmann,40,M,2024-02-28,cliente479@example.com,6
+Unisex,134,Si Passione - Giorgio Armani,Marca1,Lukas,Schmitz,24,F,2024-02-28,cliente480@example.com,10
+Unisex,89,Sauvage Elixir - Dior,Marca2,Paul,Hofmann,39,M,2024-02-28,cliente481@example.com,10
+Unisex,90,Very Good Girl Glam - Carolina Herrera,Marca1,Benjamin,Schäfer,31,F,2024-02-28,cliente482@example.com,8
+Unisex,192,La Petite Noire Rose - Guerlain,Marca2,Niklas,López,60,F,2024-02-28,cliente483@example.com,8
+Hombre,191,Fahrenheit - Dior,Marca3,Marie,Meyer,42,F,2024-02-28,cliente484@example.com,3
+Mujer,67,Black Opium extreme - Yves Saint Laurent,Marca2,Marie,Schmidt,47,M,2024-02-28,cliente485@example.com,2
+Hombre,140,Good Girl - Carolina Herrera,Marca3,Mila,Werner,19,F,2024-02-28,cliente486@example.com,4
+Hombre,127,Uomo Born In Roma - Valentino,Marca3,Emilia,Kuhdi,63,F,2024-02-28,cliente487@example.com,1
+Hombre,85,Devotion - Dolce & Gabbana,Marca3,Alexander,Zaruma,61,F,2024-02-28,cliente488@example.com,4
+Mujer,94,Noir Extreme - Tom Ford,Marca3,Tobias,Weber,66,F,2024-02-28,cliente489@example.com,5
+Hombre,163,Very Good Girl Glam - Carolina Herrera,Marca2,Emma,Schmitz,21,F,2024-02-28,cliente490@example.com,6
+Hombre,60,Y EDP - Yves Saint Laurent,Marca3,Maria,López,27,M,2024-02-28,cliente491@example.com,8
+Mujer,164,This is Her - Zadig & Voltaire,Marca2,Maximilian,Meier,59,M,2024-02-28,cliente492@example.com,9
+Mujer,190,Black Opium over red - Yves Saint Laurent,Marca3,Ella,Lange,24,F,2024-02-28,cliente493@example.com,5
+Hombre,160,Spicebomb nightvision - Viktor & Rolf,Marca1,Mila,Schröder,23,M,2024-02-28,cliente494@example.com,1
+Mujer,107,Millesime Imperial - Creed,Marca2,Amelie,Müller,41,M,2024-02-28,cliente495@example.com,5
+Hombre,126,Dior Addict - Dior,Marca3,Sarah,Richter,80,F,2024-02-28,cliente496@example.com,2
+Hombre,187,MYSLF - Yves Saint Laurent,Marca3,Ella,Schneider,65,F,2024-02-28,cliente497@example.com,6
+Hombre,76,L´Homme Intense - Prada,Marca3,Amelie,González,19,F,2024-02-28,cliente498@example.com,2
+Hombre,117,Sauvage EDP - Dior,Marca2,Lena,Kuhdi,39,M,2024-02-28,cliente499@example.com,10
+Hombre,188,Oud Minerale - Tom Ford,Marca2,Sofía,Rodríguez,44,F,2024-02-28,cliente500@example.com,9
+Hombre,159,Sauvage Parfum - Dior,Marca2,Simon,García,58,M,2024-02-28,cliente501@example.com,4
+Hombre,170,Gentleman intense - Givenchy,Marca1,Jakob,Zaruma,35,M,2024-02-28,cliente502@example.com,9
+Mujer,139,The only one - Dolce & Gabbana,Marca2,Sebastian,Pérez,36,M,2024-02-28,cliente503@example.com,10
+Unisex,76,MYSLF - Yves Saint Laurent,Marca3,María,Krause,36,F,2024-02-28,cliente504@example.com,2
+Mujer,123,Infusion Vanille - Prada,Marca2,Elena,Hoffmann,58,F,2024-02-28,cliente505@example.com,4
+Hombre,161,Bleu Noir - Narciso Rodriguez,Marca2,Lena,Fischer,33,F,2024-02-28,cliente506@example.com,2
+Unisex,108,Carolina Herrera - Bad Boy EDT,Marca3,Simon,Wussyt,37,M,2024-02-28,cliente507@example.com,8
+Unisex,145,Boss the scent - Hugo Boss,Marca3,Diego,Galia,72,F,2024-02-28,cliente508@example.com,2
+Mujer,121,Luna Rosa Ocean - Prada,Marca3,Maximilian,Lange,57,F,2024-02-28,cliente509@example.com,2
+Hombre,105,Boss the scent - Hugo Boss,Marca1,Benjamin,Meyer,22,M,2024-02-28,cliente510@example.com,6
+Hombre,122,Costa Azzurra - Tom Ford,Marca3,Laura,Schäfer,47,M,2024-02-28,cliente511@example.com,9
+Mujer,61,Luna Rosa Ocean - Prada,Marca2,Carlos,Lehmann,49,M,2024-02-28,cliente512@example.com,6
+Unisex,165,Sauvage Elixir - Dior,Marca2,Benjamin,Wagner,45,M,2024-02-28,cliente513@example.com,9
+Hombre,188,Heritage - Guerlain,Marca3,Alexander,Meier,45,F,2024-02-28,cliente514@example.com,9
+Unisex,160,Armani Code - Georgio Armani,Marca3,Julian,Richter,60,F,2024-02-28,cliente515@example.com,9
+Mujer,159,Scandal Le Parfum - Jean Paul Gaultier,Marca3,Leonie,Krüger,30,M,2024-02-28,cliente516@example.com,7
+Hombre,166,212 heroes men - Carolina Herrera,Marca1,David,Becker,19,F,2024-02-28,cliente517@example.com,4
+Mujer,135,Good Girl Supreme - Carolina Herrera,Marca1,Maria,Zimmermann,60,M,2024-02-28,cliente518@example.com,10
+Mujer,174,L´Homme Intense - Prada,Marca3,Felix,Hartmann,38,M,2024-02-28,cliente519@example.com,8
+Mujer,179,Rose Passion - Jimmy Choo,Marca1,Felix,Zimmermann,38,M,2024-02-28,cliente520@example.com,4
+Unisex,110,My Way Nectar - Giorgio Armani,Marca2,Tobias,Koch,59,F,2024-02-28,cliente521@example.com,4
+Mujer,68,Paradoxe EDP - Prada,Marca3,Anna,Meier,60,F,2024-02-28,cliente522@example.com,8
+Hombre,91,Scandal him - Jean Paul Gaultier,Marca1,Niklas,Schmitz,39,M,2024-02-28,cliente523@example.com,3
+Mujer,138,Musc Noir for her - Narciso Rodriguez,Marca2,Mia,Schulz,53,F,2024-02-28,cliente524@example.com,6
+Hombre,169,Sauvage Elixir - Dior,Marca1,Laura,Fischer,80,M,2024-02-28,cliente525@example.com,7
+Mujer,184,Code Absolu woman - Georgio Armani,Marca1,Luis,Fernández,51,M,2024-02-28,cliente526@example.com,5
+Mujer,93,The One intense - Dolce & Gabbana,Marca1,Simon,Lange,59,M,2024-02-28,cliente527@example.com,6
+Mujer,76,Creed - Bad Boy Elixir,Marca2,Jakob,Hofmann,25,F,2024-02-28,cliente528@example.com,5
+Hombre,135,Stronger whit you - Emporio Armani,Marca2,Marie,Bauer,80,M,2024-02-28,cliente529@example.com,6
+Hombre,155,Millesime Imperial - Creed,Marca3,Luis,Fischer,75,M,2024-02-28,cliente530@example.com,4
+Hombre,184,Polo Blue - Ralph Lauren,Marca2,Lina,Fittigi,48,F,2024-02-28,cliente531@example.com,4
+Hombre,118,Y Le Parfum - Yves Saint Laurent,Marca2,Niklas,Sánchez,34,F,2024-02-28,cliente532@example.com,5
+Hombre,50,Cool water - Davidoff,Marca1,Benjamin,Pérez,58,F,2024-02-28,cliente533@example.com,6
+Unisex,155,Chloe absolute - Chloé,Marca1,Hannah,García,67,F,2024-02-28,cliente534@example.com,2
+Mujer,193,Gentleman EDP - Givenchy,Marca2,Emilia,Schwarz,25,F,2024-02-28,cliente535@example.com,3
+Hombre,85,La Petite Noire Rose - Guerlain,Marca3,Amelie,Krause,74,M,2024-02-28,cliente536@example.com,7
+Hombre,75,L´Homme eau - Prada,Marca1,Lea,Schmitz,78,M,2024-02-28,cliente537@example.com,6
+Unisex,158,Noir Extreme - Tom Ford,Marca3,Benjamin,López,38,M,2024-02-28,cliente538@example.com,5
+Hombre,67,Daisy Love - Marc Jacobs,Marca1,Clara,Schmitz,48,M,2024-02-28,cliente539@example.com,1
+Mujer,96,The Most Wanted - Azaro,Marca2,Lina,Meier,40,M,2024-02-28,cliente540@example.com,6
+Mujer,136,Spirit of the Brave - Diesel,Marca2,Sofía,Rodríguez,30,F,2024-02-28,cliente541@example.com,7
+Hombre,165,Femme Parfum - Paco Rabanne,Marca3,Hannah,Gómez,18,F,2024-02-28,cliente542@example.com,8
+Mujer,157,The only one her - Dolce & Gabbana,Marca3,Pedro,Koch,19,F,2024-02-28,cliente543@example.com,8
+Unisex,168,Spirit of the Brave intense - Diesel,Marca2,Mia,Meier,66,F,2024-02-28,cliente544@example.com,3
+Hombre,137,Scandal him - Jean Paul Gaultier,Marca1,Lea,Galia,69,F,2024-02-28,cliente545@example.com,4
+Mujer,138,La Belle Parfum - Jean Paul Gaultier,Marca3,Sebastian,Zimmermann,47,M,2024-02-28,cliente546@example.com,8
+Mujer,60,Classique for her - Jean Paul Gaultier,Marca2,Johanna,Gómez,67,M,2024-02-28,cliente547@example.com,6
+Hombre,114,The Most Wanted - Azaro,Marca1,Elena,Meyer,31,F,2024-02-28,cliente548@example.com,9
+Mujer,186,Good Girl Supreme - Carolina Herrera,Marca1,David,Hoffmann,29,M,2024-02-28,cliente549@example.com,5
+Hombre,98,Chloe absolute - Chloé,Marca2,Emma,Zaruma,31,F,2024-02-28,cliente550@example.com,3
+Hombre,94,Femme Intense - Paco Rabanne,Marca1,Luis,Schmidt,21,F,2024-02-28,cliente551@example.com,3
+Unisex,156,Paradoxe Intense - Prada,Marca2,Carlos,Wussyt,78,M,2024-02-28,cliente552@example.com,3
+Hombre,81,Y Le Parfum - Yves Saint Laurent,Marca3,David,Martínez,22,M,2024-02-28,cliente553@example.com,5
+Hombre,188,Libre Le Parfum - Yves Saint Laurent,Marca2,Pedro,Schwarz,58,M,2024-02-28,cliente554@example.com,5
+Mujer,116,Fleur D´Oranger - Prada,Marca3,Maria,Schulze,35,F,2024-02-28,cliente555@example.com,10
+Mujer,148,Toy Boy - Moschino,Marca3,Emilia,Schulze,79,F,2024-02-28,cliente556@example.com,3
+Unisex,102,Bad Boy le Parfum - Carolina Herrera,Marca1,Leonie,Zimmermann,47,F,2024-02-28,cliente557@example.com,4
+Mujer,81,La Belle Parfum - Jean Paul Gaultier,Marca1,Emma,Hartmann,20,M,2024-02-28,cliente558@example.com,4
+Hombre,105,Y Elixir - Yves Saint Laurent,Marca2,Maximilian,Braun,76,F,2024-02-28,cliente559@example.com,7
+Mujer,112,Acqua di Gio EDP - Georgio Armani,Marca3,Benjamin,López,32,F,2024-02-28,cliente560@example.com,8
+Unisex,169,Femme intense - Paco Rabanne,Marca1,Niklas,Lehmann,30,F,2024-02-28,cliente561@example.com,4
+Hombre,128,K edt - Dolce & Gabbana,Marca1,Pedro,Klein,26,F,2024-02-28,cliente562@example.com,1
+Mujer,180,La Belle Parfum - Jean Paul Gaultier,Marca2,María,Zaruma,24,F,2024-02-28,cliente563@example.com,7
+Hombre,128,Stronger whit you - Emporio Armani,Marca3,Maximilian,Koch,64,M,2024-02-28,cliente564@example.com,9
+Unisex,166,Good Girl Blush - Carolina Herrera,Marca2,Lina,Krüger,35,F,2024-02-28,cliente565@example.com,2
+Unisex,81,This is Her - Zadig & Voltaire,Marca3,Liam,Kuhdi,69,M,2024-02-28,cliente566@example.com,1
+Unisex,67,Mon G Bloom - Guerlain,Marca1,Laura,Schmidt,60,M,2024-02-28,cliente567@example.com,6
+Hombre,51,Toy Boy - Moschino,Marca3,Sophie,Fernández,42,M,2024-02-28,cliente568@example.com,1
+Mujer,87,Pure Musc - Narciso Rodriguez,Marca2,Simon,Müller,71,M,2024-02-28,cliente569@example.com,6
+Mujer,62,Poison EDT - Dior,Marca2,Moritz,Schulz,38,F,2024-02-28,cliente570@example.com,1
+Mujer,119,J´Adore Infinissime - Dior,Marca3,Carlos,Rodríguez,53,M,2024-02-28,cliente571@example.com,6
+Mujer,58,Idole nectar - Lancome,Marca1,Alexander,Wolf,49,M,2024-02-28,cliente572@example.com,9
+Unisex,138,Spicebomb Infrared - Viktor & Rolf,Marca2,Lukas,Kuhdi,62,M,2024-02-28,cliente573@example.com,4
+Mujer,82,Black Opium over red - Yves Saint Laurent,Marca2,Finn,Hartmann,22,M,2024-02-28,cliente574@example.com,5
+Mujer,79,Ombre Leather - Tom Ford,Marca1,Ella,Krause,55,F,2024-02-28,cliente575@example.com,6
+Hombre,107,Ombre Leather - Tom Ford,Marca3,Clara,Klein,48,M,2024-02-28,cliente576@example.com,7
+Unisex,63,Armani Code - Georgio Armani,Marca1,Emma,Hofmann,66,M,2024-02-28,cliente577@example.com,9
+Unisex,144,Millesime Imperial - Creed,Marca3,Diego,López,51,M,2024-02-28,cliente578@example.com,9
+Hombre,144,Mon G Bloom - Guerlain,Marca2,Lina,Weber,21,M,2024-02-28,cliente579@example.com,8
+Hombre,130,Dior Addict - Dior,Marca1,Maximilian,Müller,22,F,2024-02-28,cliente580@example.com,3
+Mujer,196,MYSLF - Yves Saint Laurent,Marca2,Simon,Schmitz,18,F,2024-02-28,cliente581@example.com,1
+Unisex,162,La Petite Noire Rose - Guerlain,Marca3,Laura,Hofmann,51,M,2024-02-28,cliente582@example.com,2
+Hombre,187,La Vie Est Belle Intense - Lancome,Marca1,Maximilian,Gómez,32,M,2024-02-28,cliente583@example.com,1
+Unisex,200,The Most Wanted - Azaro,Marca3,Sebastian,Wagner,71,M,2024-02-28,cliente584@example.com,2
+Hombre,147,Acqua di Gio Profondo - Georgio Armani,Marca3,Sophie,Wagner,38,F,2024-02-28,cliente585@example.com,10
+Mujer,141,Black Opium extreme - Yves Saint Laurent,Marca3,Mila,Rodríguez,60,F,2024-02-28,cliente586@example.com,4
+Mujer,116,La Vie Est Belle Intense - Lancome,Marca2,Diego,Díaz,25,M,2024-02-28,cliente587@example.com,7
+Unisex,161,Acqua di Gio EDP - Georgio Armani,Marca1,Lukas,Meyer,59,F,2024-02-28,cliente588@example.com,9
+Mujer,152,My Way Nectar - Giorgio Armani,Marca2,Jakob,López,69,F,2024-02-28,cliente589@example.com,2
+Mujer,87,Sauvage Elixir - Dior,Marca3,Sarah,Müller,32,F,2024-02-28,cliente590@example.com,4
+Hombre,76,The only one - Dolce & Gabbana,Marca2,Leonie,Braun,43,F,2024-02-28,cliente591@example.com,7
+Hombre,111,Y men EDT - Yves Saint Laurent,Marca1,Carlos,Schulz,18,M,2024-02-28,cliente592@example.com,7
+Unisex,191,Miss Dior - Dior,Marca1,Leon,Martínez,80,F,2024-02-28,cliente593@example.com,6
+Unisex,167,Bad Boy le Parfum - Carolina Herrera,Marca2,Leonie,Zaruma,25,M,2024-02-28,cliente594@example.com,10
+Unisex,164,Rose Passion - Jimmy Choo,Marca2,Emilia,Schneider,73,F,2024-02-28,cliente595@example.com,1
+Mujer,170,Paradoxe Intense - Prada,Marca3,Finn,Sánchez,60,M,2024-02-28,cliente596@example.com,4
+Hombre,93,Stronger whit you - Emporio Armani,Marca2,Jakob,Meyer,68,F,2024-02-28,cliente597@example.com,9
+Mujer,69,Poison EDT - Dior,Marca1,Alexander,Schmitz,35,F,2024-02-28,cliente598@example.com,4
+Hombre,58,Le Beau Le Parfum - Jean Paul Gaultier,Marca2,Finn,González,20,F,2024-02-28,cliente599@example.com,9
+Hombre,83,Libre EDT - Yves Saint Laurent,Marca3,Ella,Servantes,57,F,2024-02-28,cliente600@example.com,10
