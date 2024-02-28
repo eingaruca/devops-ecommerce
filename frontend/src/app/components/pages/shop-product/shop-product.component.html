@@ -11,6 +11,7 @@
         </article>
 
         <article class="details">
+            
             <form (submit)="addItem()">
                 <h2 class="details__company">{{ product['brand'] }}</h2>
                 <h2 class="details__title">{{ product['name'] }}</h2>
@@ -38,6 +39,7 @@
 
                     <button class="details__button"> <img src="./images/icon-cart-white.svg" alt=""><i
                             class="fa-solid fa-cart-shopping"></i> Añadir a la cesta</button>
+                    <div *ngIf="!!message">{{ this.message }}</div>
                 </div>
             </form>
         </article>

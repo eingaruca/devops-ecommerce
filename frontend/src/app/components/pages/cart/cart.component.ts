@@ -102,7 +102,29 @@ export class CartComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
-          window.location.reload()
+          this.shopService.getCart()
+                  .subscribe(
+                    res => {
+                      console.log("res:::> ", res);
+                      this.order = res;
+                      this.orderId = this.order.id;
+                      this.shopService.getItemsByOrder(this.order.id)
+                          .subscribe(
+                            res => {
+                              console.log("resITEM:::> ", res);
+                              this.items = res;
+                              
+                            },
+                            err => {
+                              console.log(err)
+                            }
+                          )
+                    },
+                    err => {
+                      console.log(err)
+                    }
+                  )
+          // window.location.reload()
           // this.router.navigate(['profile']);
         },
         err => {

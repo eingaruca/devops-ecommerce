@@ -28,6 +28,8 @@ export class ShopProductComponent implements OnInit{
   item: any = {};
   operator:any = "plus";
 
+  message: string | null = null; //nuevo
+
   constructor (
     private productService:ProductService,
     private shopService: ShopService,
@@ -89,7 +91,8 @@ export class ShopProductComponent implements OnInit{
     this.shopService.addItem(this.item)
     .subscribe(
       res => {
-        console.log(res)
+        console.log(res);
+        this.message="Producto añadido a la cesta";
         // this.router.navigate(['profile']);
       },
       err => {
