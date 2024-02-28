@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class XutilitiesService {
-  private URL ='http://localhost:8004'
+  private URL = 'http://35.208.97.0:32704'
+  // private URL ='http://localhost:8004'
   // private URL ='http://xutilities.default.svc.cluster.local:8004'
   
   token:any ="";
