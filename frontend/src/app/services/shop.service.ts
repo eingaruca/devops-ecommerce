@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class ShopService {
 
-  private URL = 'http://35.208.97.0:32703'
-  // private URL = 'http://localhost:8003'
+  // private URL = 'http://35.208.97.0:32703'
+  private URL = 'http://localhost:8003'
   // private URL = 'http://shop.default.svc.cluster.local:8003'
   
   token:any ="";
@@ -58,6 +58,11 @@ export class ShopService {
     return this.http.get<any>(this.URL + `/getOrderById/${orderId}`, { headers: this.headers })
   }
 
+  updateOrderPayment(orderId:any){
+    console.log("SHOP SErvice", orderId)
+    return this.http.put<any>(this.URL + `/update/payment/`, orderId,{ headers: this.headers })
+  }
+  
   // Items
       // router.post('/addItem', itemController.addItemToCart);
       // router.post('/cleanItemsToCart', itemController.cleanItemsToCart)

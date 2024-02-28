@@ -35,6 +35,7 @@
         <div class="item-flex">
             <section class="checkout">
                 <h2 class="section-heading">Detalles de Pago</h2>
+                <form (submit)="updateOrderPayment()">
                 <div class="payment-form">
                     <div class="payment-method">
                         <button class="method selected">
@@ -50,7 +51,7 @@
                         </button>
                     </div>
 
-                    <form action="#">
+                    
                         <div class="cardholder-name">
                             <label for="cardholder-name" class="label-default">Nombre Tarjeta</label>
                             <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
@@ -78,12 +79,12 @@
                                 <input type="number" name="cvv" id="cvv" class="input-default">
                             </div>
                         </div>
-                    </form>
+                    
                 </div>
                 <button class="btn btn-primary">
                     <b>Pagar</b><span id="payAmount">{{ order.total }} €</span>
                 </button>
-
+            </form>
             </section>
 
             
@@ -111,13 +112,11 @@
                                             <ion-icon name="remove-outline"></ion-icon>
                                             
                                         </button>
-                                        <span id="quantity"
-                                            (click)="updateQuantity(item.productId,1,item.unitPrice,'plus')">{{
-                                            item.quantity }}</span>
-                                        <button id="increment">
+                                        <span id="quantity">{{ item.quantity }}</span>
+                                        <button id="increment" (click)="updateQuantity(item.productId,1,item.unitPrice,'plus')">
                                             <ion-icon name="add-outline"></ion-icon>
-                                            
                                         </button>
+                                        <span id="quantity">{{ item.size }}</span>
                                     </div>
                                     <div class="price">
                                         € <span id="price">{{ item.unitPrice }}</span>

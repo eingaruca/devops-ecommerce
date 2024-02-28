@@ -138,6 +138,8 @@ export class CartComponent implements OnInit {
         .subscribe(
           res => {
             console.log("res:::> ", res);
+
+            
           },
           err => {
             console.log(err)

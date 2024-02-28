@@ -46,6 +46,8 @@ export class CartComponent implements OnInit {
   // headers:any;
   paymentEnabled: boolean = false;
 
+  updatePay:any = {}
+
 
   constructor(
     private shopService: ShopService,
@@ -124,7 +126,7 @@ export class CartComponent implements OnInit {
     this.shopService.addItem(itemMod)
     .subscribe(
       res => {
-        console.log(res)
+        // console.log(res)
         this.shopService.getCart()
                 .subscribe(
                   res => {
@@ -184,7 +186,29 @@ export class CartComponent implements OnInit {
     this.shopService.deleteItem(itemId)
         .subscribe(
           res => {
-            console.log("res:::> ", res);
+            // console.log("res:::> ", res);
+            this.shopService.getCart()
+                .subscribe(
+                  res => {
+                    console.log("res:::> ", res);
+                    this.order = res;
+                    this.orderId = this.order.id;
+                    this.shopService.getItemsByOrder(this.order.id)
+                        .subscribe(
+                          res => {
+                            console.log("resITEM:::> ", res);
+                            this.items = res;
+                            
+                          },
+                          err => {
+                            console.log(err)
+                          }
+                        )
+                  },
+                  err => {
+                    console.log(err)
+                  }
+                )
           },
           err => {
             console.log(err)
@@ -277,6 +301,26 @@ export class CartComponent implements OnInit {
           err => {
             console.log("Err ProfileComponent", err)
           }
-    )
+        )
+  }
+
+  updateOrderPayment(){
+    this.updatePay.orderId = this.orderId
+    console.log('updateOrderPayment', this.updatePay)
+    
+    this.shopService.updateOrderPayment(this.updatePay)
+      .subscribe(
+        res => {
+          console.log('---------->',res)
+          console.log("orderid", this.orderId)
+          this.router.navigate(['cart']);
+        },
+        err => {
+          console.log("Err ProfileComponent", err)
+        }
+      )
+      
+
+    
   }
 }

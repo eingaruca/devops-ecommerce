@@ -15,7 +15,7 @@
                 <h2 class="details__company">{{ product['brand'] }}</h2>
                 <h2 class="details__title">{{ product['name'] }}</h2>
                 <p>{{ product['category'] }}<br></p>
-                <p class="details__description"> {{ product['description'] }} ---- L'Homme de Prada es una fragancia de
+                <p class="details__description"> {{ product['description'] }} <br> L'Homme de Prada es una fragancia de
                     la familia olfativa Amaderada Chipre
                     para Hombres. Prada L'Homme se lanzó en 2016. La Nariz detrás de esta fragrancia es Daniela (Roche)
                     Andrier. Las Notas de Salida son neroli, pimienta negra, cardamomo y semillas de zanahoria; las
@@ -39,6 +39,7 @@
                     <button class="details__button"> <img src="./images/icon-cart-white.svg" alt=""><i
                             class="fa-solid fa-cart-shopping"></i> Añadir a la cesta</button>
                 </div>
+                <div *ngIf="!!message" class="message-container">{{ this.message }}</div>
             </form>
         </article>
     </section>
