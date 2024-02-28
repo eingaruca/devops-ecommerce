@@ -121,27 +121,31 @@ const getProductsByName = async (req, res, next) => {
         name = name.toLowerCase();
         console.log('getProductsByName', name);
 
-        const products = await firestore.collection('Products')
-                                            .where('name', '>=', name)
-                                            .where('name', '<=', name + '\uf8ff').get();
+        const products = await firestore.collection('Products').orderBy('name')
+                                            // .where('name', '>=', name)
+                                            // .where('name', '<=', name + '\uf8ff');
 
         let productsArray = [];
 
         await products.get().then(snapshot => {
             snapshot.forEach(doc => {
-                console.log('---> ', doc.id, doc.data());
-                const product = new Product(
-                    doc.id,
-                    doc.data().name,
-                    doc.data().description,
-                    doc.data().category,
-                    doc.data().brand,
-                    doc.data().price,
-                    doc.data().size,
-                    doc.data().stock,
-                    doc.data().image
-                );
-                productsArray.push(product);
+                const productName = doc.data().name.toLowerCase();
+                if ( productName.includes(name) ){
+                    console.log('---> ', doc.id, doc.data());
+                    const product = new Product(
+                        doc.id,
+                        doc.data().name,
+                        doc.data().description,
+                        doc.data().category,
+                        doc.data().brand,
+                        doc.data().price,
+                        doc.data().size,
+                        doc.data().stock,
+                        doc.data().image
+                    );
+                    productsArray.push(product);
+                }
+                
             });
         });
 
