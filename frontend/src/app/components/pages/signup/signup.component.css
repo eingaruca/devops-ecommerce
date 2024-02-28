@@ -65,7 +65,7 @@ body{
     border-radius: 10px;
     font-size: 16px;
     color: black;
-    padding: 20px 45px 20px 20px;
+    padding: 0px 45px 0px 20px;
 }
 
 .inputo-box input::placeholder{

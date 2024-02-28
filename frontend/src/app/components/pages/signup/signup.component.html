@@ -28,6 +28,7 @@
             <div class="input-box">
                 <input type="text" id="phone" [(ngModel)]="user.phone" name="phone" placeholder="Teléfono móvil (*)" pattern="[0-9]*" 
                 title="Por favor, ingrese solo números" required>
+                <i class="bx bxs-phone"></i>
                 <!-- <input type="text" id="phone" [(ngModel)]="user.phone" name="phone" placeholder="Teléfono móvil"  required> -->
                 <div *ngIf="!user.phone && submitted" class="error-message">Este campo es obligatorio</div>
             </div>
@@ -49,7 +50,7 @@
             </div>
             <div class="input-box">
                 <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email (*)" required>
-                <i class="bx bx-mail"></i>
+                <i class='bx bx-envelope'></i>
                 <div *ngIf="!user.email && submitted" class="error-message">Este campo es obligatorio</div>
             </div>
             <div class="input-box">
