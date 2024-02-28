@@ -89,28 +89,73 @@ export class CartComponent implements OnInit {
 //     }
 // }
 
-  updateQuantity(productId:any, quantity:any, price:any, operator:any){
-      let itemMod:any = {};
+  // updateQuantity(productId:any, quantity:any, price:any, operator:any){
+  //     let itemMod:any = {};
 
-      itemMod.userId = this.user.id
-      itemMod.productId = productId;
-      itemMod.unitPrice = price;
-      itemMod.quantity = 1
-      itemMod.operation = operator;
-      console.log("itemmod", itemMod)
-      this.shopService.addItem(itemMod)
-      .subscribe(
-        res => {
-          console.log(res)
-          window.location.reload()
-          // this.router.navigate(['profile']);
-        },
-        err => {
-          console.log(err)
-        } 
-      )
+  //     itemMod.userId = this.user.id
+  //     itemMod.productId = productId;
+  //     itemMod.unitPrice = price;
+  //     itemMod.quantity = 1
+  //     itemMod.operation = operator;
+  //     console.log("itemmod", itemMod)
+  //     this.shopService.addItem(itemMod)
+  //     .subscribe(
+  //       res => {
+  //         console.log(res)
+  //         window.location.reload()
+  //         // this.router.navigate(['profile']);
+  //       },
+  //       err => {
+  //         console.log(err)
+  //       } 
+  //     )
     
-  }
+  // }
+
+  updateQuantity(productId:any, quantity:any, price:any, operator:any){
+    let itemMod:any = {};
+
+    itemMod.userId = this.user.id
+    itemMod.productId = productId;
+    itemMod.unitPrice = price;
+    itemMod.quantity = 1
+    itemMod.operation = operator;
+    console.log("itemmod", itemMod)
+    this.shopService.addItem(itemMod)
+    .subscribe(
+      res => {
+        console.log(res)
+        this.shopService.getCart()
+                .subscribe(
+                  res => {
+                    console.log("res:::> ", res);
+                    this.order = res;
+                    this.orderId = this.order.id;
+                    this.shopService.getItemsByOrder(this.order.id)
+                        .subscribe(
+                          res => {
+                            console.log("resITEM:::> ", res);
+                            this.items = res;
+                            
+                          },
+                          err => {
+                            console.log(err)
+                          }
+                        )
+                  },
+                  err => {
+                    console.log(err)
+                  }
+                )
+        // window.location.reload()
+        // this.router.navigate(['profile']);
+      },
+      err => {
+        console.log(err)
+      } 
+    )
+  
+}
 
   updateAddress(){
     let update:any = {};

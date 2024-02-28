@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product
+  name: shop
   labels:
-    app: product
+    app: shop
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: product
+      app: shop
   template:
     metadata:
       labels:
-        app: product
+        app: shop
     spec:
       containers:
-      - name: product
-        image: eingaruca/ecommerce:product
+      - name: shop
+        image: gcr.io/handy-position-413808/github.com/eingaruca/devops-ecommerce/shop:latest
         ports:
         - containerPort: 8002

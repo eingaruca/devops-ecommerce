@@ -4,10 +4,10 @@ metadata:
   labels:
     app: product
   name: product
-  namespace: ecommerce
+  # namespace: ecommerce
 spec:
   ports:
-  - nodePort: 30217
+  - nodePort: 32701
     port: 8001
     protocol: TCP
     targetPort: 8001
