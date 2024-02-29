@@ -19,7 +19,24 @@
    - Módulo de estadísticas y recomendación (* Posible fase 2 *)
 
 ## 4. Software utilizado
-   - Html / CSS / Sass
-   - Node.js 
-   - MySql
-   - Google Cloud Platform
+- **Programming Languages**
+  - **Frontend:**
+    - Html / CSS
+    - Angular 17
+  - **Backend:**
+    - NodeJS
+    - Python - Django
+- **Google Cloud Infraestructure**
+  - Firestore Database (NoSQL)
+  - Firebase Storage (Bucket)
+  - Google Kubernetes Engine (GKE)
+  - Cloud Build
+  - Virtual Private Cloud (VPC)
+- **Hosting**
+  - GoDaddy
+
+## 5. Web Site Overview
+![Alt text](Betaromas-Security.webp)
+
+## 6. Google Cloud Architecture
+![Alt text](Betaromas-Architecture.webp)
