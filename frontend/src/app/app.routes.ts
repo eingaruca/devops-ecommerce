@@ -20,6 +20,8 @@ import { ChangePasswordComponent } from './components/partials/change-password/c
 import { UserReviewsComponent } from './components/partials/user-reviews/user-reviews.component';
 import { OrdersHistoryComponent } from './components/partials/orders-history/orders-history.component';
 import { OrdersDetailComponent } from './components/partials/orders-detail/orders-detail.component';
+import { AnalyticsComponent } from './components/pages/analytics/analytics.component';
+import { ArchComponent } from './components/pages/arch/arch.component';
 
 export const routes: Routes = [
     {
@@ -98,5 +100,11 @@ export const routes: Routes = [
     },
     {
         path: 'orders-detail/:orderId', component: OrdersDetailComponent
+    },
+    {
+        path: 'analytics', component: AnalyticsComponent
+    },
+    {
+        path: 'arch', component: ArchComponent
     },
 ];

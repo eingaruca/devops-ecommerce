@@ -38,6 +38,8 @@ ng g c components/pages/perfumes-woman
 ng g c components/pages/perfumes-unisex
 ng g c components/pages/perfumes-unisex
 ng g c components/pages/contact
+ng g c components/pages/arch
+ng g c components/pages/analytics
 
 ng g c components/partials/header
 ng g c components/partials/footer
