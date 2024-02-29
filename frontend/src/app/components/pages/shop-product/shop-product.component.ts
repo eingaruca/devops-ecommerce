@@ -65,7 +65,7 @@ export class ShopProductComponent implements OnInit{
     if (typeof localStorage !== 'undefined') {
       token = localStorage.getItem('token') || '';
       if ( token.length > 0 && token !== null){
-        console.log("tok tok", token);
+        // console.log("tok tok", token);
         this.item.userId = (JSON.parse(atob(token.split('.')[1]))).id;
       }
     }
@@ -107,7 +107,7 @@ export class ShopProductComponent implements OnInit{
         this.item.size = this.product.size;
         this.item.subTotal = this.item.unitPrice * this.item.quantity;
         this.item.operation = this.operator;
-        console.log('IT EM',this.item)
+        // console.log('IT EM',this.item)
         this.shopService.addItem(this.item)
         .subscribe(
           res => {

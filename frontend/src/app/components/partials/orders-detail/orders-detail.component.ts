@@ -62,7 +62,7 @@ export class OrdersDetailComponent implements OnInit{
     this.shopService.getItemsByOrder(orderId)
           .subscribe(
             res => {
-              console.log(res)
+              // console.log(res)
               this.items = res;
             },
             err => {

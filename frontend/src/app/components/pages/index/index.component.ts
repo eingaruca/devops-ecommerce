@@ -47,7 +47,7 @@ export class IndexComponent implements OnInit {
     this.xutilitiesService.getArticles()
     .subscribe(
       res => {
-        console.log("blog.component.ts", res.articles[0]);
+        // console.log("blog.component.ts", res.articles[0]);
         this.articles = res.articles;
         //Paginación
         this.pages = this.articles.length;
@@ -64,7 +64,7 @@ export class IndexComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
 
       window.addEventListener('scroll', function () {
-        console.log("============================= addEventListener OnInit indexComponent ===============================");
+        // console.log("============================= addEventListener OnInit indexComponent ===============================");
         var welcomeText = document.getElementById('welcomeText');
         var header = document.querySelector('.header');
         if (header && welcomeText) {

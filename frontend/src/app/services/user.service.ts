@@ -20,13 +20,7 @@ export class UserService {
     private http: HttpClient
   ) 
   { 
-    // this.token = localStorage.getItem('token');
-    // this.headers = new HttpHeaders({
-    //   'Authorization': `Bearer ${this.token}`,
-    // });
-
     this.setHeader();
-
   }
 
   setHeader(){
@@ -35,12 +29,12 @@ export class UserService {
       this.headers = new HttpHeaders({
         'Authorization': `Bearer ${this.token}`,
       });
-      console.log("UserService constructor - token ok", this.token)
+      // console.log("UserService constructor - token ok", this.token)
     } else {
       this.headers = new HttpHeaders({
         'Authorization': `Bearer `,
       });
-      console.log("UserService constructor - localStorage undefined")
+      // console.log("UserService constructor - localStorage undefined")
     }
   }
 
@@ -59,7 +53,7 @@ export class UserService {
      * updateProfile -> Recibe todo el usuario y su token.
      */
 
-    console.log('USERSERVICE', user)
+    // console.log('USERSERVICE', user)
     return this.http.put<any>(this.URL + `/updateProfile`, user, {headers: this.headers})
   }
 

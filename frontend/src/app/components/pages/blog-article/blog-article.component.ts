@@ -37,7 +37,7 @@ export class BlogArticleComponent implements OnInit{
     this.xutilitiesService.getArticleById(this.articleId)
         .subscribe(
           res => {
-            console.log(res)
+            // console.log(res)
             this.article = res;
           },
           err => {

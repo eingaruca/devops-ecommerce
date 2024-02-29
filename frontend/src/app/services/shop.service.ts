@@ -6,9 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class ShopService {
 
-  // private URL = 'http://35.208.97.0:32703'
-  private URL = 'http://localhost:8003'
-  // private URL = 'http://shop.default.svc.cluster.local:8003'
+  private URL = 'http://35.208.97.0:32703'
+  // private URL = 'http://localhost:8003'
   
   token:any ="";
   headers:any;
@@ -20,12 +19,12 @@ export class ShopService {
       this.headers = new HttpHeaders({
         'Authorization': `Bearer ${this.token}`,
       });
-      console.log("ShopService constructor - token ok", this.token)
+      // console.log("ShopService constructor - token ok", this.token)
     } else {
       this.headers = new HttpHeaders({
         'Authorization': `Bearer `,
       });
-      console.log("ShopService constructor - localStorage undefined")
+      // console.log("ShopService constructor - localStorage undefined")
     }
 
     
@@ -59,7 +58,7 @@ export class ShopService {
   }
 
   updateOrderPayment(orderId:any){
-    console.log("SHOP SErvice", orderId)
+    // console.log("SHOP SErvice", orderId)
     return this.http.put<any>(this.URL + `/update/payment/`, orderId,{ headers: this.headers })
   }
   
@@ -70,7 +69,7 @@ export class ShopService {
       // router.get('/getItemsByOrder', itemController.getItemsByOrder);
       // router.delete('/deleteItem/:id', itemController.deleteItem)
   addItem(item:any){
-    console.log("shop service", item)
+    // console.log("shop service", item)
     return this.http.post<any>(this.URL + `/addItem`, item, { headers : this.headers });
   }
   getItemsByOrder(orderId:any){
@@ -78,7 +77,7 @@ export class ShopService {
   }
 
   deleteItem(itemId:any){
-    console.log("ShopService - itemid", itemId)
+    // console.log("ShopService - itemid", itemId)
     return this.http.delete(this.URL + `/deleteItem/${itemId}`, { headers : this.headers });
   }
 

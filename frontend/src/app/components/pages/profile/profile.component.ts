@@ -48,13 +48,13 @@ export class ProfileComponent implements OnInit {
   }
 
   updateProfile() {
-    console.log("profilecomponent", this.user)
+    // console.log("profilecomponent", this.user)
     this.user.id = this.user.email
     delete this.user.password
     return this.userService.updateProfile(this.user)
       .subscribe(
         res => {
-          console.log(res)
+          // console.log(res)
           this.router.navigate(['index'])
         },
         err => {
@@ -98,7 +98,7 @@ export class ProfileComponent implements OnInit {
         .subscribe(
           res => {
             this.user = res;
-            console.log(this.user);
+            // console.log(this.user);
           },
           err => {
             console.log(err)
@@ -107,7 +107,7 @@ export class ProfileComponent implements OnInit {
         )
     } else {
       this.router.navigate(['signin']);
-      console.log("Profilecomponent ngOnInit - localStorage undefined")
+      // console.log("Profilecomponent ngOnInit - localStorage undefined")
     }
 
   }

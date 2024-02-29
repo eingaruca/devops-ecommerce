@@ -75,7 +75,6 @@ export class CartComponent implements OnInit {
 
     if (this.existToken) {
       console.log("IFFFF", this.existToken)
-
     }
 
   }
@@ -88,23 +87,18 @@ export class CartComponent implements OnInit {
     itemMod.unitPrice = price;
     itemMod.quantity = 1
     itemMod.operation = operator;
-    console.log("itemmod", itemMod)
     this.shopService.addItem(itemMod)
       .subscribe(
         res => {
-          // console.log(res)
           this.shopService.getCart()
             .subscribe(
               res => {
-                console.log("res:::> ", res);
                 this.order = res;
                 this.orderId = this.order.id;
-                console.log("ORDER!!!!", this.order.total)
                 this.shopService.getItemsByOrder(this.order.id)
                   .subscribe(
                     res => {
                       this.items = res;
-                      console.log("getItemsByOrder!!!!")
                     },
                     err => {
                       console.log(err)
@@ -133,11 +127,11 @@ export class CartComponent implements OnInit {
     update.community = this.order.community ?? this.user.community;
     update.postalCode = this.order.postalCode ?? this.user.postalCode;
 
-    console.log("update", update)
+    // console.log("update", update)
     this.shopService.updateOrder(update)
       .subscribe(
         res => {
-          console.log("Update Address:::> ", res);
+          // console.log("Update Address:::> ", res);
           this.paymentEnabled = true;
           this.contentBlocked= false;
         },
@@ -157,13 +151,13 @@ export class CartComponent implements OnInit {
           this.shopService.getCart()
             .subscribe(
               res => {
-                console.log("res:::> ", res);
+                // console.log("res:::> ", res);
                 this.order = res;
                 this.orderId = this.order.id;
                 this.shopService.getItemsByOrder(this.order.id)
                   .subscribe(
                     res => {
-                      console.log("resITEM:::> ", res);
+                      // console.log("resITEM:::> ", res);
                       this.items = res;
 
                     },
@@ -194,18 +188,18 @@ export class CartComponent implements OnInit {
       this.userService.getUserById()
         .subscribe(
           res => {
-            console.log("noOnInitgetUserById:::> ", res);
+            // console.log("noOnInitgetUserById:::> ", res);
             this.user = res;
             this.shopService.getCart()
               .subscribe(
                 res => {
-                  console.log("res:::> ", res);
+                  // console.log("res:::> ", res);
                   this.order = res;
                   this.orderId = this.order.id;
                   this.shopService.getItemsByOrder(this.order.id)
                     .subscribe(
                       res => {
-                        console.log("resITEM:::> ", res);
+                        // console.log("resITEM:::> ", res);
                         this.items = res;
 
                       },
@@ -239,11 +233,11 @@ export class CartComponent implements OnInit {
   checkExistToken() {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== null) {
       this.token = localStorage.getItem('token');
-      console.log("CartComponent ngOnInit - token ok", this.token);
+      // console.log("CartComponent ngOnInit - token ok", this.token);
       this.userService.getUserById()
         .subscribe(
           res => {
-            console.log("noOnInitgetUserById:::> ", res);
+            // console.log("noOnInitgetUserById:::> ", res);
             this.user = res;
           },
           err => {
@@ -253,7 +247,7 @@ export class CartComponent implements OnInit {
         )
 
     } else {
-      console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
+      // console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
       this.router.navigate(['signin']);
     }
   }
@@ -262,18 +256,18 @@ export class CartComponent implements OnInit {
     this.xutilitiesService.getCommunities()
       .subscribe(
         res => {
-          console.log('---------->', res)
+          // console.log('---------->', res)
           this.communities = res.communities;
         },
         err => {
-          console.log("Err ProfileComponent", err)
+          console.log(err)
         }
       )
   }
 
   updateOrderPayment() {
     this.updatePay.orderId = this.orderId
-    console.log('updateOrderPayment', this.updatePay)
+    // console.log('updateOrderPayment', this.updatePay)
 
     
  
@@ -298,7 +292,7 @@ export class CartComponent implements OnInit {
           
         },
         err => {
-          console.log("Err ProfileComponent", err)
+          console.log(err)
         }
       )
 

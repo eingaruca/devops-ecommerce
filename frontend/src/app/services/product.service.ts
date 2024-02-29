@@ -6,10 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
 
-  // private URL = 'http://35.208.97.0:32701'
-  private URL = 'http://localhost:8001'
-  // private URL = 'http://product.default.svc.cluster.local:8001'
-  
+  private URL = 'http://35.208.97.0:32701'
+  // private URL = 'http://localhost:8001'
+    
   constructor(private http: HttpClient) { 
 
   }
@@ -32,9 +31,9 @@ export class ProductService {
   }
 
   getProductsbyId(id: any){
-    console.log("product.service.ts - getProductsbyId")
+    // console.log("product.service.ts - getProductsbyId")
     const urlnew = this.URL + `/${id}`
-    console.log("product.service.ts", urlnew)
+    // console.log("product.service.ts", urlnew)
     return this.http.get<any>(urlnew);
   }
 
@@ -42,11 +41,4 @@ export class ProductService {
     return this.http.get<any>(this.URL + `/search/${text}`);
   }
 
-  
-  // router.post('/', productController.createProduct);
-  // router.get('/', productController.getProducts); getProducts
-  // router.get('/brands', productController.getBrands);
-  // router.get('/:id', productController.getProductById);
-  // router.get('/category/:category', productController.getProductsByCategory);
-  // router.put('/update', productController.updateProduct);
 }

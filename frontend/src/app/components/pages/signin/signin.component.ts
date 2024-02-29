@@ -33,11 +33,11 @@ export class SigninComponent {
   ngOnInit() {}
 
   signin(){
-    console.log("signin", this.user)
+    // console.log("signin", this.user)
     this.authService.signin(this.user)
       .subscribe(
         res => {
-          console.log(res)
+          // console.log(res)
           localStorage.setItem('token', res.token);
           this.router.navigate(['index']);
         },

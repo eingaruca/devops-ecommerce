@@ -26,30 +26,18 @@ export class XutilitiesService {
    * Common Method
    */
   setHeader(){
-    // if (typeof localStorage !== 'undefined') {
-    //   this.token = localStorage.getItem('token');
-    //   this.headers = new HttpHeaders({
-    //     'Authorization': `Bearer ${this.token}`,
-    //   });
-    //   console.log("xutilities constructor - token ok", this.token)
-    // } else {
-    //   this.headers = new HttpHeaders({
-    //     'Authorization': `Bearer `,
-    //   });
-    //   console.log("xutilities constructor - localStorage undefined")
-    // }
 
     if (typeof localStorage !== 'undefined') {
       this.token = localStorage.getItem('token');
       this.headers = new HttpHeaders({
         'Authorization': `Bearer ${this.token}`,
       });
-      console.log("ShopService constructor - token ok", this.token)
+      // console.log("ShopService constructor - token ok", this.token)
     } else {
       this.headers = new HttpHeaders({
         'Authorization': `Bearer `,
       });
-      console.log("ShopService constructor - localStorage undefined")
+      // console.log("ShopService constructor - localStorage undefined")
     }
   }
 

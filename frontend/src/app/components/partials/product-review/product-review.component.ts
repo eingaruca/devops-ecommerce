@@ -56,7 +56,7 @@ export class ProductReviewComponent implements OnInit{
     if (typeof localStorage !== 'undefined') {
       token = localStorage.getItem('token') || '';
       if ( token.length > 0 && token !== null){
-        console.log("tok tok", token);
+        // console.log("tok tok", token);
         this.userId = (JSON.parse(atob(token.split('.')[1]))).id;
       }
     }
@@ -81,9 +81,6 @@ export class ProductReviewComponent implements OnInit{
   }
 
   async submitReview(){
-    // console.log('=>=>=>=>=> ', this.newReview);
-    // return this.xutilitiesService.createReview(this.productId, this.newReview)
-    // const filePath = `archivos/${file.name}`;
 
     // https://www.npmjs.com/package/@angular/fire/v/17.0.0
     // https://www.youtube.com/watch?v=gUCvOZzAXGg
@@ -99,20 +96,18 @@ export class ProductReviewComponent implements OnInit{
       uploadFile.on('state_changed',
       async () => {
         url = await getDownloadURL(fileRef);
-        console.log("url", url);
+        // console.log("url", url);
         if (url !== ''){
           this.newReview.image = url;
-          console.log('if', url);
+          // console.log('if', url);
         } else {
-          console.log('else' ,url);
+          // console.log('else' ,url);
           this.newReview.image = 'No image'
         }
 
         return this.xutilitiesService.createReview(this.productId, this.newReview)
             .subscribe(
               res => {
-                console.log("===============================================")
-                console.log(res);                
                 window.location.reload();
               },
               err => {
@@ -127,7 +122,7 @@ export class ProductReviewComponent implements OnInit{
       return this.xutilitiesService.createReview(this.productId, this.newReview)
                 .subscribe(
                   res => {
-                    console.log(res);                
+                    // console.log(res);                
                     window.location.reload();
                   },
                   err => {
@@ -145,8 +140,7 @@ export class ProductReviewComponent implements OnInit{
   createFormData(event:any) {
     this.selectedFile = <File>event.target.files[0];
     this.fd.append('file', this.selectedFile, this.selectedFile.name);
-    console.log('=> ', this.selectedFile.name)
-    
+   
   }
 
   getDecodedAccessToken(token: string): string {

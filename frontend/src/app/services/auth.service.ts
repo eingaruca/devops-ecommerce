@@ -47,14 +47,3 @@ export class AuthService {
     localStorage.removeItem('token');
    }
 }
-
-// // Authentication
-// router.post('/login', userController.loginUser);
-// router.post('/logout', authMiddleware.authRequired, userController.logoutUser);
-// router.get('/profile', authMiddleware.authRequired, userController.profile);
-// // Users
-// router.get('/', authMiddleware.authRequired, userController.getUsers);
-// router.post('/', authMiddleware.authRequired, userController.createUser);
-// router.get('/:id', authMiddleware.authRequired, userController.getUserById);
-// router.put('/:id', authMiddleware.authRequired, userController.updateUser);
-// router.delete('/:id', authMiddleware.authRequired, userController.deleteUser);

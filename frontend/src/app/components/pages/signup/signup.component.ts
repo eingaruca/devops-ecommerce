@@ -75,7 +75,6 @@ export class SignupComponent {
     this.xutilitiesService.getCommunities()
       .subscribe(
         res => {
-          console.log('---------->', res)
           this.communities = res.communities;
         },
         err => {
