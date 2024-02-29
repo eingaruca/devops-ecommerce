@@ -7,8 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AuthService {
 
-  private URL = 'http://35.208.97.0:32702'
-  // private URL ='http://localhost:8002'
+  // private URL = 'http://35.208.97.0:32702'
+  private URL ='http://localhost:8002'
   // private URL ='http://user.default.svc.cluster.local:8002'
   token:any ="";
   headers:any;
@@ -30,7 +30,6 @@ export class AuthService {
    }
 
    signin(user: any) {
-    console.log(user)
     return this.http.post<any>(this.URL + '/login', user);
    }
 
@@ -45,5 +44,7 @@ export class AuthService {
 
    logout():void  {
     localStorage.removeItem('token');
+    localStorage.removeItem('fullname');
+    localStorage.removeItem('type');
    }
 }

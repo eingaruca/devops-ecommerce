@@ -42,7 +42,13 @@ const loginUser = async(req, res, next) => {
 
             res.cookie("token",token);
             userValid = data.data();
-            res.json( {'email': userValid.email, 'token': token} );
+            fullname = `${userValid.name} ${userValid.lastname}`
+            type = false
+            if (userValid.type) type = true;
+
+            console.log(fullname)
+            console.log("type", type)
+            res.json( {'email': userValid.email, 'token': token, 'fullname': fullname, 'type': type} );
         }
     } catch (error) {
         return res.status(400).send(error.message);

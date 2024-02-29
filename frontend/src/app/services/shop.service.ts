@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class ShopService {
 
-  private URL = 'http://35.208.97.0:32703'
-  // private URL = 'http://localhost:8003'
+  // private URL = 'http://35.208.97.0:32703'
+  private URL = 'http://localhost:8003'
   
   token:any ="";
   headers:any;

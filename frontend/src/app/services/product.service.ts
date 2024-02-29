@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
 
-  private URL = 'http://35.208.97.0:32701'
-  // private URL = 'http://localhost:8001'
+  // private URL = 'http://35.208.97.0:32701'
+  private URL = 'http://localhost:8001'
     
   constructor(private http: HttpClient) { 
 
