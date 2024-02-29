@@ -34,12 +34,13 @@
       
     </div>
     <div class="noticia" *ngFor="let article of articles">
+      <a [routerLink]="['/blog-article', article['id']]">
       <img *ngIf="article['imageMini'] ; else noimage " src="{{ article['imageMini'] }}" alt="Noticia 1">
       <ng-template #noimage>
         <img
           src="https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/articles%2FgenericImage.JPG?alt=media&token=d5f5ef1c-11db-496e-8d1a-b4bd9f45fa73"
           alt="Noticia 1">
-      </ng-template>
+      </ng-template></a>
       <!-- <img src="assets/images/perfumearticle.jpg" alt="Noticia 1"> -->
       <!-- <h2><a [routerLink]="['/blog-article', article['id']]">{{ article['title'] }}</a></h2> -->
       <h2>{{ article['title'] }}</h2>

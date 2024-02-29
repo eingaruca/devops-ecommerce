@@ -1,4 +1,51 @@
+.welcome{
+    margin-top: 150px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 1;
+}
+.welcome span{
+    display: block;
+    
+}
+.text1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    background: transparent; 
+    backdrop-filter: blur(1px); 
+    position: relative;
+    animation: text 4s infinite;
+    z-index: -1;
+    filter: drop-shadow(10px 10px 10px black);
+}
+.text1 span {
+    opacity: 0;
+    animation: appear 5s infinite;
+}
 
+@keyframes text{
+    0%{
+    color: #005687ff;
+    }
+    25%{
+    color: #68b8faff;
+    letter-spacing: 9px;
+    }
+    50%{
+    color: #979cf9ff;
+    letter-spacing: 8px;
+    }
+    75%{
+    color: rgb(208, 153, 228);
+    letter-spacing: 8px;
+    }
+}
 
 .container {
     margin-top: 150px;

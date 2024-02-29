@@ -31,12 +31,13 @@
     color: #333;
     text-align: center;
     margin-bottom: 10px;
+    filter: drop-shadow(5px 5px 10px rgb(255, 255, 255));
 }
 
 .imagen h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #555252;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -46,4 +47,40 @@
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .imagen {
+        width: 90%;
+    }
+
+    .imagen h1 {
+        font-size: 30px;
+    }
+
+    .imagen h3 {
+        font-size: 20px;
+    }
+
+    .imagen p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen h1 {
+        font-size: 26px;
+    }
+
+    .imagen h3 {
+        font-size: 18px;
+    }
+
+    .imagen p {
+        font-size: 15px;
+    }
 }

@@ -277,7 +277,9 @@ input::-webkit-outer-spin-button{
   justify-content: flex-end;
 }
 .cart-item-box{
-  padding: 40px 60px;
+  padding: 40px 10px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: auto;
 }
 .product-card:not(:last-child) {
@@ -301,6 +303,7 @@ input::-webkit-outer-spin-button{
 }
 .card .detail .wrapper{
   display: flex;
+  margin: auto;
   gap: 20px;
 }
 .product-qty{
@@ -387,11 +390,11 @@ input::-webkit-outer-spin-button{
   .item-flex { flex-direction: column-reverse;}
 
   .checkout {
-      width: 100%;
+      width: 90%;
       border-right: none;
   }
 
-  .btn-primary { width: 100%;}
+  .btn-primary { width: 80%;}
 
   .cart {
       display: grid;
@@ -415,11 +418,67 @@ input::-webkit-outer-spin-button{
   .discount-token { border-top: 1px solid hsl(0, 0%, 90%);}
   .wrapper-flex { gap: 20px;}
   .tracking-form {
+    justify-content: center;
+    width: 90%;
     padding: 20px 30px; /* Ajuste de padding para dispositivos móviles */
   }
   .checkout {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     padding: 20px;
+    border-right: none;
+}
+.btn-primary {
+  width: 80%; /* Hace que el botón primario ocupe todo el ancho */
+}
+
+.cart {
+  grid-template-columns: 1fr; /* Cambia la disposición a una sola columna */
+  border-bottom: none; /* Elimina el borde inferior en dispositivos móviles */
+}
+
+.cart .cart-item-box {
+  border-right: none; /* Elimina el borde derecho en dispositivos móviles */
+}
+
+.discount-token {
+  border-top: none; /* Elimina el borde superior en dispositivos móviles */
+}
+
+.wrapper-flex {
+  flex-direction: column; /* Cambia la disposición a una sola columna */
+}
+
+.payment-method {
+    width: 100%;
+    flex-direction: column; /* Cambia la disposición a una sola columna */
+    gap: 20px; /* Añade un espacio entre los elementos */
+  }
+
+.input-flex {
+  width: 80%;
+  flex-direction: column; /* Cambia la disposición a una sola columna */
+  gap: 20px; /* Añade un espacio entre los elementos */
+}
+.cardholder-name, .card-number {width: 80%;}
+
+
+.input-flex .expire-date,
+.input-flex .cvv {
+  width: 80%; /* Hace que los campos de fecha de vencimiento y CVV ocupen todo el ancho */
+}
+
+.expire-date .input-flex {
+  flex-direction: row; /* Cambia la disposición a una fila */
+}
+.btn-outline{
+  padding: 10px 25px;
+  border: 1px solid hsl(0, 0%, 99%);
+  color: hsl(0, 0%, 99%);
+}
+.btn-outline:hover{
+  background: hsl(0, 0%, 99%);
+  color: hsl(0, 0%, 100%);
 }
 }
 
@@ -427,23 +486,31 @@ input::-webkit-outer-spin-button{
 
   .html { padding: 20px;}
   .tracking-form {
+    width: 90%;
     padding: 20px; /* Ajuste de padding para dispositivos muy pequeños */
   }
-  .payment-method,
+  .payment-method
   .input-flex{
       flex-direction: column;
       gap: 20px;
   }
   .checkout {
-        width: 100%;
-        padding: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
     }
 
-  .payment-method .method { width: 100%;}
+  .payment-method, .cardholder-name, .card-number,.input-flex { 
+    margin: auto;
+    width: 90%;}
 
   .input-flex .expire-date,
-  .input-flex .cvv { width: 100%;}
+  .input-flex .cvv { width: 50%;}
 
   .expire-date .input-flex { flex-direction: row;}
+  .btn-primary { 
+    margin-left: 25%;
+    width: 50%; }
+  .cardholder-name, .card-number, .payment-method{width: 80%;}
 
 }

@@ -159,6 +159,7 @@ body {
     border: none;
     border-radius: 10px;
     background-color: rgba(143, 140, 140, 0.288);
+    transition: all 0.3s;
 }
 .noticia:hover{
     cursor: pointer;
@@ -166,6 +167,12 @@ body {
     opacity: 1;
     filter: contrast(120%);
     transform: scale(1.1);
+}
+.noticia:active { 
+    width: 300px; 
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
 }
 .noticia img {
     width: 100%;
@@ -190,6 +197,18 @@ body {
     color: #007bff;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 768px) {
+    .noticia {
+      width: 100%; /* Ajustamos el ancho al 100% para que ocupe todo el espacio disponible */
+      transition: none; /* Deshabilitamos la transición en dispositivos móviles */
+    }
+  
+    .noticia:hover {
+      width: 100%; /* Mantenemos el ancho al 100% en dispositivos móviles */
+      transform: none; /* Deshabilitamos la transformación en dispositivos móviles */
+    }
+  }
 
 @media (max-width: 992px){
     .header{
