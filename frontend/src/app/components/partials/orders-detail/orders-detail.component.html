@@ -31,7 +31,7 @@
 
 <!-- Estructura para los items de la orden -->
 <div class="order-items">
-    <h2>Items de la Orden</h2>
+    <h2>Detalle compra</h2>
     <table>
         <thead>
             <tr>
@@ -53,17 +53,28 @@
                 <!-- <td>{{ item.id }}</td>
                 <td>{{ item.orderId }}</td>
                 <td>{{ item.productId }}</td> -->
-                <td><img src="{{ item.productImage }}" style="width: 50px; height: 50px;"> </td>
-                <td>{{ item.productName }}</td>
+                <td>
+                    <a [routerLink]="['/shop-product', item['productId']]"
+                        style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="{{ item.productImage }}" style="width: 50px; height: 50px;">
+                    </a>
+                </td>
+                <td>
+                    <a [routerLink]="['/shop-product', item['productId']]"
+                        style="text-decoration: none; color: inherit; cursor: pointer;">
+                        {{ item.productName }}
+                    </a>
+                </td>
                 <td>{{ item.unitPrice }}</td>
                 <td>{{ item.quantity }}</td>
                 <td>{{ item.size }}</td>
                 <td>{{ item.subTotal }}</td>
+
             </tr>
             <!-- Puedes repetir esta estructura para cada item de la orden -->
         </tbody>
     </table>
     <br>
     <br>
-    <a routerLink="/orders-history" routerLinkActive="active" style="color: aliceblue;">Regresar</a>
+    <!-- <a routerLink="/orders-history" routerLinkActive="active" style="color: aliceblue;">Regresar</a> -->
 </div>

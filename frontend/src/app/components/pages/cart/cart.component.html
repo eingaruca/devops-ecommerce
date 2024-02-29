@@ -1,8 +1,8 @@
 <div id="paypal-button-container"></div>
     <p id="result-message"></p>
     <!-- Replace the "test" client-id value with your client-id -->
-    <script src="https://www.paypal.com/sdk/js?client-id=Abz9n39NRW2osCl11bQGDTNzODeWqghimwWywLbXoaHmN4udc-1FZVnS2gsp_gp_ZM6pWrTZBZ0Z3gFM&currency=USD"></script>
-    <script>
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=Abz9n39NRW2osCl11bQGDTNzODeWqghimwWywLbXoaHmN4udc-1FZVnS2gsp_gp_ZM6pWrTZBZ0Z3gFM&currency=USD"></script> -->
+    <!-- <script>
         window.paypal
   .Buttons({
     async createOrder() {
@@ -98,7 +98,7 @@ function resultMessage(message) {
   container.innerHTML = message;
 }
 
-    </script>
+    </script> -->
     <main class="container">
         <h1 class="heading">
             <ion-icon name="cart-outline"></ion-icon>Carrito Compra
@@ -135,7 +135,7 @@ function resultMessage(message) {
         <div class="item-flex">
             <section class="checkout">
                 <h2 class="section-heading">Detalles de Pago</h2>
-                <form (submit)="updateOrderPayment()">
+                <form (submit)="updateOrderPayment()" [ngClass]="{'item-flex-bloqueado': contentBlocked}">
                 <div class="payment-form">
                     <div class="payment-method">
                         <button class="method selected">
@@ -184,6 +184,8 @@ function resultMessage(message) {
                 <button class="btn btn-primary">
                     <b>Pagar</b><span id="payAmount">{{ order.total }} €</span>
                 </button>
+                <div *ngIf="!!message" class="message-container" [ngClass]="{'message-container': true, 'message-fade-out': !message}">
+                  {{ this.message }}</div>
             </form>
             </section>
 
@@ -250,10 +252,10 @@ function resultMessage(message) {
 
                     <div class="amount">
                         <div class="subtotal">
-                            <span>Subtotal</span><span><span id="subtotal">{{ (order.total) * (0.79) }}€</span></span>
+                            <span>Subtotal</span><span><span id="subtotal">{{ (order.total) * (0.79)  | number:'1.2-2' }}€</span></span>
                         </div>
                         <div class="IVA">
-                            <span>IVA</span><span><span id="IVA">{{ (order.total) * (0.21) }}€</span></span>
+                            <span>IVA</span><span><span id="IVA">{{ (order.total) * (0.21)  | number:'1.2-2' }}€</span></span>
                         </div>
                         <div class="Envio">
                             <span>Envio</span><span><span id="Envio">0,00€</span></span>

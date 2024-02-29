@@ -16,6 +16,32 @@ body {
   position: relative;
 }
 
+/* INICIO ELDO*/
+.message-container {
+  background-color: #e6f7ff; /* Color de fondo celeste */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-top: 10px; /* Margen superior */
+  text-align: center; /* Alineación del texto al centro */
+  display: inline-block; /* Para que ocupe solo el ancho necesario */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.message-fade-out {
+  animation: fadeOut 1.5s ease forwards; /* Ajusta la duración de la animación según desees */
+}
+
+/* FIN ELDO */
+
 .content {
   margin-top: 150px;
   display: flex;
@@ -207,9 +233,10 @@ body {
 }
 
 .quantity {
-  width: 70px;
+  width: 50px;
   text-align: center;
   border: 1px solid #ccc;
+  background-color: #e4e2e0;
   border-radius: 4px;
   margin: 0 5px;
   font-size: 1rem;

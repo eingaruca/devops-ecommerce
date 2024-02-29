@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { XutilitiesService } from '../../../services/xutilities.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-reviews',
@@ -9,6 +10,7 @@ import { XutilitiesService } from '../../../services/xutilities.service';
   imports: [
     FormsModule,
     CommonModule,
+    RouterModule,
   ],
   providers : [
     XutilitiesService
@@ -41,5 +43,9 @@ export class UserReviewsComponent implements OnInit{
           console.log(err)
         }
       );
+  }
+
+  getStarsArray(rating: number): number[] {
+    return Array.from({ length: rating }, (_, i) => i + 1);
   }
 }

@@ -6,6 +6,7 @@ import { MatList, MatListItem } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { isPlatformBrowser } from '@angular/common';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
   selector: 'app-index',
@@ -16,7 +17,8 @@ import { isPlatformBrowser } from '@angular/common';
     FormsModule,
   ],
   providers: [
-    XutilitiesService
+    XutilitiesService,
+    ProductService,
   ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css'
@@ -29,10 +31,14 @@ export class IndexComponent implements OnInit {
   pages: number = 0;
   from: number = 0;
   to: number = this.pageSize;
+
+  searchText:string = '';
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
     private xutilitiesService: XutilitiesService,
+    private productService: ProductService,
     private paginator: MatPaginatorIntl
   ) { }
 
@@ -84,6 +90,22 @@ export class IndexComponent implements OnInit {
     // console.log(e);
     this.from = e.pageIndex * this.pageSize;
     this.to = this.from + e.pageSize;
+  }
+
+
+  searchProducts(){
+    this.router.navigate(['perfumes', 'search', this.searchText.trim()]); // Navegar a la ruta 'perfumes/search/:searchText'
+
+    // this.productService.getProductsByName(this.searchText)
+    //   .subscribe(
+    //     res => {
+    //       console.log(res)
+    //       this.router.navigate(['perfumes', 'search', this.searchText.trim()]); // Navegar a la ruta 'perfumes/search/:searchText'
+    //     },
+    //     err => {
+    //       console.log("ERR - Searching products", err)
+    //     } 
+    //   )
   }
 
 }

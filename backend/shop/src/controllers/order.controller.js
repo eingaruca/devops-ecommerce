@@ -193,6 +193,7 @@ const updateOrder = async (req, res, next) => {
     let data = req.body;
     console.log("data", data);
     let id = data.orderId;
+    data.sendedAt = format(new Date(), "dd/MM/yyyy HH:mm:ss");
     let order = await firestore.collection("Orders").doc(id);
 
     let updatedOrder = await order.update(data);
@@ -268,12 +269,18 @@ const getOrderById = async (req, res, next) => {
 
 const updateOrderStatePayment = async (req, res, next) => {
   try {
+    const orderUpdatedAt = format(new Date(), "dd/MM/yyyy HH:mm:ss");
+
     let data = req.body;
     console.log("data", data);
     let id = data.orderId;
     let order = await firestore.collection("Orders").doc(id);
 
-    let updatedOrder = await order.update({'statusOrder': 'Order'});
+    let updatedOrder = await order.update({'statusOrder': 'Order', 
+            orderedAt: orderUpdatedAt, 
+            paidAt: orderUpdatedAt,
+            paymentStatus: "OK"
+          });
 
     req.body.statusItem = "Order"
     next();

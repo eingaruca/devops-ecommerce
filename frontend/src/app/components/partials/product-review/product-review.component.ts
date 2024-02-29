@@ -156,6 +156,9 @@ export class ProductReviewComponent implements OnInit{
       return '';
     }
   }
+  getStarsArray(rating: number): number[] {
+    return Array.from({ length: rating }, (_, i) => i + 1);
+  }
 }
 // https://medium.com/angular-chile/subir-archivos-a-firebase-cloud-storage-con-angular-7-d735d5dbfa53
 // 

@@ -53,10 +53,16 @@ export class PerfumesComponent implements OnInit {
   ngOnInit() {
     this.category = "";
     this.route.params.subscribe(params => {
-        this.category = params['category'];
-        console.log("::::::::::> ", typeof this.category)
-
-      this.getProducts(this.category);
+        
+        if (params['search']){
+          this.getProductsByName(params['search']);
+        } else {
+          this.category = params['category'];
+          console.log(this.category);
+          this.getProducts(this.category);
+        }
+          
+        
       });
   }
 
@@ -90,6 +96,21 @@ export class PerfumesComponent implements OnInit {
           }
         )
     }
+  }
+
+  getProductsByName(search:any){
+    this.productService.getProductsByName(search)
+        .subscribe(
+          res => {
+            this.products = res;
+            //Paginación
+            this.pages = this.products.length;
+            this.paginator.itemsPerPageLabel = 'Productos por página:';
+          },
+          err => {
+            console.log(err)
+          }
+        )
   }
 
   redirectToProduct(productId: number) {

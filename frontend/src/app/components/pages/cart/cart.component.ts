@@ -21,7 +21,7 @@ import { IonicModule } from '@ionic/angular';
     IonicModule,
     // ShopComponent,
   ],
-  providers : [
+  providers: [
     ShopService,
     UserService,
     XutilitiesService,
@@ -32,21 +32,27 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CartComponent implements OnInit {
 
-  existToken:boolean = false;
+  //Payment disabled:
+  contentBlocked: boolean = true;
+  //Message
+  message: string | null = null; //nuevo
 
-  userId:string | null = null;
-  user:any = {};
-  order:any = {};
-  orderId:string | null = null;
-  items:any = []
-  communities:any = []
+
+  existToken: boolean = false;
+
+  userId: string | null = null;
+  user: any = {};
+  order: any = {};
+  orderId: string | null = null;
+  items: any = []
+  communities: any = []
 
   address: any = {};
-  token:any ="";
+  token: any = "";
   // headers:any;
   paymentEnabled: boolean = false;
 
-  updatePay:any = {}
+  updatePay: any = {}
 
 
   constructor(
@@ -67,55 +73,15 @@ export class CartComponent implements OnInit {
 
     this.existToken = this.checkExistToken2();
 
-    if (this.existToken){
+    if (this.existToken) {
       console.log("IFFFF", this.existToken)
-      
+
     }
-      
+
   }
 
-//   async ngOnInit(): Promise<void> {
-//     try {
-//         const cartResponse: any = await this.shopService.getCart().toPromise();
-//         console.log("Respuesta de getCart:", cartResponse);
-//         this.order = cartResponse;
-
-//         // Llamada a getItemsByOrder solo si hay un pedido válido
-//         if (this.order && this.order.id) {
-//             const itemsResponse: any = await this.shopService.getItemsByOrder(this.order.id).toPromise();
-//             console.log("Respuesta de getItemsByOrder:", itemsResponse);
-//             this.items = itemsResponse;
-//         }
-//     } catch (error) {
-//         console.error("Error al obtener el carrito o los elementos del pedido:", error);
-//     }
-// }
-
-  // updateQuantity(productId:any, quantity:any, price:any, operator:any){
-  //     let itemMod:any = {};
-
-  //     itemMod.userId = this.user.id
-  //     itemMod.productId = productId;
-  //     itemMod.unitPrice = price;
-  //     itemMod.quantity = 1
-  //     itemMod.operation = operator;
-  //     console.log("itemmod", itemMod)
-  //     this.shopService.addItem(itemMod)
-  //     .subscribe(
-  //       res => {
-  //         console.log(res)
-  //         window.location.reload()
-  //         // this.router.navigate(['profile']);
-  //       },
-  //       err => {
-  //         console.log(err)
-  //       } 
-  //     )
-    
-  // }
-
-  updateQuantity(productId:any, quantity:any, price:any, operator:any){
-    let itemMod:any = {};
+  updateQuantity(productId: any, quantity: any, price: any, operator: any) {
+    let itemMod: any = {};
 
     itemMod.userId = this.user.id
     itemMod.productId = productId;
@@ -124,43 +90,43 @@ export class CartComponent implements OnInit {
     itemMod.operation = operator;
     console.log("itemmod", itemMod)
     this.shopService.addItem(itemMod)
-    .subscribe(
-      res => {
-        // console.log(res)
-        this.shopService.getCart()
-                .subscribe(
-                  res => {
-                    console.log("res:::> ", res);
-                    this.order = res;
-                    this.orderId = this.order.id;
-                    this.shopService.getItemsByOrder(this.order.id)
-                        .subscribe(
-                          res => {
-                            console.log("resITEM:::> ", res);
-                            this.items = res;
-                            
-                          },
-                          err => {
-                            console.log(err)
-                          }
-                        )
-                  },
-                  err => {
-                    console.log(err)
-                  }
-                )
-        // window.location.reload()
-        // this.router.navigate(['profile']);
-      },
-      err => {
-        console.log(err)
-      } 
-    )
-  
-}
+      .subscribe(
+        res => {
+          // console.log(res)
+          this.shopService.getCart()
+            .subscribe(
+              res => {
+                console.log("res:::> ", res);
+                this.order = res;
+                this.orderId = this.order.id;
+                console.log("ORDER!!!!", this.order.total)
+                this.shopService.getItemsByOrder(this.order.id)
+                  .subscribe(
+                    res => {
+                      this.items = res;
+                      console.log("getItemsByOrder!!!!")
+                    },
+                    err => {
+                      console.log(err)
+                    }
+                  )
+              },
+              err => {
+                console.log(err)
+              }
+            )
+          // window.location.reload()
+          // this.router.navigate(['profile']);
+        },
+        err => {
+          console.log(err)
+        }
+      )
 
-  updateAddress(){
-    let update:any = {};
+  }
+
+  updateAddress() {
+    let update: any = {};
 
     update.orderId = this.order.id;
     update.address = this.order.address ?? this.user.address;
@@ -169,58 +135,59 @@ export class CartComponent implements OnInit {
 
     console.log("update", update)
     this.shopService.updateOrder(update)
-        .subscribe(
-          res => {
-            console.log("Update Address:::> ", res);
-            this.paymentEnabled = true;
-          },
-          err => {
-            console.log(err)
-          }
-        )
+      .subscribe(
+        res => {
+          console.log("Update Address:::> ", res);
+          this.paymentEnabled = true;
+          this.contentBlocked= false;
+        },
+        err => {
+          console.log(err)
+        }
+      )
 
   }
 
 
-  eliminarItem(itemId:any){
+  eliminarItem(itemId: any) {
     this.shopService.deleteItem(itemId)
-        .subscribe(
-          res => {
-            // console.log("res:::> ", res);
-            this.shopService.getCart()
-                .subscribe(
-                  res => {
-                    console.log("res:::> ", res);
-                    this.order = res;
-                    this.orderId = this.order.id;
-                    this.shopService.getItemsByOrder(this.order.id)
-                        .subscribe(
-                          res => {
-                            console.log("resITEM:::> ", res);
-                            this.items = res;
-                            
-                          },
-                          err => {
-                            console.log(err)
-                          }
-                        )
-                  },
-                  err => {
-                    console.log(err)
-                  }
-                )
-          },
-          err => {
-            console.log(err)
-          }
-        )
+      .subscribe(
+        res => {
+          // console.log("res:::> ", res);
+          this.shopService.getCart()
+            .subscribe(
+              res => {
+                console.log("res:::> ", res);
+                this.order = res;
+                this.orderId = this.order.id;
+                this.shopService.getItemsByOrder(this.order.id)
+                  .subscribe(
+                    res => {
+                      console.log("resITEM:::> ", res);
+                      this.items = res;
+
+                    },
+                    err => {
+                      console.log(err)
+                    }
+                  )
+              },
+              err => {
+                console.log(err)
+              }
+            )
+        },
+        err => {
+          console.log(err)
+        }
+      )
   }
 
   /** OTROS **/
 
-  checkExistToken2(){
+  checkExistToken2() {
 
-    if ( !this.authService.existsToken() ) {
+    if (!this.authService.existsToken()) {
       this.router.navigate(['signin']);
       return false;
     } else {
@@ -230,27 +197,27 @@ export class CartComponent implements OnInit {
             console.log("noOnInitgetUserById:::> ", res);
             this.user = res;
             this.shopService.getCart()
-                  .subscribe(
-                    res => {
-                      console.log("res:::> ", res);
-                      this.order = res;
-                      this.orderId = this.order.id;
-                      this.shopService.getItemsByOrder(this.order.id)
-                          .subscribe(
-                            res => {
-                              console.log("resITEM:::> ", res);
-                              this.items = res;
-                              
-                            },
-                            err => {
-                              console.log(err)
-                            }
-                          )
-                    },
-                    err => {
-                      console.log(err)
-                    }
-                  )
+              .subscribe(
+                res => {
+                  console.log("res:::> ", res);
+                  this.order = res;
+                  this.orderId = this.order.id;
+                  this.shopService.getItemsByOrder(this.order.id)
+                    .subscribe(
+                      res => {
+                        console.log("resITEM:::> ", res);
+                        this.items = res;
+
+                      },
+                      err => {
+                        console.log(err)
+                      }
+                    )
+                },
+                err => {
+                  console.log(err)
+                }
+              )
             return true;
           },
           err => {
@@ -260,16 +227,16 @@ export class CartComponent implements OnInit {
           }
         );
     }
-    
+
     return false;
-  
+
 
 
   }
-  
 
 
-  checkExistToken(){
+
+  checkExistToken() {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('token') !== null) {
       this.token = localStorage.getItem('token');
       console.log("CartComponent ngOnInit - token ok", this.token);
@@ -284,43 +251,58 @@ export class CartComponent implements OnInit {
             console.log(err)
           }
         )
-      
+
     } else {
       console.log("CartComponent ngOnInit - token nook - redirection signin", this.token);
       this.router.navigate(['signin']);
     }
   }
-  
+
   getCommunities() {
     this.xutilitiesService.getCommunities()
-        .subscribe(
-          res => {
-            console.log('---------->',res)
-            this.communities = res.communities;
-          },
-          err => {
-            console.log("Err ProfileComponent", err)
-          }
-        )
-  }
-
-  updateOrderPayment(){
-    this.updatePay.orderId = this.orderId
-    console.log('updateOrderPayment', this.updatePay)
-    
-    this.shopService.updateOrderPayment(this.updatePay)
       .subscribe(
         res => {
-          console.log('---------->',res)
-          console.log("orderid", this.orderId)
-          this.router.navigate(['cart']);
+          console.log('---------->', res)
+          this.communities = res.communities;
         },
         err => {
           console.log("Err ProfileComponent", err)
         }
       )
-      
+  }
+
+  updateOrderPayment() {
+    this.updatePay.orderId = this.orderId
+    console.log('updateOrderPayment', this.updatePay)
 
     
+ 
+
+
+    this.shopService.updateOrderPayment(this.updatePay)
+      .subscribe(
+        (res) => {
+          // console.log('---------->', res)
+          // console.log("orderid", this.orderId)
+          this.router.navigate(['profile']);
+          this.message = "Realizando pago... Regiriendo a Perfil de Usuario.";
+          setTimeout(async () => {
+            this.message = this.message + '.';
+            }, 1500);
+          // for (let i = 1; i <= 5; i++) {
+          //   time = time + 500;
+          //   setTimeout(async () => {
+          //     this.message = this.message + '.';
+          //     }, time);
+          // }
+          
+        },
+        err => {
+          console.log("Err ProfileComponent", err)
+        }
+      )
+
+
+
   }
 }

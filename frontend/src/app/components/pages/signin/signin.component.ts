@@ -39,7 +39,7 @@ export class SigninComponent {
         res => {
           console.log(res)
           localStorage.setItem('token', res.token);
-          this.router.navigate(['profile']);
+          this.router.navigate(['index']);
         },
         err => {
           console.log("ERROR Signin component", err)

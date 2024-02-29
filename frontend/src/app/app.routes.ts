@@ -67,6 +67,9 @@ export const routes: Routes = [
         path: 'perfumes/:category', component: PerfumesComponent
     },
     {
+        path: 'perfumes/search/:search', component: PerfumesComponent
+    },
+    {
         path: 'perfumes-man', component: PerfumesComponent
     },
     {

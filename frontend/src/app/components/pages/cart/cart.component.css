@@ -1,3 +1,7 @@
+.item-flex-bloqueado {
+  pointer-events: none; /* Deshabilita la interacción con los elementos dentro del div */
+  opacity: 0.5; /* Opcional: reduce la opacidad de los elementos para indicar que están deshabilitados */
+}
 
  :root{
   --onyx:         hsl(0, 0%, 25%);
@@ -280,6 +284,7 @@ input::-webkit-outer-spin-button{
   margin-bottom: 20px;
 }
 .product-card .card{
+  padding-bottom: 5px;
   position: relative;
   display: flex;
   align-items: flex-start;

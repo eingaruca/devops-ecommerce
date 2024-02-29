@@ -25,23 +25,28 @@
 
                 <div class="details__prices">
                     <p class="details__now">{{ product['price'] }}€ <span class="details__discount">44%</span> </p>
-                    <p class="details__before">{{ product['price'] + (100*44/(product['price'])) }}€ </p>
+                    <p class="details__before">{{ (product['price'] + (100*44/(product['price'])))  | number:'1.2-2' }}€ </p>
                 </div>
                 <div class="details__product-quantity">
-                    <button class="quantity-button" onclick="decreaseQuantity()"><i
-                            class="fa-solid fa-minus"></i></button>
+                    <a class="quantity-button" (click)="decreaseQuantity()"><i
+                            class="fa-solid fa-minus"></i></a>
                     <!-- <input type="" class="quantity" value="1" min="1"> -->
-                    <input type="" class="quantity" name="quantity" [(ngModel)]="item.quantity" min="0" value="1">
-                    <button class="quantity-button" onclick="increaseQuantity()"><i
-                            class="fa-solid fa-plus"></i></button>
+                    <input type="number" class="quantity" name="quantity" [(ngModel)]="item.quantity" min="1"  readonly>
+                    <a class="quantity-button" (click)="increaseQuantity()"><i
+                            class="fa-solid fa-plus"></i></a>
 
                     <button class="details__button"> <img src="./images/icon-cart-white.svg" alt=""><i
                             class="fa-solid fa-cart-shopping"></i> Añadir a la cesta</button>
                 </div>
-                <div *ngIf="!!message" class="message-container">{{ this.message }}</div>
+                <div *ngIf="!!message" class="message-container" [ngClass]="{'message-container': true, 'message-fade-out': !message}">
+                    {{ this.message }}</div>
             </form>
         </article>
+        
     </section>
-
+    <section class="content">
+        <app-product-review></app-product-review>
+        
+    </section>
     
 </div>
