@@ -10,8 +10,8 @@
 <div class="container">
 <div class="graficos-container">
     <div *ngFor="let grafico of graficos" class="grafico-item"  (click)="seleccionarImagen(grafico)">
-      <img [src]="grafico" alt="grafico" class="grafico-img">
-      <h4 style="text-align: center;" class="descripcion">Gráfico Ventas</h4>
+      <img [src]="grafico.image" alt="grafico" class="grafico-img">
+      <h4 style="text-align: center;" class="descripcion">{{grafico.desc}}</h4>
     </div>
   </div>
   
@@ -19,7 +19,6 @@
     <img [src]="imagenSeleccionada" alt="Imagen Ampliada">
   </div>
 </div>
-  
 
 <!-- 
 

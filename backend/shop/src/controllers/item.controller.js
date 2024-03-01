@@ -8,7 +8,7 @@ const addItemToCart = async (req, res, next) => {
   console.log("addItemToCart");
   try {
     // Necesito
-    console.log("additemtocart controller", req.body);
+    // console.log("additemtocart controller", req.body);
     const statusOrder = "Cart";
     const operation = req.body.operation;
     delete req.body.operation;

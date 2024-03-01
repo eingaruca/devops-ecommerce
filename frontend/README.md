@@ -14,11 +14,13 @@ ng new frontend --routing
 npm install -g @angular/cli
 npm install --save @angular/material
 npm install --save @angular/animations
+npm install leaflet jquery --save
 npm install @ionic/angular
 npm install jwt-decode
 // npm install firebase @angular/fire --save
 //npm install @google-cloud/storage
-
+npm install --save-dev @types/leaflet
+npm install --save-dev @types/leaflet
 ng serve -o
 ```
 - Components
@@ -41,6 +43,7 @@ ng g c components/pages/contact
 ng g c components/pages/arch
 ng g c components/pages/analytics
 
+ng g c components/partials/mapa
 ng g c components/partials/header
 ng g c components/partials/footer
 ng g c components/partials/change-password

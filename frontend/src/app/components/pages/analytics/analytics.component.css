@@ -28,6 +28,7 @@
 }
 
 .imagen-ampliada {
+  padding-top: 200px;
   position: fixed;
   margin: 5px;
   top: 50%;
@@ -42,8 +43,8 @@
 }
 
 .imagen-ampliada img {
-  max-width: 450px;
-  max-height: 450px;
+  max-width: 850px;
+  max-height: 850px;
 }
 
 

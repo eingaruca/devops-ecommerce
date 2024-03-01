@@ -58,7 +58,7 @@ export class PerfumesComponent implements OnInit {
           this.getProductsByName(params['search']);
         } else {
           this.category = params['category'];
-          console.log(this.category);
+          // console.log(this.category);
           this.getProducts(this.category);
         }
           

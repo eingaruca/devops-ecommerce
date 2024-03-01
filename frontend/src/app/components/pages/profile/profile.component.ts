@@ -9,6 +9,7 @@ import { UserReviewsComponent } from '../../partials/user-reviews/user-reviews.c
 import { OrdersDetailComponent } from '../../partials/orders-detail/orders-detail.component';
 import { OrdersHistoryComponent } from '../../partials/orders-history/orders-history.component';
 import { AnalyticsComponent } from '../analytics/analytics.component';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -21,10 +22,12 @@ import { AnalyticsComponent } from '../analytics/analytics.component';
     RouterModule,
     OrdersHistoryComponent,
     AnalyticsComponent,
+    
   ],
   providers: [
     UserService,
     XutilitiesService,
+    AuthService
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
@@ -40,6 +43,7 @@ export class ProfileComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private xutilitiesService: XutilitiesService,
+    private authService: AuthService,
   ) {
 
   }
@@ -168,7 +172,9 @@ export class ProfileComponent implements OnInit {
 
 
   validType(){
-    const valid = localStorage.getItem('type')?.toString();
+    let valid:any;
+    if ( this.authService.existsToken() )
+       valid = localStorage.getItem('type')?.toString();
     return valid;
   }
 }
