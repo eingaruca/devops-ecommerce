@@ -10,5 +10,6 @@ body {
     background-size: cover;
     position: relative;
     box-sizing: border-box;
+    width: auto;
   }
   
