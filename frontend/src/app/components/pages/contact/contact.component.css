@@ -6,9 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background: linear-gradient(90deg, #054467ff, #005687ff, #68b8faff, #979cf9ff);
-}
+
 .header{
     position: fixed;
     top: 0;
@@ -246,7 +244,7 @@ body{
 
 @media (max-width: 991px){
     body{
-        background: linear-gradient(90deg, #054467ff, #005687ff, #68b8faff, #979cf9ff);
+        width: fit-content;
     }
     
     .contactUs .title{
@@ -285,10 +283,6 @@ body{
     }
     .contactUs .title{
         padding-top: 100px;
-    }
-    .contactform, .contactmap, .contactinfo{
-        width: 100%;
-
     }
     .header{
         padding: 0;
