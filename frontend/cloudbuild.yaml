@@ -1,15 +1,5 @@
 steps:
-  # Paso para instalar dependencias npm
-  # - name: 'gcr.io/cloud-builders/npm'
-  #   args: ['install']
-  #   dir: 'frontend'  # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
-
-  # # Paso para compilar el proyecto Angular
-  # - name: 'gcr.io/cloud-builders/npm:node-20.11.1'
-  #   args: ['run', 'build']
-  #   dir: 'frontend'    # Reemplaza '/path/to/your/angular/project' con la ruta a tu proyecto Angular
-
-  # Paso para construir la imagen de Docker
+   # Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/handy-position-413808/github.com/eingaruca/devops-ecommerce/frontend:latest', 'frontend/']
 
@@ -17,7 +7,7 @@ steps:
     args:
         - push
         - 'gcr.io/handy-position-413808/github.com/eingaruca/devops-ecommerce/frontend:latest'
-  # Despliegue en GKE
+  # GKE Deployment
   - name: 'gcr.io/cloud-builders/gcloud'
     id: Deploy
     entrypoint: 'bash'
@@ -30,9 +20,3 @@ steps:
           gcloud container clusters get-credentials betaroma --zone us-central1-a --project handy-position-413808 
           kubectl delete -f kubernetes/dp-frontend.yaml
           kubectl apply -f kubernetes/dp-frontend.yaml
-  # - name: "gcr.io/cloud-builders/gke-deploy"
-  #   args:
-  #   - run
-  #   - --filename=kubernetes-resource-file
-  #   - --location=location
-  #   - --cluster=cluster

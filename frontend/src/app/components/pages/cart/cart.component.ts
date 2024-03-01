@@ -265,38 +265,48 @@ export class CartComponent implements OnInit {
       )
   }
 
-  updateOrderPayment() {
+  async updateOrderPayment() {
     this.updatePay.orderId = this.orderId
     // console.log('updateOrderPayment', this.updatePay)
 
     
  
-
+    
 
     this.shopService.updateOrderPayment(this.updatePay)
       .subscribe(
-        (res) => {
-          // console.log('---------->', res)
-          // console.log("orderid", this.orderId)
-          this.router.navigate(['profile']);
-          this.message = "Realizando pago... Regiriendo a Perfil de Usuario.";
-          setTimeout(async () => {
-            this.message = this.message + '.';
-            }, 1500);
-          // for (let i = 1; i <= 5; i++) {
-          //   time = time + 500;
-          //   setTimeout(async () => {
-          //     this.message = this.message + '.';
-          //     }, time);
-          // }
+        async (res) => {
+          this.message = "Realizando pago... Redirigiendo a Perfil de Usuario.";
+          await this.delay(500);
+          this.message += ".";
           
+          await this.delay(500);
+          this.message += ".";
+        
+          await this.delay(500);
+          this.message += ".";
+        
+          await this.delay(500);
+          this.message += ".";
+        
+          await this.delay(500);
+          this.message += ".";
+        
+          await this.delay(800);
+          this.message = "... fin ...";
+          
+          await this.delay(500);
+          await this.router.navigate(['profile']);  
+          this.router.navigate(['profile']);          
         },
         err => {
           console.log(err)
         }
       )
+  }
+  
 
-
-
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }

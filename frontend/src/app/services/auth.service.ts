@@ -30,7 +30,6 @@ export class AuthService {
    }
 
    signin(user: any) {
-    console.log(user)
     return this.http.post<any>(this.URL + '/login', user);
    }
 
@@ -45,5 +44,7 @@ export class AuthService {
 
    logout():void  {
     localStorage.removeItem('token');
+    localStorage.removeItem('fullname');
+    localStorage.removeItem('type');
    }
 }

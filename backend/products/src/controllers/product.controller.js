@@ -130,7 +130,8 @@ const getProductsByName = async (req, res, next) => {
         await products.get().then(snapshot => {
             snapshot.forEach(doc => {
                 const productName = doc.data().name.toLowerCase();
-                if ( productName.includes(name) ){
+                const brand = doc.data().brand.toLowerCase();
+                if ( productName.includes(name) || brand.includes(name) ){
                     console.log('---> ', doc.id, doc.data());
                     const product = new Product(
                         doc.id,

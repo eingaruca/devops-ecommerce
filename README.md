@@ -40,3 +40,22 @@
 
 ## 6. Google Cloud Architecture
 ![Alt text](Betaromas-Architecture.webp)
+
+## 7. CI / CD
+
+- Push branch to github
+![Alt text](image-3.png)
+
+- Triggers
+![Alt text](image.png)
+
+- Artifact Registry:
+![Alt text](image-2.png)
+
+- Yaml:
+![Alt text](image-4.png)
+
+- Google Kubernetes Engine:
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](image-1.png)

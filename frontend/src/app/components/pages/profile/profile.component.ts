@@ -8,6 +8,7 @@ import { ChangePasswordComponent } from '../../partials/change-password/change-p
 import { UserReviewsComponent } from '../../partials/user-reviews/user-reviews.component';
 import { OrdersDetailComponent } from '../../partials/orders-detail/orders-detail.component';
 import { OrdersHistoryComponent } from '../../partials/orders-history/orders-history.component';
+import { AnalyticsComponent } from '../analytics/analytics.component';
 
 @Component({
   selector: 'app-profile',
@@ -19,6 +20,7 @@ import { OrdersHistoryComponent } from '../../partials/orders-history/orders-his
     UserReviewsComponent,
     RouterModule,
     OrdersHistoryComponent,
+    AnalyticsComponent,
   ],
   providers: [
     UserService,
@@ -33,7 +35,7 @@ export class ProfileComponent implements OnInit {
   communities: any = [];
   token: any = "";
   headers: any;
-
+  valid:any = false;
   constructor(
     private router: Router,
     private userService: UserService,
@@ -45,6 +47,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.getCommunities();
     this.getProfileLocalStorage();
+    this.valid = this.validType();
   }
 
   updateProfile() {
@@ -164,4 +167,8 @@ export class ProfileComponent implements OnInit {
   }
 
 
+  validType(){
+    const valid = localStorage.getItem('type')?.toString();
+    return valid;
+  }
 }

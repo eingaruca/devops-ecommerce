@@ -1,4 +1,33 @@
-<div style="padding-top: 100px; padding-bottom: 50px;">
-    <h1> Gráfico Microservicio Analytics</h1>
-<img src="https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2Fhistograma.jpg?alt=media&token=d2018272-e72f-48c4-ae1e-79404d2dde34" >
+<div class="container">
+    <div class="titulo">
+      <h1>Gráficos estadísticos</h1>
+      <!-- <img src="https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2Fhistograma.jpg?alt=media&token=d2018272-e72f-48c4-ae1e-79404d2dde34" class="imagen-principal" alt="Gráfico Principal"> -->
+    </div>
+  </div>
+  
+
+
+<div class="container">
+<div class="graficos-container">
+    <div *ngFor="let grafico of graficos" class="grafico-item"  (click)="seleccionarImagen(grafico)">
+      <img [src]="grafico" alt="grafico" class="grafico-img">
+      <h4 style="text-align: center;" class="descripcion">Gráfico Ventas</h4>
+    </div>
+  </div>
+  
+  <div class="imagen-ampliada" *ngIf="imagenSeleccionada" (click)="cerrarImagen()">
+    <img [src]="imagenSeleccionada" alt="Imagen Ampliada">
+  </div>
 </div>
+  
+
+<!-- 
+
+<div class="container">
+  <div class="graficos-container">
+    <div *ngFor="let grafico of graficos" class="grafico-item" (click)="cambiarGrafico(grafico)">
+      <img [src]="'assets/images/' + grafico" alt="grafico" class="grafico-img">
+      <p class="descripcion">Gráfico Ventas</p>
+    </div>
+  </div>
+</div> -->

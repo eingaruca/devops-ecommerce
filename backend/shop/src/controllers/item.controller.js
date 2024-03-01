@@ -293,8 +293,10 @@ const updateStatusItem = async (req, res, next) => {
         // Actualizar los campos del documento
         await docRef.update({ statusOrder: data.statusItem });
         console.log("Item actualizado exitosamente");
+        return res.json({message: 'Updateed'});
       } catch (error) {
         console.error("Error al actualizar el documento:", error);
+        return res.status(400).send(error.message);
       }
     });
   } catch (error) {
