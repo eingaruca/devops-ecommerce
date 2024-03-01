@@ -38,19 +38,21 @@ table tbody tr:hover {
   .user-profile {
     flex-direction: column; /* Cambia la dirección de flex a columna para dispositivos pequeños */
     align-items: center; /* Centra los elementos en dispositivos pequeños */
-    padding: 20px auto;
+    padding: 10px auto;
   }
   
   table {
-      min-width: 200px; /* Establece un ancho mínimo para evitar que la tabla se colapse completamente */
+      
+      width: 100%;
+      text-align: center;
   }
   
   /* Asegura que las celdas de la tabla se muestren en bloque para una mejor legibilidad */
-  th, td {
+  tr, th, td {
       display: block;
-      text-align: center;
-    
+      text-align: center;    
   }
+ 
   .order-items th {
     text-align: center;
 }

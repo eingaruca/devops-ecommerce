@@ -246,7 +246,7 @@
     body{
         width: fit-content;
     }
-    
+        
     .contactUs .title{
         padding-top: 100px;
     }
@@ -277,6 +277,9 @@
     
 }
 @media (max-width: 768px){
+    body{
+        width: fit-content;
+    }
     .contactUs{
         width: 100%;
         padding: 0;
