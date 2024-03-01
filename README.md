@@ -4,6 +4,8 @@
    - Concepto: Un e-commerce especializado en la venta de perfumes comercial y de nicho, aquellos difíciles de encontrar en tiendas físicas o perfumerías tradicionales.
    - Público objetivo: Amantes de la perfumería, coleccionistas de fragancias, personas que buscan aromas únicos y diferenciadores.
    - Vamos a diseñar una plataforma e-commerce propia con un diseño atractivo, intuitivo y fácil de usar.
+
+   ![Alt text](image-7.png)
    
 ## 2. Integrantes equipo Beta:
    - Eldo Ingaruca
