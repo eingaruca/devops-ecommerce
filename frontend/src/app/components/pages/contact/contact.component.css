@@ -6,7 +6,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    background: url('../../../../assets/images/fondo3.jpg') no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
 
+.div-body {
+    background-size: cover;
+    position: relative;
+}
 .header{
     position: fixed;
     top: 0;
@@ -242,7 +251,7 @@
 }
 /* responsive movile*/
 
-@media (max-width: 991px){
+@media (max-width: 769px){
     body{
         width: fit-content;
     }
@@ -258,6 +267,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: "form" "info" "map";
+        padding: 0;
     }
     .formBox .row50{
         display: flex;
@@ -268,7 +278,7 @@
         width: 100%;
     }
     .contact{
-        padding: 30px;
+        padding: 5px;
     }
     .map{
         min-height: 300px;
