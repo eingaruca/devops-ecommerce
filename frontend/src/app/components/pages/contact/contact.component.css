@@ -6,9 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background: linear-gradient(90deg, #054467ff, #005687ff, #68b8faff, #979cf9ff);
-}
+
 .header{
     position: fixed;
     top: 0;
@@ -246,15 +244,15 @@ body{
 
 @media (max-width: 991px){
     body{
-        background: linear-gradient(90deg, #054467ff, #005687ff, #68b8faff, #979cf9ff);
+        width: fit-content;
     }
     
     .contactUs .title{
         padding-top: 100px;
     }
     .contactUs{
-        padding: 20px;
-        width: 90%;
+        padding: 10px;
+        width: 100%;
     }
     .box{
         grid-template-columns: 1fr;
@@ -280,7 +278,8 @@ body{
 }
 @media (max-width: 768px){
     .contactUs{
-        width: 90%;
+        width: 100%;
+        padding: 0;
     }
     .contactUs .title{
         padding-top: 100px;

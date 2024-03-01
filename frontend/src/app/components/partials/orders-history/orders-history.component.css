@@ -42,13 +42,14 @@ table tbody tr:hover {
   }
   
   table {
-      min-width: 400px; /* Establece un ancho mínimo para evitar que la tabla se colapse completamente */
+      min-width: 200px; /* Establece un ancho mínimo para evitar que la tabla se colapse completamente */
   }
   
   /* Asegura que las celdas de la tabla se muestren en bloque para una mejor legibilidad */
   th, td {
       display: block;
       text-align: center;
+    
   }
   .order-items th {
     text-align: center;
