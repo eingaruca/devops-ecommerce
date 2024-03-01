@@ -31,7 +31,7 @@ export class AnalyticsComponent implements OnInit {
       },
       {
         image: 'https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2FGraficoEdad.png?alt=media&token=418db1b3-2933-4bc7-b244-0430b9537c53',
-        desc: "Agrupación Clientes Edad"
+        desc: "Edad Clientes"
       },
       {
         image: 'https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2Fmapa_calor_compras.png?alt=media&token=60fe684f-01b6-4c47-bf72-296aa44a36e4',
