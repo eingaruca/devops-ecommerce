@@ -366,9 +366,16 @@ footer {
       width: 150px;
       height: 150px;
     }
-    /* .reseña{
-       border: 1px solid #333;
-       margin-top: 50px;
-    }
-   */
+    .tabs {
+      flex-direction: column;
+      align-items: center;
   }
+
+  .tablinks {
+      margin-bottom: 10px;
+  }
+  .guardar-cambios-btn{
+    width: 100%;
+  }
+}
+  
