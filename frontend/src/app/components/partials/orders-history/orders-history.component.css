@@ -8,12 +8,15 @@
 .orders-container h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 table {
   /* width: 100%; */
   border-collapse: collapse;
   overflow-x: auto; 
+  
 }
 
 table th,
@@ -25,9 +28,47 @@ table td {
 table th {
   background-color: #f2f2f2;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 
 table tbody tr:hover {
   background-color: #f9f9f9;
+}
+@media only screen and (max-width: 600px) {
+  table {
+      min-width: 400px; /* Establece un ancho mínimo para evitar que la tabla se colapse completamente */
+  }
+  
+  /* Asegura que las celdas de la tabla se muestren en bloque para una mejor legibilidad */
+  th, td {
+      display: block;
+      text-align: center;
+  }
+  .order-items th {
+    text-align: center;
+}
+
+/* Alinea el contenido de la tabla en el centro */
+.order-items td {
+    text-align: center;
+}
+
+
+  /* Oculta el contenido de las celdas */
+  td {
+      display: none;
+  }
+
+  /* Muestra solo el contenido de las celdas de las filas impares */
+  tbody tr:nth-child(odd) td {
+      display: block;
+      text-align: center;
+  }
+  
+  /* Estilos para el enlace en pantallas pequeñas */
+  a {
+      display: block;
+      padding: 8px;
+  }
+  
 }
