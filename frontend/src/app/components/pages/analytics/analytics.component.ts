@@ -30,7 +30,7 @@ export class AnalyticsComponent implements OnInit {
         desc: "Importancia Característica"
       },
       {
-        image: 'https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2FImportanciaCaracteristicaModelo.png?alt=media&token=4e890ff2-0523-4647-9779-62f444d3ce9c',
+        image: 'https://firebasestorage.googleapis.com/v0/b/beta-shopping-fa365.appspot.com/o/analytics%2FGraficoEdad.png?alt=media&token=418db1b3-2933-4bc7-b244-0430b9537c53',
         desc: "Agrupación Clientes Edad"
       },
       {
