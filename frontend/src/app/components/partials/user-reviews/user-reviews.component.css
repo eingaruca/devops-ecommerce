@@ -102,11 +102,12 @@
   
   .review {
     background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
-    padding: 20px; /* Espaciado interno */
+    margin: auto;
+    padding: 10px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
     margin-bottom: 20px; /* Margen inferior */
-    width: 350px; /* Ancho del 30% de la pantalla */
+    width: 95%; /* Ancho del 30% de la pantalla */
   }
   
   .review-title {

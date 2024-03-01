@@ -85,6 +85,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   
   /* Sección de revisiones */
@@ -141,7 +142,7 @@
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
     margin-bottom: 20px; /* Margen inferior */
-    width: 350px; /* Ancho del 30% de la pantalla */
+    width: 95%; /* Ancho del 30% de la pantalla */
   }
   
   .review-title {
@@ -217,4 +218,3 @@
   #loggedOut {
     color: #999999; /* Color del texto para el usuario desconectado */
   }
-  

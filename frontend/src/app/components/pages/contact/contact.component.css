@@ -253,8 +253,8 @@ body{
         padding-top: 100px;
     }
     .contactUs{
-        padding: 20px;
-        width: 90%;
+        padding: 10px;
+        width: 100%;
     }
     .box{
         grid-template-columns: 1fr;
@@ -280,10 +280,15 @@ body{
 }
 @media (max-width: 768px){
     .contactUs{
-        width: 90%;
+        width: 100%;
+        padding: 0;
     }
     .contactUs .title{
         padding-top: 100px;
+    }
+    .contactform, .contactmap, .contactinfo{
+        width: 100%;
+
     }
     .header{
         padding: 0;
