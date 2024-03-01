@@ -34,7 +34,13 @@ table th {
 table tbody tr:hover {
   background-color: #f9f9f9;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .user-profile {
+    flex-direction: column; /* Cambia la dirección de flex a columna para dispositivos pequeños */
+    align-items: center; /* Centra los elementos en dispositivos pequeños */
+    padding: 20px auto;
+  }
+  
   table {
       min-width: 400px; /* Establece un ancho mínimo para evitar que la tabla se colapse completamente */
   }
